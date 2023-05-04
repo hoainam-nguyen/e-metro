@@ -1,0 +1,42 @@
+:root {
+    /* neutral colors */
+    --black: #101828;
+    --grey: #667085;
+    --light-grey: #d0d5dd;
+    /* primary colors */
+    --purple: #53389e;
+    --light-purple: #9e77ed;
+    --light-light-purple: #d6bbfb;
+    /* feedback colors */
+    --error: #f04438;
+    --warning: #f79009;
+    --success: #12b76a;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    font-weight: 600;
+    line-height: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+/* responsive */
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
