@@ -1,3 +1,132 @@
-h1 {
-    font-size: 3rem;
+/* Header */
+.header {
+    padding: 8px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
 }
+
+.header__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__info-item {
+    display: flex;
+}
+
+/*  */
+.app-info {
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   color: white;
+   background-color: var(--purple);
+   padding: 16px;
+   border-radius: 5px;
+   flex: 1;
+}
+
+.app-info__logo {
+    margin-right: 2rem;
+    font-size: 2.5rem;
+}
+
+.app-info__name {
+    text-decoration: none;
+}
+
+.app-info__name-E {
+    color: white;
+}
+
+/*  */
+
+.user-acc {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--black);
+    padding: 8px;
+    margin-left: 10px;
+}
+
+.user-acc:hover {
+    color: var(--purple);
+    border-radius: 5px;
+}
+
+.user-acc__avt {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+.user-acc__name {
+    margin-left: 10px;
+    font-size: 1.8rem;
+}
+
+/*  */
+
+.seperate {
+    height: 1px;
+    background-color: rgba(83, 56, 158, 0.3);
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+
+/*  */
+
+.tabs {
+    display: flex;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.tab-item {
+    min-width: 80px;
+    padding: 16px 20px 11px 20px;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.header__tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: var(--purple);
+    transition: all 0.2s ease;
+}
+
+.tab-item:hover {
+    opacity: 0.9;
+    border-color: var(--purple);
+    background-color: rgba(83, 56, 158, 0.1);
+}
+
+.tab-item.active {
+    opacity: 1;
+    border-color: var(--purple);
+}
+
+.tab-item.active .tab-item__icon {
+    color: var(--purple);
+}
+
+.tab-item__icon {
+    margin-right: 8px;
+}
+
+
+

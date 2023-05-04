@@ -1,5 +1,6 @@
 :root {
     /* neutral colors */
+    --text-color: #475467;
     --black: #101828;
     --grey: #667085;
     --light-grey: #d0d5dd;
@@ -26,6 +27,7 @@ html {
 }
 
 /* responsive */
+
 .grid {
     width: 1200px;
     max-width: 100%;
