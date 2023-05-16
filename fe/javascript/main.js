@@ -108,3 +108,39 @@ then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
 // 
+
+
+// <TABLE>
+
+// Click on table
+var table = document.getElementById("dataTable");
+var rows = table.getElementsByTagName("tr");
+for (i = 1; i < rows.length; i++) {
+  var currentRow = table.rows[i];
+  // Click on row table
+  var createClickHandler = function(row) {
+    return function() {
+      var cell = row.getElementsByTagName("td")[0];
+      var id = cell.innerHTML;
+      alert("row");
+    };
+  }; 
+  currentRow.onclick = createClickHandler(currentRow);
+
+  // Click on edit button
+  var cell = currentRow.getElementsByTagName("td")[5];
+  var id = currentRow.getElementsByTagName("td")[0].innerHTML;
+  var btn_edit = cell.getElementsByTagName("i")[0];
+  var btn_edit_click = function(id) {
+    return function(e) {
+      e.preventDefault();
+      e.stopPropagation(); 
+      alert(id);
+    }
+  }
+  btn_edit.addEventListener('click', btn_edit_click(id));
+}
+
+
+
+// </TABLE>

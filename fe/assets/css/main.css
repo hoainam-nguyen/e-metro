@@ -104,7 +104,13 @@ hr {
     opacity: 0.6;
     cursor: pointer;
     transition: all 0.5s ease;
+    text-decoration: none;
+    color: #444;
 }
+
+/* .tab-item__text {
+    color: #444;
+} */
 
 .header__tabs .line {
     position: absolute;
@@ -119,9 +125,14 @@ hr {
 
 .tab-item:hover {
     opacity: 0.9;
+    color: var(--purple);
     border-color: var(--purple);
     background-color: rgba(83, 56, 158, 0.1);
 }
+.tab-item:hover .tab-item__text {
+    color: #444;
+}
+
 
 .tab-item.active {
     opacity: 1;
@@ -454,11 +465,44 @@ hr {
 }
 
 .edit {
-    font-size: 2rem;
+    font-size: 1.4rem;
     color: var(--purple);
-    margin-right: 30px;
 }
 
 .edit:hover {
     opacity: 0.8;
 }
+
+/* <TABLE> */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+.table tr {
+    cursor: pointer;
+}
+
+.table td, .table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover { 
+    background-color: #ddd;
+}
+
+.table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--purple);
+    color: white;
+}
+
+/* </TABLE> */
