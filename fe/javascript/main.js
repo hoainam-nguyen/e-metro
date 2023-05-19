@@ -1,33 +1,5 @@
-// tab
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
 
-const tabs = $$(".tab-item");
-const tabActive = $(".tab-item.active");
-const line = $('.line');
-
-function ShowLine(tab) {
-    line.style.left = tab.offsetLeft + "px";
-    line.style.width = tab.offsetWidth + "px";
-};
-
-ShowLine(tabActive);
-
-
-tabs.forEach((tab, index) => {
-    var icon = $('.tab-item__icon')[index];
-    tab.onclick = function () {
-        $(".tab-item.active").classList.remove("active");
-
-        ShowLine(tab);
-
-        this.classList.add("active");
-    };
-});
-// 
-
-
-// SORT
+// SORT 
 var x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
 x = document.getElementsByClassName("custom-select");
@@ -82,6 +54,7 @@ for (i = 0; i < l; i++) {
       this.classList.toggle("select-arrow-active");
     });
 }
+
 function closeAllSelect(elmnt) {
   /*a function that will close all select boxes in the document,
   except the current select box:*/
@@ -128,7 +101,8 @@ for (i = 1; i < rows.length; i++) {
   currentRow.onclick = createClickHandler(currentRow);
 
   // Click on edit button
-  var cell = currentRow.getElementsByTagName("td")[5];
+  var array_td = currentRow.getElementsByTagName("td");
+  var cell = array_td[array_td.length-1];
   var id = currentRow.getElementsByTagName("td")[0].innerHTML;
   var btn_edit = cell.getElementsByTagName("i")[0];
   var btn_edit_click = function(id) {
@@ -144,3 +118,25 @@ for (i = 1; i < rows.length; i++) {
 
 
 // </TABLE>
+
+
+//  <DONUT_CHART>
+const donutChartData = {
+  labels: ["Python", "Java", "C++"],
+  data: [30, 30, 40]
+}
+
+const donutChart = $(".donut-chart");
+console.log(donutChart);
+
+// new Chart(ctx, {
+//   type: "doughnut",
+//   data: {
+//     labels: donutChart.labels,
+//     datasets: [{
+//       label: 'data',
+//       data: donutChartData.data,
+//     }]
+//   }
+// });
+//  </DONUT_CHART>

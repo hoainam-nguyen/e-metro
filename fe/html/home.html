@@ -14,6 +14,13 @@
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" type="text/css" href="/fe/assets/css/main.css">
+<!--  -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
+
+<!--  -->
+
+
 </head>
 <body>
     <div class="app">
@@ -83,88 +90,38 @@
         <div class="content">
             <div class="grid">
                 <div class="grid__row">
-                    <div class="grid__column-2">
-                        <div class="filter">
-                            <div class="filter__header">
-                                FILTER
-                            </div>
-                            <hr class="seperate-filter">
-                            <label class="container">Tên
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Website
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Địa chỉ
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Email
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
+                    <div class="donut-chart-container">
+                        <div class="donut-chart__header">
+                            DONUT CHART
                         </div>
+                        <canvas id="doughnut-chart" class="donut-chart"></canvas>
                     </div>
-
-                    <div class="grid__column-10">
-                        <div class="body-container">
-                            <div class="search-add-container">
-                                <input class="search" type="text" placeholder="Search"></input>
-                                <div class="add">+</div>
-                            </div>
-                            <div class="result-sort-container">
-                                <div class="result">Total: 3</div>
-                                <div class="sort">
-                                    <span class="sort__label">Sort by:</span>
-                                    <div class="custom-select">
-                                        <select>
-                                          <option value="0">Select field</option>
-                                          <option value="1">Tên</option>
-                                          <option value="2">Website</option>
-                                          <option value="3">Địa chỉ</option>
-                                        </select>
-                                      </div>
-                                </div>
-                            </div>
-                            <div class="table">
-                                <div class="table-item">
-                                    <div class="table-item__line"></div>
-                                    <h1 class="table-item-property code">M01</h1>
-                                    <h1 class="table-item-property name">Bến Thành - Suối Tiên</h1>
-                                    <h1 class="table-item-property website">metro.com</h1>
-                                    <h1 class="table-item-property address">Bình Thạnh, TP.HCM</h1>
-                                    <h1 class="table-item-property phone">0333666552</h1>
-                                    <i class="fa-sharp fa-solid fa-pen-to-square edit"></i>
-                                </div>
-                                <div class="table-item">
-                                    <div class="table-item__line"></div>
-                                    <h1 class="table-item-property code">M02</h1>
-                                    <h1 class="table-item-property name">Bến Thành - Suối Tiên</h1>
-                                    <h1 class="table-item-property website">metro.com</h1>
-                                    <h1 class="table-item-property address">Bình Thạnh, TP.HCM</h1>
-                                    <h1 class="table-item-property phone">0333666552</h1>
-                                    <i class="fa-sharp fa-solid fa-pen-to-square edit"></i>
-                                </div>
-                                <div class="table-item">
-                                    <div class="table-item__line"></div>
-                                    <h1 class="table-item-property code">M03</h1>
-                                    <h1 class="table-item-property name">Bến Thành - Suối Tiên</h1>
-                                    <h1 class="table-item-property website">metro.com</h1>
-                                    <h1 class="table-item-property address">Bình Thạnh, TP.HCM</h1>
-                                    <h1 class="table-item-property phone">0333666552</h1>
-                                    <i class="fa-sharp fa-solid fa-pen-to-square edit"></i>
-                                </div>
-                               
-                            </div>
+                    <div class="bar-chart_container">
+                        <div class="bar-chart__header">
+                            BAR CHART
                         </div>
+                        <canvas id="bar-chart" class="bar-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="grid__row">
+                    <div class="line-chart-container">
+                        <div class="line-chart__header">
+                            LINE CHART
+                        </div>
+                        <canvas id="line-chart" class="line-chart"></canvas>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="footer"></footer>
+    
+        <footer class="footer">
+            <div class="footer-container">
+                
+            </div>
+        </footer>
     </div>
-    <script src="/fe/javascript/main.js"></script>
+    <script src="/fe/javascript/base.js"></script>
+    <script src="/fe/javascript/home.js"></script>
 </body>
 </html>

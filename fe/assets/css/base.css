@@ -26,6 +26,23 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .footer {
+    flex: 1;
+    position: relative;
+}
+
+.footer-container {
+    width: 100%;
+    height: 50px;
+    background-color: var(--purple);
+    position: absolute;
+} */
+
 /* responsive */
 
 .grid {
