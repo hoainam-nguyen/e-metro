@@ -119,24 +119,3 @@ for (i = 1; i < rows.length; i++) {
 
 // </TABLE>
 
-
-//  <DONUT_CHART>
-const donutChartData = {
-  labels: ["Python", "Java", "C++"],
-  data: [30, 30, 40]
-}
-
-const donutChart = $(".donut-chart");
-console.log(donutChart);
-
-// new Chart(ctx, {
-//   type: "doughnut",
-//   data: {
-//     labels: donutChart.labels,
-//     datasets: [{
-//       label: 'data',
-//       data: donutChartData.data,
-//     }]
-//   }
-// });
-//  </DONUT_CHART>

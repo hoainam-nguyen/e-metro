@@ -7,18 +7,12 @@
     <title>E-METRO</title>
     <link rel="stylesheet" type="text/css" href="/fe/assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/fe/assets/css/base.css">
-
-    
-
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="/fe/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/company.css">
 </head>
 <body>
     <div class="app">
@@ -133,38 +127,6 @@
                                       </div>
                                 </div>
                             </div>
-                            <!-- <div class="table">
-
-
-                                <div class="table-item">
-                                    <div class="table-item__line"></div>
-                                    <h1 class="table-item-property code">M01</h1>
-                                    <h1 class="table-item-property name">Bến Thành - Suối Tiên</h1>
-                                    <h1 class="table-item-property website">metro.com</h1>
-                                    <h1 class="table-item-property address">Bình Thạnh, TP.HCM</h1>
-                                    <h1 class="table-item-property phone">0333666552</h1>
-                                    <i class="fa-sharp fa-solid fa-pen-to-square edit"></i>
-                                </div>
-                                <div class="table-item">
-                                    <div class="table-item__line"></div>
-                                    <h1 class="table-item-property code">M02</h1>
-                                    <h1 class="table-item-property name">Bến Thành - Suối Tiên</h1>
-                                    <h1 class="table-item-property website">metro.com</h1>
-                                    <h1 class="table-item-property address">Bình Thạnh, TP.HCM</h1>
-                                    <h1 class="table-item-property phone">0333666552</h1>
-                                    <i class="fa-sharp fa-solid fa-pen-to-square edit"></i>
-                                </div>
-                                <div class="table-item">
-                                    <div class="table-item__line"></div>
-                                    <h1 class="table-item-property code">M03</h1>
-                                    <h1 class="table-item-property name">Bến Thành - Suối Tiên</h1>
-                                    <h1 class="table-item-property website">metro.com</h1>
-                                    <h1 class="table-item-property address">Bình Thạnh, TP.HCM</h1>
-                                    <h1 class="table-item-property phone">0333666552</h1>
-                                    <i class="fa-sharp fa-solid fa-pen-to-square edit"></i>
-                                </div>
-                               
-                            </div> -->
 
                             <table id="dataTable" class="table">
                                 <tr>
@@ -218,8 +180,53 @@
                 
             </div>
         </footer>
+
+        <!-- Modal Layout -->
+        <div class="modal">
+            <div class="modal__overlay"></div>
+
+            <div class="modal__body">
+                <div class="modal__inner">
+                    <!-- Add Company Form -->
+                    <div class="add-company-form">
+                        <div class="add-company-form__header">
+                            <h1 class="add-company-form__heading">Thêm mới công ty</h1>
+                        </div>
+                        <div class="add-company-form__content">
+                            <div class="add-company-form__img">
+                                <i class="fa-solid fa-camera-rotate add-company-form__img-icon"></i>
+                            </div>
+
+                            <div class="add-company-form__input-container">
+                                <div class="add-company-form__group">
+                                    <span class="add-company-form__title">Tên công ty</span>
+                                    <input type="text" class="add-company-form__input" placeholder="Nhập tên công ty"> 
+                                </div>
+                                <div class="add-company-form__group">
+                                    <span class="add-company-form__title">Website</span>
+                                    <input type="text" class="add-company-form__input" placeholder="Nhập website"> 
+                                </div>
+                                <div class="add-company-form__group">
+                                    <span class="add-company-form__title">Địa chỉ</span>
+                                    <input type="text" class="add-company-form__input" placeholder="Nhập địa chỉ"> 
+                                </div>
+                                <div class="add-company-form__group">
+                                    <span class="add-company-form__title">Số điện thoại</span>
+                                    <input type="tel" class="add-company-form__input" placeholder="Nhập số điện thoại"> 
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="add-company-form__controls">
+                            <button id="add_btn_cancel" class="btn margin_btn">HỦY</button>
+                            <button class="btn btn--primary">THÊM</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="/fe/javascript/base.js"></script>
     <script src="/fe/javascript/main.js"></script>
+    <script src="/fe/javascript/company.js"></script>
 </body>
 </html>
