@@ -26,3 +26,5 @@ tabs.forEach((tab, index) => {
         this.classList.add("active");
     };
 });
+
+

@@ -5,14 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>E-METRO</title>
-    <link rel="stylesheet" type="text/css" href="/fe/assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="/fe/assets/css/base.css">
+
+    <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="/fe/assets/css/main.css">
-    <link rel="stylesheet" type="text/css" href="/fe/assets/css/company.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/main.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/company.css">
+
 </head>
 <body>
     <div class="app">
@@ -20,7 +27,7 @@
             <div class="grid">
                 <!--  -->
                 <div class="header__info">
-                    <a class="header__info-item app-info" href="./">
+                    <a class="header__info-item app-info" href="/fe/html/home.html">
                         <div class="app-info__logo-container">
                             <i class="app-info__logo fa-solid fa-train"></i>
                         </div>
@@ -88,20 +95,12 @@
                                 FILTER
                             </div>
                             <hr class="seperate-filter">
-                            <label class="container">Tên
+                            <label class="container">Còn khai thác
                                 <input type="checkbox" checked="checked">
                                 <span class="checkmark"></span>
                             </label>
-                            <label class="container">Website
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Địa chỉ
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Email
-                                <input type="checkbox">
+                            <label class="container">Dừng khai thác
+                                <input type="checkbox" checked="checked">
                                 <span class="checkmark"></span>
                             </label>
                         </div>
@@ -111,70 +110,74 @@
                         <div class="body-container">
                             <div class="search-add-container">
                                 <input class="search" type="text" placeholder="Search"></input>
-                                <div class="add">+</div>
+                                <div class="add">+ Thêm mới công ty</div>
                             </div>
                             <div class="result-sort-container">
                                 <div class="result">Total: 3</div>
-                                <div class="sort">
-                                    <span class="sort__label">Sort by:</span>
-                                    <div class="custom-select">
-                                        <select>
-                                          <option value="0">Select field</option>
-                                          <option value="1">Tên</option>
-                                          <option value="2">Website</option>
-                                          <option value="3">Địa chỉ</option>
-                                        </select>
-                                      </div>
-                                </div>
                             </div>
 
                             <table id="dataTable" class="table">
-                                <tr>
-                                    <th>Mã công ty</th>
-                                    <th>Tên công ty</th>
-                                    <th>Website</th>
-                                    <th>Địa chỉ</th>
-                                    <th>Số điện thoại</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <td>CT01</td>
-                                    <td>Rạng Đông</td>
-                                    <td>rangdong.com</td>
-                                    <td>3A Trần Bạch Đằng, Quận 1, TP.HCM</td>
-                                    <td>0223336541</td>
-                                    <td><i class="fa-sharp fa-solid fa-pen-to-square edit"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>CT02</td>
-                                    <td>Tân Hiệp Phát</td>
-                                    <td>tanhiepphat.com</td>
-                                    <td>56B Điện Biên Phủ, Bình Thạnh, TP.HCM</td>
-                                    <td>0236225339</td>
-                                    <td><i class="fa-sharp fa-solid fa-pen-to-square edit"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>CT03</td>
-                                    <td>Vạn Thịnh Phát</td>
-                                    <td>vanthinhphat.com</td>
-                                    <td>337A Linh Trung, TP.Thủ Đức, TP.HCM</td>
-                                    <td>0123456789</td>
-                                    <td><i class="fa-sharp fa-solid fa-pen-to-square edit"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>CT04</td>
-                                    <td>Masterise Home</td>
-                                    <td>masterisehome.com</td>
-                                    <td>552 Lê Duẩn, Bình Chánh, TP.HCM</td>
-                                    <td>0333655223</td>
-                                    <td><i class="fa-sharp fa-solid fa-pen-to-square edit"></i></td>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th class="table_heading">Mã công ty 
+                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
+                                        </th>
+                                        <th class="table_heading">Tên công ty 
+                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin"> 
+                                        </th>
+                                        <th class="table_heading">Website 
+                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin"> 
+                                        </th>
+                                        <th class="table_heading">Địa chỉ 
+                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin"> 
+                                        </th>
+                                        <th class="table_heading">Số điện thoại 
+                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin"> 
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>CT01</td>
+                                        <td>Rạng Đông</td>
+                                        <td>rangdong.com</td>
+                                        <td>3A Trần Bạch Đằng, Quận 1, TP.HCM</td>
+                                        <td>0223336541</td>
+                                        <td><i class="fa-sharp fa-solid fa-pen-to-square edit"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CT02</td>
+                                        <td>Tân Hiệp Phát</td>
+                                        <td>tanhiepphat.com</td>
+                                        <td>56B Điện Biên Phủ, Bình Thạnh, TP.HCM</td>
+                                        <td>0236225339</td>
+                                        <td><i class="fa-sharp fa-solid fa-pen-to-square edit"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CT03</td>
+                                        <td>Vạn Thịnh Phát</td>
+                                        <td>vanthinhphat.com</td>
+                                        <td>337A Linh Trung, TP.Thủ Đức, TP.HCM</td>
+                                        <td>0123456789</td>
+                                        <td><i class="fa-sharp fa-solid fa-pen-to-square edit"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CT04</td>
+                                        <td>Masterise Home</td>
+                                        <td>masterisehome.com</td>
+                                        <td>552 Lê Duẩn, Bình Chánh, TP.HCM</td>
+                                        <td>0333655223</td>
+                                        <td><i class="fa-sharp fa-solid fa-pen-to-square edit"></i></td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
         <footer class="footer">
             <div class="footer-container">
                 
@@ -187,46 +190,91 @@
 
             <div class="modal__body">
                 <div class="modal__inner">
+
                     <!-- Add Company Form -->
-                    <div class="add-company-form">
-                        <div class="add-company-form__header">
-                            <h1 class="add-company-form__heading">Thêm mới công ty</h1>
+                    <div class="form add-company-form">
+                        <div class="form__header add-company-form__header">
+                            <h1 class="form__heading add-company-form__heading">Thêm mới công ty</h1>
                         </div>
-                        <div class="add-company-form__content">
-                            <div class="add-company-form__img">
-                                <i class="fa-solid fa-camera-rotate add-company-form__img-icon"></i>
+                        <div class="form__content add-company-form__content">
+                            <div class="form__img add-company-form__img">
+                                <label for="input-img-file">
+                                    <i class="fa-solid fa-camera-rotate form__img-icon add-company-form__img-icon"></i>
+                                </label>
+                                <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-img-file">
                             </div>
 
-                            <div class="add-company-form__input-container">
-                                <div class="add-company-form__group">
-                                    <span class="add-company-form__title">Tên công ty</span>
-                                    <input type="text" class="add-company-form__input" placeholder="Nhập tên công ty"> 
+                            <div class="form__input-container add-company-form__input-container">
+                                <div class="form__group add-company-form__group">
+                                    <span class="form__title add-company-form__title">Tên công ty</span>
+                                    <input type="text" class="form__input add-company-form__input" placeholder="Nhập tên công ty"> 
                                 </div>
-                                <div class="add-company-form__group">
-                                    <span class="add-company-form__title">Website</span>
-                                    <input type="text" class="add-company-form__input" placeholder="Nhập website"> 
+                                <div class="form__group add-company-form__group">
+                                    <span class="form__title add-company-form__title">Website</span>
+                                    <input type="text" class="form__input add-company-form__input" placeholder="Nhập website"> 
                                 </div>
-                                <div class="add-company-form__group">
-                                    <span class="add-company-form__title">Địa chỉ</span>
-                                    <input type="text" class="add-company-form__input" placeholder="Nhập địa chỉ"> 
+                                <div class="form__group add-company-form__group">
+                                    <span class="form__title add-company-form__title">Địa chỉ</span>
+                                    <input type="text" class="form__input add-company-form__input" placeholder="Nhập địa chỉ"> 
                                 </div>
-                                <div class="add-company-form__group">
-                                    <span class="add-company-form__title">Số điện thoại</span>
-                                    <input type="tel" class="add-company-form__input" placeholder="Nhập số điện thoại"> 
+                                <div class="form__group add-company-form__group">
+                                    <span class="form__title add-company-form__title">Số điện thoại</span>
+                                    <input type="tel" class="form__input add-company-form__input" placeholder="Nhập số điện thoại"> 
                                 </div>
                             </div>
                         </div> 
-                        <div class="add-company-form__controls">
+                        <div class="form__controls add-company-form__controls">
                             <button id="add_btn_cancel" class="btn margin_btn">HỦY</button>
-                            <button class="btn btn--primary">THÊM</button>
+                            <button id="add_btn_yes" class="btn btn--primary">THÊM</button>
+                        </div>
+                    </div>
+
+                    <!-- Update Company Form -->
+                    <div class="form update-company-form">
+                        <div class="form__header update-company-form__header">
+                            <h1 class="form__heading update-company-form__heading">Cập nhật thông tin công ty</h1>
+                        </div>
+                        <div class="form__content update-company-form__content">
+                            <div class="form__img update-company-form__img">
+                                <label for="input-img-file-update">
+                                    <i class="fa-solid fa-camera-rotate form__img-icon update-company-form__img-icon"></i>
+                                </label>
+                                <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-img-file-update">
+                            </div>
+
+                            <div class="form__input-container update-company-form__input-container">
+                                <div class="form__group update-company-form__group">
+                                    <span class="form__title update-company-form__title">Mã công ty</span>
+                                    <input readonly="readonly" type="text" class="form__input update-company-form__input"> 
+                                </div>
+                                <div class="form__group update-company-form__group">
+                                    <span class="form__title update-company-form__title">Tên công ty</span>
+                                    <input type="text" class="form__input update-company-form__input" placeholder="Nhập tên công ty"> 
+                                </div>
+                                <div class="form__group update-company-form__group">
+                                    <span class="form__title update-company-form__title">Website</span>
+                                    <input type="text" class="form__input update-company-form__input" placeholder="Nhập website"> 
+                                </div>
+                                <div class="form__group update-company-form__group">
+                                    <span class="form__title update-company-form__title">Địa chỉ</span>
+                                    <input type="text" class="form__input update-company-form__input" placeholder="Nhập địa chỉ"> 
+                                </div>
+                                <div class="form__group update-company-form__group">
+                                    <span class="form__title update-company-form__title">Số điện thoại</span>
+                                    <input type="tel" class="form__input update-company-form__input" placeholder="Nhập số điện thoại"> 
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="form__controls update-company-form__controls">
+                            <button id="update_btn_cancel" class="btn margin_btn">HỦY</button>
+                            <button id="update_btn_yes" class="btn btn--primary">CẬP NHẬT</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="/fe/javascript/base.js"></script>
-    <script src="/fe/javascript/main.js"></script>
-    <script src="/fe/javascript/company.js"></script>
+    <script src="/fe/javascript/NhanVienSo/main.js"></script>
+    <script src="/fe/javascript/NhanVienSo/company.js"></script>
 </body>
 </html>

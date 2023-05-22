@@ -1,4 +1,4 @@
-/* Header */
+/* HEADER */
 .header {
     height: 66px;
     font-size: 1.6rem;
@@ -18,7 +18,7 @@
 }
 
 
-/*  */
+/* LOGO */
 .app-info {
    text-decoration: none;
    align-items: center;
@@ -52,7 +52,7 @@
     color: var(--purple);
 }
 
-/*  */
+/* ACCOUNT */
 
 .user-acc {
     text-decoration: none;
@@ -80,13 +80,13 @@
     font-size: 1.6rem;
 }
 
-/*  */
+/* SEPERATE */
 
 hr {
     color: var(--purple);
 }
 
-/*  */
+/* TABS */
 
 .tabs {
     display: flex;
@@ -259,6 +259,7 @@ hr {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    line-height: 20px;
   }
 
   .container + .container {
@@ -342,27 +343,27 @@ hr {
 }
 
 .add {
-    width: 50px;
     background-color: var(--purple);
-    font-size: 3rem;
+    font-size: 1.4rem;
     color: white;
     text-align: center;
     border-radius: 1px;
-    margin-left: 18px;
+    margin-left: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 12px;
 }
 
 .add:hover {
     opacity: 0.8;
 }
-/*  */
 
-/*  */
+
+/* RESULT */
 .result-sort-container {
     display: flex;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     justify-content: space-between;
     margin-top: 16px;
     align-items: center;
@@ -378,69 +379,6 @@ hr {
 }
 
 
-/* SORT */
-/*the container must be positioned relative:*/
-.custom-select {
-  position: relative;
-  width: 200px;
-  font-size: 1.4rem;
-}
-
-.custom-select select {
-  display: none; /*hide original SELECT element:*/
-}
-
-.select-selected {
-  background-color: var(--purple);
-}
-
-/*style the arrow inside the select element:*/
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-
-/*point the arrow upwards when the select box is open (active):*/
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-}
-
-/*style the items (options), including the selected item:*/
-.select-items div,.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-  user-select: none;
-}
-
-/*style items (options):*/
-.select-items {
-  position: absolute;
-  background-color: var(--purple);
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
-/*hide the items when the select box is closed:*/
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-/*  */
 
 /* TABLE */
 .table {
@@ -507,51 +445,118 @@ hr {
 
 /* </TABLE> */
 
-/* <DONUT_CHART> */
-.donut-chart-container {
-    margin-top: 2rem;
-    width: 40rem;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    padding: 16px 16px;
+
+
+/* FORM MODAL */
+
+.form {
+    font-size: 1.4rem;
+    width: 800px;
 }
 
-.donut-chart__header {
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 0.5rem;
+.form__header {
+    height: 56px;
+    background-color: var(--purple);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;    
 }
 
-/* </DONUT_CHART> */
-
-/* <BAR_CHART> */
-.bar-chart_container {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    flex: 1;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    padding: 16px 16px;
+.form__heading {
+    margin-left: 24px;
+    font-size: 2rem;
 }
 
-.bar-chart__header {
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 0.5rem;
+.form__content {
+    padding: 32px 32px 0px 32px;
+    display: flex;
 }
-/* </BAR_CHART> */
 
-/* <LINE_CHART> */
-.line-chart-container {
+.form__img {
+    width:200px;
+    height:200px; 
+    background-image:url('/fe/assets/img/blank_img.png');
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin-right: 32px;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.form__img-icon {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+}
+
+.form__img::after {
+    content: "";
     width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    padding: 16px 16px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.12);
+    display: none;
 }
-.line-chart__header {
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 0.5rem;
+
+.form__img:hover.form__img::after {
+    display: block;
 }
-/* </LINE_CHART> */
+
+.form__img:hover .form__img-icon {
+    display: block;
+}
+
+
+.form__input-container {
+    flex: 1;
+}
+.form__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form__title {
+    margin-bottom: 5px;
+}
+
+.form__input {
+    height: 40px;    
+    width: 100%;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    outline: none;
+}
+
+.form__input:focus {
+    border-color: var(--purple);
+} 
+
+.form__controls {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 32px 32px 32px;
+}
+
+.btn.margin_btn {
+    margin-right: 18px;
+}
+
+
+
 
 

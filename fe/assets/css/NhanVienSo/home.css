@@ -1,0 +1,46 @@
+/* <DONUT_CHART> */
+.donut-chart-container {
+    margin-top: 2rem;
+    width: 40rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 16px 16px;
+}
+
+.donut-chart__header {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* </DONUT_CHART> */
+
+/* <BAR_CHART> */
+.bar-chart_container {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    flex: 1;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 16px 16px;
+}
+
+.bar-chart__header {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+/* </BAR_CHART> */
+
+/* <LINE_CHART> */
+.line-chart-container {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 16px 16px;
+}
+.line-chart__header {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+/* </LINE_CHART> */

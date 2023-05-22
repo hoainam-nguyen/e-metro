@@ -88,8 +88,9 @@ html {
     right: 0;
     left: 0;
     bottom: 0;
-    display: none;
+    display: block;
     animation: 0.2s ease-in FadeIn;
+    display: none;
 }
 
 .modal__overlay {
@@ -143,3 +144,4 @@ html {
     cursor: default;
     background-color: #999;
 }
+
