@@ -96,26 +96,48 @@
         <div class="content">
             <div class="grid">
                 <div class="grid__row">
-                    <div class="donut-chart-container">
-                        <div class="donut-chart__header">
-                            DONUT CHART
+                    <div class="grid__column-12">
+                        <div class="donut-chart-row">
+
+
+                            <div class="donut-chart-container donut-1">
+                                <div class="donut-chart__header">
+                                    TÌNH TRẠNG HOẠT ĐỘNG NHÀ GA
+                                </div>
+                                <canvas id="doughnut-chart" class="donut-chart"></canvas>
+                            </div>
+
+                            <div class="donut-chart-container donut-2">
+                                <div class="donut-chart__header">
+                                    CÔNG TY KHAI THÁC
+                                </div>
+                                <canvas id="doughnut-chart2" class="donut-chart"></canvas>
+                            </div>
+
+
                         </div>
-                        <canvas id="doughnut-chart" class="donut-chart"></canvas>
-                    </div>
-                    <div class="bar-chart_container">
-                        <div class="bar-chart__header">
-                            BAR CHART
-                        </div>
-                        <canvas id="bar-chart" class="bar-chart"></canvas>
                     </div>
                 </div>
-
+                
                 <div class="grid__row">
-                    <div class="line-chart-container">
-                        <div class="line-chart__header">
-                            LINE CHART
+                    <div class="grid__column-12">
+
+                        <div class="chart-row">
+                            <div class="bar-chart_container">
+                                <div class="bar-chart__header">
+                                    BAR CHART
+                                </div>
+                                <canvas id="bar-chart" class="bar-chart"></canvas>
+                            </div>
+                            
+                            <!-- <div class="line-chart-container">
+                                <div class="line-chart__header">
+                                    LINE CHART
+                                </div>
+                                <canvas id="line-chart" class="line-chart"></canvas>
+                            </div> -->
                         </div>
-                        <canvas id="line-chart" class="line-chart"></canvas>
+                
                     </div>
                 </div>
             </div>

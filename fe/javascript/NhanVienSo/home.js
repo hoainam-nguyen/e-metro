@@ -3,10 +3,15 @@
   var chart1 = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['Red', 'Blue', 'Yellow'],
+        labels: ['Bình thường', 'Đã ngưng hoạt động', 'Đang sữa chửa'],
         datasets: [{
-          label: '# of Votes',
+          label: ' Số lượng',
           data: [70, 20, 50],
+          backgroundColor: [
+            'rgb(43, 192, 43)',
+            'rgb(230, 68, 68)',
+            'rgb(241, 241, 59)'            
+          ],
         }]
     },
     options: {
@@ -17,6 +22,32 @@
         }
     }                                                                                                                                                                                               
   });
+  
+  var donut2 = document.getElementById("doughnut-chart2");
+  var chart2 = new Chart(donut2, {
+    type: 'doughnut',
+    data: {
+        labels: ['Còn khai thác', 'Dừng khai thác'],
+        datasets: [{
+          label: ' Số lượng',
+          data: [70, 20],
+          backgroundColor: [
+            'rgb(96, 96, 252)',
+            'rgb(230, 68, 68)',
+          ],
+        }]
+    },
+    options: {
+        plugins: {
+            labels: {
+                render: 'percentage',
+            }
+        }
+    }                                                                                                                                                                                               
+  });
+
+
+  
 // BAR CHART
 const labels = ['January','February','March','April','May','June','July'];
 const data = {

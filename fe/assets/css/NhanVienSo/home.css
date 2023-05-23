@@ -1,7 +1,17 @@
+.donut-chart-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.chart-row {
+    display: flex;
+    justify-content: center;
+}
+
 /* <DONUT_CHART> */
 .donut-chart-container {
+    width: 50rem;
     margin-top: 2rem;
-    width: 40rem;
     border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 16px 16px;
 }
@@ -14,13 +24,16 @@
 
 /* </DONUT_CHART> */
 
+
+
 /* <BAR_CHART> */
 .bar-chart_container {
     margin-top: 2rem;
     margin-left: 2rem;
-    flex: 1;
+    width: 100rem;
     border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 16px 16px;
+    margin-bottom: 100px;
 }
 
 .bar-chart__header {

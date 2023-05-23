@@ -122,7 +122,7 @@ function onClickTable(currentRow)
         return function() {
         var cell = row.getElementsByTagName("td")[0];
         var id_company = cell.innerHTML;
-        alert("row" + id_company);
+        window.location.href = 'detail_company.html';
         };
     }; 
     currentRow.addEventListener('click', onClickRow(currentRow)); 

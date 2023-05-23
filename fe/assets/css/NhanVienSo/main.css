@@ -557,6 +557,67 @@ hr {
 }
 
 
+/* SELECT MENU */
+.select-menu{
+    width: 200px;
+}
+
+.select-menu .select-btn{
+    display: flex;
+    height: 40px;
+    background: #fff;
+    padding: 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 5px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.select-btn i{
+    font-size: 1.4rem;
+    transition: 0.3s;
+}
+.select-menu.active .select-btn i{
+    transform: rotate(-180deg);
+}
+.select-menu .options{
+    position: relative;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0 0 3px rgba(0,0,0,0.1); */
+    display: none;
+}
+.select-menu.active .options{
+    display: block;
+}
+.options .option{
+    display: flex;
+    height: 40px;
+    cursor: pointer;
+    padding: 0 12px;
+    border-radius: 5px;
+    align-items: center;
+    background: #fff;
+}
+.options .option:hover{
+    background: #d4d4d4;
+}
+.option .option-text{
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.option i {
+    font-size: 1.4rem;
+    margin-right: 10px;
+}
+
+
 
 
 

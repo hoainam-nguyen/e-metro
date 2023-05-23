@@ -107,7 +107,7 @@ function onClickTable(currentRow)
         return function() {
         var cell = row.getElementsByTagName("td")[0];
         var id_station = cell.innerHTML;
-        alert("row " + id_station);
+        window.location.href = 'detail_station.html';
         };
     }; 
     currentRow.addEventListener('click', onClickRow(currentRow)); 
