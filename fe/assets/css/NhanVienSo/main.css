@@ -129,6 +129,8 @@ hr {
     border-color: var(--purple);
     background-color: rgba(83, 56, 158, 0.1);
 }
+
+
 .tab-item:hover .tab-item__text {
     color: #444;
 }
@@ -218,6 +220,8 @@ hr {
 
 .user-info-item {
     padding: 10px 0;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .user-info-item:hover {
@@ -226,8 +230,11 @@ hr {
 } 
 
 
+/*  */
+.user-info-link {
+    text-decoration: none;
 
-
+}
 /*  */
 
 /* FILTER */
@@ -379,29 +386,6 @@ hr {
 }
 
 
-
-/* TABLE */
-.table {
-    margin-top: 16px;
-}
-
-.table-item {
-    height: 60px;
-    border: 1px solid #ccc;
-    display: flex;
-    align-items: center;
-    font-size: 1.4rem;
-    justify-content: space-between;
-    margin: 8px 0;
-}
-
-
-.table-item__line {
-    height: 100%;
-    width: 5px;
-    background-color: var(--purple);
-}
-
 .edit {
     font-size: 1.4rem;
     color: var(--purple);
@@ -416,6 +400,7 @@ hr {
     border-collapse: collapse;
     width: 100%;
     font-size: 1.4rem;
+    margin-top: 16px;
 }
 
 .table tr {

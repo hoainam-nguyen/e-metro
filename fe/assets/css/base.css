@@ -155,4 +155,8 @@ html {
     background-color: var(--purple);
 }
 
-
+/* TAB ITEM */
+.tab-item-link {
+    text-decoration: none;
+    color: #444;
+}
