@@ -462,3 +462,273 @@ hr {
 .edit:hover {
     opacity: 0.8;
 }
+.ticketseller{
+    margin-top: 60px;
+    height: 560px;
+}
+.ticketseller-item{
+    height: 500px;
+}
+.ticketseller-item_img{   
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 500px;
+}
+.ticketseller-item_sellerlayout{
+margin-left: 280px;
+background-color: transparent   ;
+height: 431px;
+width: 400px;
+}
+.seller_header{
+    justify-content:center;
+    display: flex;
+    height: 47px;
+    background-color: transparent;
+    width: 400px;
+}
+.seller_radiobutton{
+    background-color: transparent;
+    height: 47px;
+    width: 400px;
+}
+.radio{
+display: inline-flex;
+align-items: center;
+cursor: pointer;
+margin-left: 40px;
+margin-top: 10px;
+font-size: 15px;
+color: #ffffff;
+padding-left: 30px;
+}
+.radio__input{
+    display:none;
+}
+.radio + .radio{
+    margin-left: 30px;
+}
+.radio__radio{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d8e4e2;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+.radio__radio::after{
+content: "";
+width: 14px;
+height: 14px;
+display:block;
+background: #6941C6;
+margin-top: 8.15px;
+margin-left: 8.55px;
+border-radius: 50%;
+transform: translate(-50%,-50%) scale(0);
+transition: 300ms ease-in-out 0s;
+}
+.radio__input:checked ~ .radio__radio:after{
+    transform: translate(-50%,-50%) scale(1);
+}
+.seller_ticketid{
+width: 400px;
+height: 60px;
+background-color:transparent ;
+}
+.ticketid{
+    margin-left: 15px;
+    position: relative;
+}
+.text_field{
+    border: 2px solid #6941C6;
+    height: 45px;
+    width: 150px;
+    margin-top: 5px;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 12px;
+    transition: all .3s;
+    outline: none;
+    color:#6941C6;
+}
+.tf_label{
+    position: absolute;
+    left: 25px;
+    top: 20px;
+    transform: all 0.2s;
+    padding: 0 2px;
+    transform: translateY(-50%);
+    z-index: 1;
+    color:#6941C6;
+    transition: 0.25s ease;
+    font-size: 11px;
+}
+.tf_label::before{
+    content: "";
+    height: 5px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    z-index: -1;
+    font-size: 12px;
+}
+.text_field:focus{
+    border:2px solid #6941C6;
+    font-size: 12px;
+}
+.text_field + .tf_label, 
+.filled{
+    top: 13px;
+    margin-left: 5px;
+    background-color:transparent;
+    font-size: 12px;
+}
+.text_field::placeholder{
+    font-size: 12px;
+    opacity: 0;
+    transition: all .3s;
+}
+.text_field:focus::placeholder{
+    opacity: 1;
+    animation-delay: 0.5s;
+}
+.ticketid + .lineid{
+    margin-left: 195px;
+}
+.lineid{
+    margin-top: -50px;
+    position: relative;
+}
+.line_choice{
+    display: flex;
+    width: 400px;
+    height: 70px;
+    background-color: transparent;
+    justify-content: center;
+    align-items: flex-start;
+}
+.select_line{
+margin-left: 5px;
+}
+.dropdown_line{
+    margin-top: 5px;
+    margin-left: 0px;
+    width: 330px;
+    height: 55px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #6941C6;
+    color: #6941C6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+.date_and_status{
+    width: 400px;
+    height: 70px;
+    background-color: transparent;
+}
+.date_choice{
+    margin-left: 15px;
+    position: relative;
+}
+.status{
+    margin-top: -50px;
+    position: relative;
+}
+.date_choice + .status{
+    margin-left: 195px;
+}
+.tf_label_date{
+        position:absolute;
+        left: 25px;
+        top: 20px;
+        transform: all 0.2s;
+        padding: 0 2px;
+        transform: translateY(-50%);
+        z-index: 1;
+        color:#6941C6;
+        transition: 0.25s ease;
+        font-size: 11px;
+}
+.text_field + .tf_label_date, 
+.filled{
+    top: 13px;
+    margin-left: 5px;
+    background-color:transparent;
+    font-size: 12px;
+}
+.date_choosing{
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+.tf_label_date + .date_choosing,
+.filled{
+    margin-left: -35px;
+}
+.ticket_price{
+    position: relative;
+    margin-left: 5px;
+}
+.text_field_price{
+    border: 2px solid #6941C6;
+    height: 45px;
+    width: 330px;
+    margin-top: 5px;
+    margin-left: 30px;
+    padding-left: 20px;
+    border-radius: 10px;
+    font-size: 12px;
+    transition: all .3s;
+    outline: none;
+    color:#6941C6;
+}
+.tf_label_price{
+    text-align: right;
+    position: absolute;
+    left: 35px;
+    transform: all 0.2s;
+    padding: 0 2px;
+    transform: translateY(-50%);
+    z-index: 1;
+    color:#6941C6;
+    transition: 0.25s ease;
+    font-size: 11px;
+}
+.text_field_price + .tf_label_price, 
+.filled{
+    top: 13px;
+    margin-left: 15px;
+    margin-top: 12px;
+    background-color:transparent;
+    font-size: 12px;
+}
+.button_accept{
+    width: 400px;
+    height: 70px;
+    background-color: transparent;
+}
+.accept-but{
+    width: 330px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #9370DB;
+    border: 0;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-left: 35px;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+}
+.accept-but:active{
+    transform: translateY(2px);
+}

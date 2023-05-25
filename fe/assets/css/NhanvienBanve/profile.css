@@ -1,0 +1,202 @@
+.profile_layout{
+    width: 100vw;
+    height: 550px;
+    margin-top: 35px;
+    background-color: transparent;
+}
+.cover_image{
+    width: 1000px;
+    height: 220px;
+    margin-left: 230px;
+    background-color: transparent;
+    border: 0.5px solid #333333;
+}
+.profile_firstgrid{
+    position: relative;
+    width: 300px;
+    height: 370px;
+    background-color: #ffffff;
+    margin-top: -55px;
+    margin-left: 280px;
+    border: 0.5px solid #333333;
+}
+.profile_avt{
+    width: 110px;
+    height: 110px;
+    margin-top: 25px;
+    border-radius: 55px;
+    border: 0.5px solid #333333;
+    margin-left: 90px;
+    background-image: url(https://khoinguonsangtao.vn/wp-content/uploads/2022/07/avatar-cute-2.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.change_avt-but{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #9370DB;
+    margin-left: 175px;
+    margin-top: -35px;
+}
+.profile_username{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+}
+.profile_level{
+    text-align: center;
+    font-size: 13px;
+    margin-top: 5px;
+    color: #6941C6;
+}
+.staff_id{
+    text-align: center;
+    margin-top: 140px;
+    font-size: 12px;
+}
+.profile_secondgrid{
+    position: relative;
+    width: 580px;
+    height: 370px;
+    background-color: #ffffff;
+    margin-top: -370px;
+    margin-left: 600px;
+    border: 0.5px solid #333333;
+}
+.username_tb{
+    background-color:transparent;
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.username-tb{
+    background-color: #eeeeee;
+    width: 220px;
+    height: 45px;
+    padding:15px 15px ;
+    margin-top: 5px;
+    font-size: 13px;
+    margin-left: 45px;
+    border-radius: 7px;
+    box-shadow: 0 2px 0  0  #dddd;
+}
+.phonenum{
+    background-color: transparent;
+    width: 180px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: -64px;
+    margin-left: 300px;
+}
+.phonenum-tb{
+    background-color: #eeeeee;
+    width: 220px;
+    height: 45px;
+    padding:15px 15px ;
+    margin-top: 5px;
+    font-size: 13px;
+    margin-left: 325px;
+    border-radius: 7px;
+    box-shadow: 0 2px 0  0  #dddd;
+}
+.email{
+    background-color: transparent;
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.email-tb{
+    background-color: #eeeeee;
+    width: 220px;
+    height: 45px;
+    padding:15px 15px ;
+    margin-top: 5px;
+    font-size: 13px;
+    margin-left: 45px;
+    border-radius: 7px;
+    box-shadow: 0 2px 0  0  #dddd;
+}
+.dob{
+    position: relative;
+    background-color: transparent;
+    width: 180px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.dob-tb{
+    position: relative;
+    background-color: #eeeeee;
+    width: 220px;
+    height: 45px;
+    padding:15px 15px ;
+    margin-top: 5px;
+    font-size: 13px;
+    margin-left: 45px;
+    border-radius: 7px;
+    box-shadow: 0 2px 0  0  #dddd;
+}
+.calendar{
+    position: absolute;
+    margin-top: -30px;
+    border: 0;
+    background-color: transparent;
+    margin-left: 230px;
+    cursor: pointer;
+}
+.address{
+    background-color: transparent;
+    width: 160px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 15px;
+    position: relative;
+}
+.address-tb{
+    background-color: #eeeeee;
+    width: 220px;
+    height: 45px;
+    padding:15px 15px ;
+    margin-top: 5px;
+    font-size: 13px;
+    margin-left: 45px;
+    border-radius: 7px;
+    box-shadow: 0 2px 0  0  #dddd;
+}
+.profile_edit{
+    width: 100px;
+    height: 35px;
+    border-radius: 8px;
+    border: 0;
+    background-color: #eeeeee;
+    box-shadow: 0 2px 0  0  #888888;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 320px;
+    position: relative;
+}
+.save_profile{
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    border-radius: 8px;
+    border: 0;
+    background-color: #9370DB;
+    box-shadow: 0 2px 0  0  #888888;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 30px;
+}
