@@ -111,6 +111,10 @@
     display: none;
 }
 
+#input-img-file-update {
+    display: none;
+}
+
 .detail-img-icon {
     color: white;
     position: absolute;

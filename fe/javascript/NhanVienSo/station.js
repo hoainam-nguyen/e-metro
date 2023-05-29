@@ -1,4 +1,3 @@
-
 var modal = $(".modal");
 var dataTable = $("#dataTable");
 var add_form = $(".add-station-form");
@@ -105,9 +104,18 @@ function onClickTable(currentRow)
 {
     var onClickRow = function(row) {
         return function() {
-        var cell = row.getElementsByTagName("td")[0];
-        var id_station = cell.innerHTML;
-        window.location.href = 'detail_station.html';
+            var cell = row.getElementsByTagName("td");
+
+            let station = {
+                id: cell[0].innerText,  
+                name: cell[1].innerText,    
+                desc: cell[2].innerText,    
+                status: cell[3].innerText    
+            }
+
+            sessionStorage.setItem("stationObject", JSON.stringify(station));
+            
+            window.location.href = 'detail_station.html';       
         };
     }; 
     currentRow.addEventListener('click', onClickRow(currentRow)); 
@@ -287,6 +295,7 @@ function sortTable(column, isDesc) {
 
 // FILTER
 
+
 var RowWithFilter = function(checkbox) {
     return function() { 
         let string = null;
@@ -311,11 +320,61 @@ var RowWithFilter = function(checkbox) {
 }
 
 
-
 var checkbox = $$(".checkbox");
-var checkmark = $$(".checkmark");
-
-
-checkbox.forEach(function(checkbox, i) {
+checkbox.forEach(function(checkbox) {
     checkbox.addEventListener('click', RowWithFilter(checkbox));
 });
+
+
+
+// START
+
+var stationApi = "https://aiclub.uit.edu.vn/namnh/emetro/stations/search?id=1";
+
+
+function start() {
+    getStations(renderStations);
+}
+
+start();
+
+function getStations(callback) {
+    fetch (stationApi) 
+        .then (function(respone) {
+            return respone.json();
+        })
+        .then (callback);
+}
+
+function renderStations(stations) {
+    let tableBody = $("table tbody");
+
+    let data = stations.data[0];
+
+    let stringStatus = "";
+    if (data.status == "0") {
+        stringStatus = "Bình thường"
+    }
+    
+    let htmls =  
+    `<tr>
+        <td>${data.id}</td>
+        <td>${data.name}</td>
+        <td>${data.description}</td>
+        <td>${stringStatus}</td>
+        <td><i class="fa-sharp fa-solid fa-pen-to-square edit"></i></td>
+    </tr>`;
+
+    // console.log(data.name);
+    tableBody.innerHTML = htmls;
+    addOnClickTable();
+}
+
+function addOnClickTable() {
+    let rows = dataTable.getElementsByTagName("tr");
+    for (i = 1; i < rows.length; i++) {
+        let currentRow = dataTable.rows[i];
+        onClickTable(currentRow);
+    }  
+}
+
