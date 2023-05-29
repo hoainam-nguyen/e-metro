@@ -36,7 +36,6 @@ body{
     
 }
 .welcome{
-    font-family: 'Inter';
     font-size: 20px;
     line-height: 38px;
     color: #333;
@@ -44,7 +43,6 @@ body{
     margin-bottom: 8px;
 }
 .introduce{
-    font-family: 'Inter';
     font-size: 30px;
     line-height: 24px;
     color: #53389e;
@@ -133,7 +131,6 @@ body{
     padding: 0;
 }
 .container__welcome{
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
@@ -157,7 +154,6 @@ body{
     width: 36px;
     height: 20px;
     /* Text sm/Medium */
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -214,7 +210,6 @@ body{
     height: 20px;
     color: #475467;
     /* Text sm/Regular */
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -362,7 +357,6 @@ body{
 .modal-label-forgot{
     width: 140px;
     height: 20px;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
