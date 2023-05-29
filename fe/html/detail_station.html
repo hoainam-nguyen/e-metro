@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-METRO</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/main.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/detail_station.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <!--  -->
+                <div class="header__info">
+                    <a class="header__info-item app-info" href="/fe/html/home.html">
+                        <div class="app-info__logo-container">
+                            <i class="app-info__logo fa-solid fa-train"></i>
+                        </div>
+                        <h1 class="app-info__name">
+                            <span class="app-info__name-E">E</span>
+                            -METRO
+                        </h1>
+                    </a>
+                    <div class="header__info-item user-acc user-info-popup">
+                        <img src="https://plus.unsplash.com/premium_photo-1666184129932-e443a8de06e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" class="user-acc__avt">
+                        <span class="user-acc__name">Phạm Kiệt</span>
+
+                        
+                        <div class="user-info">
+                            <div class="user-info__header">
+                                <img src="https://plus.unsplash.com/premium_photo-1666184129932-e443a8de06e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" class="user-info-avt">
+                                <div class="user-info-acc">
+                                    <div class="user-info-name">Phạm Kiệt</div>
+                                    <div class="user-info-username">@phamkiet</div>
+                                </div>
+                            </div>
+                            <hr class="seperate-info">
+                            <ul class="user-info__list">
+                                <li class="user-info-item">Trang cá nhân</li>
+                            </ul>
+                            <hr class="seperate-info">
+                            <ul class="user-info__list">
+                                <li class="user-info-item">Cài đặt</li>
+                                <li class="user-info-item">Đăng xuất</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <hr>
+
+        <nav class="top-nav">
+            <div class="grid">
+                <nav class="tabs">
+                    <a class="tab-item" href="home.html">
+                        <i class="tab-item__icon fa-solid fa-house"></i>
+                        <span class="tab-item__text">TRANG CHỦ</span>
+                    </a>
+                    <a class="tab-item active" href="station.html">
+                        <i class="tab-item__icon fa-solid fa-building-user"></i>
+                        <span class="tab-item__text">NHÀ GA</span>
+                    </a>
+                    <a class="tab-item" href="company.html">
+                        <i class="tab-item__icon fa-solid fa-building"></i>
+                        <span class="tab-item__text">CÔNG TY</span>
+                    </a>
+                    <div class="line"></div>
+                </nav>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-12">
+                        <div class="detail-container tool-container">
+                            <div class="search-container">
+                                <input class="search-detail" type="text" placeholder="Tìm kiếm"></input>
+                                <div class="search-station">
+                                    <ul class="search-station-list">
+                                        <li class="search-station-item">
+                                            <a href="detail_station.html">
+                                                <div class="item__img">
+                                                </div>
+                                                <div class="item__info">
+                                                    <span class="item__code">MT01</span>
+                                                    <span class="item__name">Bến Thành - Suối Tiên</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search-station-item">
+                                            <a href="detail_station.html">
+                                                <div class="item__img">
+                                                </div>
+                                                <div class="item__info">
+                                                    <span class="item__code">MT02</span>
+                                                    <span class="item__name">Bến Thành - Tham Lương</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search-station-item">
+                                            <a href="detail_station.html">
+                                                <div class="item__img">
+                                                </div>
+                                                <div class="item__info">
+                                                    <span class="item__code">MT02</span>
+                                                    <span class="item__name">Bến Thành - Tham Lương</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search-station-item">
+                                            <a href="detail_station.html">
+                                                <div class="item__img">
+                                                </div>
+                                                <div class="item__info">
+                                                    <span class="item__code">MT02</span>
+                                                    <span class="item__name">Bến Thành - Tham Lương</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search-station-item">
+                                            <a href="detail_station.html">
+                                                <div class="item__img">
+                                                </div>
+                                                <div class="item__info">
+                                                    <span class="item__code">MT02</span>
+                                                    <span class="item__name">Bến Thành - Tham Lương</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search-station-item">
+                                            <a href="detail_station.html">
+                                                <div class="item__img">
+                                                </div>
+                                                <div class="item__info">
+                                                    <span class="item__code">MT02</span>
+                                                    <span class="item__name">Bến Thành - Tham Lương</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search-station-item">
+                                            <a href="detail_station.html">
+                                                <div class="item__img">
+                                                </div>
+                                                <div class="item__info">
+                                                    <span class="item__code">MT02</span>
+                                                    <span class="item__name">Bến Thành - Tham Lương</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search-station-item">
+                                            <a href="detail_station.html">
+                                                <div class="item__img">
+                                                </div>
+                                                <div class="item__info">
+                                                    <span class="item__code">MT02</span>
+                                                    <span class="item__name">Bến Thành - Tham Lương</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        
+                                    </ul>
+                                    <li class="search-more">
+                                        <a class="search-more__link" href="station.html">
+                                            <span>Xem tất cả</span>
+                                        </a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div class="btn-container add-container">
+                                <i class="fa-solid fa-circle-plus icon-margin"></i> 
+                                Thêm mới nhà ga
+                            </div>
+                        </div>
+
+                        <div class="detail-container info-container">
+                            <div class="info-header">
+                                <div class="info-heading">Hồ Sơ Nhà Ga</div>
+                            </div>
+                            <div class="separate"></div>
+                            <div class="img-info-container">
+                                <div class="detail-img">
+                                    <label for="input-img-file">
+                                        <i class="fa-solid fa-camera-rotate detail-img-icon"></i>
+                                    </label>
+                                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-img-file">
+                                </div>
+                                <div class="detail-info">
+                                    <div class="form__input-container detail-station__input-container">
+                                        <div class="form__group detail-station__group">
+                                            <span class="form__title detail-station__title">Mã nhà ga</span>
+                                            <input readonly="readonly" type="text" class="form__input detail-station__input"> 
+                                        </div>
+                                        <div class="form__group detail-station__group">
+                                            <span class="form__title detail-station__title">Tên nhà ga</span>
+                                            <input type="text" class="form__input detail-station__input" placeholder="Nhập tên nhà ga"> 
+                                        </div>
+                                        <div class="form__group detail-station__group">
+                                            <span class="form__title detail-station__title">Mô tả vị trí</span>
+                                            <textarea  class="form__textarea detail__textarea" rows="4" cols="50"></textarea>
+                                        </div>
+                                        <div class="form__group detail-station__group">
+                                            <span class="form__title detail-station__title">Tình trạng hoạt động</span>
+                                            
+                                            
+                                            <div class="select-menu select-menu-update">
+                                                <div class="select-btn select-btn-update">
+                                                    <span class="sBtn-text sBtn-text-update">Tình trạng hoạt động</span>
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+                                                <ul class="options">
+                                                    <li class="option option-update">
+                                                        <i class="fa-solid fa-circle-dot" style="color: #25ef68;"></i>
+                                                        <span class="option-text option-text-update">Bình thường</span>
+                                                    </li>
+                                                    <li class="option option-update">
+                                                        <i class="fa-solid fa-wrench" style="color: #949494;"></i>
+                                                        <span class="option-text option-text-update">Đang sửa chữa</span>
+                                                    </li>
+                                                    <li class="option option-update">
+                                                        <i class="fa-solid fa-circle-xmark" style="color: #f44e4e;"></i>
+                                                        <span class="option-text option-text-update">Đã ngừng hoạt động</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            <div class="update-button-container">
+                                <div class="btn-container update-container">
+                                    <i class="fa-solid fa-square-pen icon-margin"></i>
+                                    Cập nhật
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer-container">
+                
+            </div>
+        </footer>
+
+        <!-- Modal Layout -->
+        <div class="modal">
+            <div class="modal__overlay"></div>
+
+            <div class="modal__body">
+                <div class="modal__inner">
+
+                    <!-- Add Station Form -->
+                    <div class="form add-station-form">
+                        <div class="form__header add-station-form__header">
+                            <h1 class="form__heading add-station-form__heading">Thêm mới nhà ga</h1>
+                        </div>
+                        <div class="form__content add-station-form__content">
+                            <div class="form__img add-station-form__img">
+                                <label for="input-img-file">
+                                    <i class="fa-solid fa-camera-rotate form__img-icon add-station-form__img-icon"></i>
+                                </label>
+                                <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-img-file">
+                            </div>
+
+                            <div class="form__input-container add-station-form__input-container">
+                                <div class="form__group add-station-form__group">
+                                    <span class="form__title add-station-form__title">Tên nhà ga</span>
+                                    <input type="text" class="form__input add-station-form__input" placeholder="Nhập tên nhà ga"> 
+                                </div>
+                                <div class="form__group add-station-form__group">
+                                    <span class="form__title add-station-form__title">Mô tả vị trí</span>
+                                    <textarea  class="form__textarea add-station-form__textarea" rows="4" cols="50"></textarea>
+                                </div>
+                                <div class="form__group add-station-form__group">
+                                    <span class="form__title add-station-form__title margin_bottom">Tình trạng hoạt động</span>
+                                    <!-- SELECT OPTION ADD FORM -->
+                                    <div class="select-menu select-menu-add">
+                                        <div class="select-btn select-btn-add">
+                                            <span class="sBtn-text sBtn-text-add">Tình trạng hoạt động</span>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                        <ul class="options">
+                                            <li class="option option-add">
+                                                <i class="fa-solid fa-circle-dot" style="color: #25ef68;"></i>
+                                                <span class="option-text option-text-add">Bình thường</span>
+                                            </li>
+                                            <li class="option option-add">
+                                                <i class="fa-solid fa-wrench" style="color: #949494;"></i>
+                                                <span class="option-text option-text-add">Đang sửa chữa</span>
+                                            </li>
+                                            <li class="option option-add">
+                                                <i class="fa-solid fa-circle-xmark" style="color: #f44e4e;"></i>
+                                                <span class="option-text option-text-add">Đã ngừng hoạt động</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="form__controls add-station-form__controls">
+                            <button id="add_btn_cancel" class="btn margin_btn">HỦY</button>
+                            <button id="add_btn_yes" class="btn btn--primary">THÊM</button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>  
+    <script src="/fe/javascript/NhanVienSo/main.js"></script>
+    <script src="/fe/javascript/NhanVienSo/detail_station.js"></script>
+</body>
+</html>
