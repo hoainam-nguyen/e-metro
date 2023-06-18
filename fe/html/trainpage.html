@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <link rel="stylesheet" href="/fe/assets/css/NhanVienCongTy/trainmain.css">
+    <link rel="stylesheet" href="/fe/assets/css/NhanVienCongTy/trainbase.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css" class="css">
+    <link rel="stylesheet" href="assets/font/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Train Station Web</title>
+</head>
+<body>
+    <div class="App">
+        <header class="header">
+            <div class="header__train__info">
+                <div class="image__header__icon">
+                    <i class="app-info__logo fa-solid fa-train"></i>
+                    <span class="image__content">
+                        E -METRO
+                    </span>
+                </div>
+                <div class="header__info__active">
+                    <div class="full__option">
+                        <div class="avatar-wrapper">
+                            <img class="profile-pic" src="/fe/assets/img/avatar.png" />
+                            <div class="upload-button">
+                                <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                            </div>
+                            <input class="file-upload" type="file" accept="image/*"/>
+                            
+                        </div>
+                        <div class="avatar__online"></div>
+                        <span class="name__account">
+                            Bích Huyền
+                        </span>
+                    </div>
+                    <div class="icon__information">
+                        <div class="info__element">
+                            Thông tin cái nhân
+                        </div>
+                        <div class="info__element">
+                            Bảo mật và đăng nhập
+                        </div>
+                        <div class="info__element">
+                            Cài đặt
+                        </div>
+                        <div class="info__element">
+                            Đăng xuất
+                        </div>
+                    </div>  
+                </div>
+                
+            </div>
+        </header>
+        <hr>
+        <div class="container">
+            <div class="grid">
+                <nav class="tabs">
+                    <a class="tab-item" href="trainhome.html">
+                        <i class="tab-item__icon fa-solid fa-house"></i>
+                        <span class="tab-item__text">TRANG CHỦ</span>
+                    </a>
+                    <a class="tab-item" href="trangchu.html">
+                        <i class="tab-item__icon fa-solid fa-building-user"></i>
+                        <span class="tab-item__text">TUYẾN TÀU</span>
+                    </a>
+                    <a class="tab-item active" href="trainpage.html">
+                        <i class="tab-item__icon fa-solid fa-building"></i>
+                        <span class="tab-item__text">CHI TIẾT TUYẾN TÀU</span>
+                    </a>
+                    <div class="line"></div>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
+            <nav class="navbar navbar-light d-flex mt-3 mb-5">
+                <form class="form-inline change__form__inline_2">
+                  <input class="form-control change-form-control_2 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="changebtn btn btn-outline-success ms-2 my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </nav>
+            <div class="cardWrap">
+                <div class="card cardLeft"> 
+                    <div class="main__header">
+                        <div class="logo__card">
+                            <div class="image__header__icon">
+                                <i class="app-info__logo fa-solid fa-train"></i>
+                            </div>
+                            <div class="logo__content">
+                                TRAIN INFORMATION
+                            </div>
+                        </div>
+                        <div class="code__train__searching d-flex align-items-center me-3">
+                            <div class="logo__content train__code">
+                                Mã Chuyến
+                            </div>
+                            <form class="form-inline change__form__inline">
+                                <input class="form-control change-form-control mr-sm-2" type="search" placeholder="Nhập code" aria-label="Search">
+                            </form>
+                        </div>
+                    </div> 
+                    <div class="main_container">
+                        <div class="main__information__train">
+                            <span class="title__background">BICH HUYEN</span>
+                            <span class="title__background__double">BICH HUYEN</span>
+                            <div class="location_div">
+                                <div class="content__container">
+                                    <div class="name__train">
+                                        <div class="title">
+                                            NAME OF TRAIN
+                                        </div>
+                                        <div class="name__content">
+                                            VN234562
+                                        </div>
+                                    </div>
+                                    <div class="price__content">
+                                        <div class="price">
+                                            <div class="title">
+                                                PRICE
+                                            </div>
+                                            <div class="name__content">
+                                                45 EURO
+                                            </div>
+                                        </div>
+                                        <div class="price__code">
+                                            <div class="title">
+                                                TYPE OF TRAIN
+                                            </div>
+                                            <div class="name__content">
+                                                3456
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__container column">
+                                    <div class="name__train">
+                                        <div class="title">
+                                            FROM
+                                        </div>
+                                        <div class="name__content">
+                                            HO CHI MINH
+                                        </div>
+                                    </div>
+                                    <div class="price__content">
+                                        <div class="price__code">
+                                            <div class="title">
+                                                STATUS
+                                            </div>
+                                            <div class="name__content">
+                                               ON
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__container column__special">
+                                    <div class="name__train">
+                                        <div class="title">
+                                           TO
+                                        </div>
+                                        <div class="name__content">
+                                            HA NOI
+                                        </div>
+                                    </div>
+                                    <div class="price__content">
+                                        <div class="price__code">
+                                            <div class="title">
+                                                WAITING
+                                            </div>
+                                            <div class="name__content">
+                                                10MIN
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__container column">
+                                    <div class="name__train">
+                                        <div class="title">
+                                            STOP STATION
+                                        </div>
+                                        <div class="name__content">
+                                            DA NANG
+                                        </div>
+                                    </div>
+                                    <div class="price__content">
+                                        <div class="price auto__fix">
+                                            <div class="title">
+                                                START
+                                            </div>
+                                            <div class="name__content">
+                                                7:00
+                                            </div>
+                                        </div>
+                                        <div class="price__code">
+                                            <div class="title">
+                                                END
+                                            </div>
+                                            <div class="name__content"> 
+                                                8:00
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="barcode"></div>
+                </div>
+                <div class="card cardRight">
+                    <div class="header2__info__active">
+                        <div class="avatar-wrapper2">
+                            <img class="profile2-pic" src="/assets/image/avatar.png" />
+                            <div class="upload2-button">
+                                <i class="fa fa-arrow-circle-up change-fa" aria-hidden="true"></i>
+                            </div>
+                            <input class="file2-upload" type="file" accept="image/*"/>
+                        </div>
+                        <div class="avatar__online__2"></div>  
+                    </div>
+                    <div class="information__staff ps-3 d-flex justify-content-between">
+                        <div class="left__info">
+                            <div class="name__staff mb-2">
+                                <div class="name__title title">
+                                    NAME OF STAFF
+                                </div>
+                                <div class="main__name name__content">
+                                    Đào Bích Huyền
+                                </div>
+                            </div>
+                            <div class="staff__code">
+                                <div class="name__title title">
+                                    STAFF'S CODE
+                                </div>
+                                <div class="main__name name__content">
+                                    20521165
+                                </div>
+                            </div>
+                        </div>
+                        <div class="train__code">
+                            <div class="name__title title">
+                                MÃ CHUYẾN
+                            </div>
+                            <div class="main__name name__content">
+                                12345
+                            </div>
+                        </div>
+                    </div>
+                    <div class="barcode__2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+          
+        </div>
+    </div>
+    <script src="/fe/javascript/NhanVienCongTy/tdn.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body> 
+</html>

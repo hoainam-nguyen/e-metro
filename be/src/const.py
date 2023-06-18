@@ -1,0 +1,1 @@
+RESOUSCE_MAP = {}

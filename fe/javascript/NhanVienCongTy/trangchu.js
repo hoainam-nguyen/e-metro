@@ -1,0 +1,33 @@
+const profile_pic = document.querySelector('.profile-pic')
+const file_upload = document.querySelector('.file-upload')
+const upload_button = document.querySelector('.upload-button')
+const profile2_pic = document.querySelector('.profile2-pic')
+const file2_upload = document.querySelector('.file2-upload')
+const upload2_button = document.querySelector('.upload2-button')
+
+file_upload.addEventListener('change',function() {
+    if (this.files && this.files[0]) {
+        profile_pic.onload = () => {
+            URL.revokeObjectURL(profile_pic.src);  // no longer needed, free memory
+        }
+  
+        profile_pic.src = URL.createObjectURL(this.files[0]); // set src to blob url
+    }
+    if (this.files && this.files[0]) {
+        profile2_pic.onload = () => {
+            URL.revokeObjectURL(profile2_pic.src);  // no longer needed, free memory
+        }
+  
+        profile2_pic.src = URL.createObjectURL(this.files[0]); // set src to blob url
+    }
+});
+
+upload_button.addEventListener('click', function() {
+   file_upload.click();
+});
+
+
+
+
+
+
