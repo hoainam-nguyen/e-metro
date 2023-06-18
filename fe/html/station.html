@@ -226,15 +226,21 @@
 
                             <div class="form__input-container add-station-form__input-container">
                                 <div class="form__group add-station-form__group">
-                                    <span class="form__title add-station-form__title">Tên nhà ga</span>
+                                    <span class="form__title add-station-form__title">Tên nhà ga
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
                                     <input type="text" class="form__input add-station-form__input" placeholder="Nhập tên nhà ga"> 
                                 </div>
                                 <div class="form__group add-station-form__group">
-                                    <span class="form__title add-station-form__title">Mô tả vị trí</span>
+                                    <span class="form__title add-station-form__title">Mô tả vị trí
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
                                     <textarea  class="form__textarea add-station-form__textarea" rows="4" cols="50"></textarea>
                                 </div>
                                 <div class="form__group add-station-form__group">
-                                    <span class="form__title add-station-form__title margin_bottom">Tình trạng hoạt động</span>
+                                    <span class="form__title add-station-form__title margin_bottom">Tình trạng hoạt động
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
                                     <!-- <input type="text" class="form__input add-station-form__input">  -->
                                 </div>
                             </div>
@@ -247,26 +253,7 @@
 
                     
                     <!-- SELECT OPTION UPDATE FORM -->
-                    <div class="select-menu select-menu-update">
-                        <div class="select-btn select-btn-update">
-                            <span class="sBtn-text sBtn-text-update">Tình trạng hoạt động</span>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="options">
-                            <li class="option option-update">
-                                <i class="fa-solid fa-circle-dot" style="color: #25ef68;"></i>
-                                <span class="option-text option-text-update">Bình thường</span>
-                            </li>
-                            <li class="option option-update">
-                                <i class="fa-solid fa-wrench" style="color: #949494;"></i>
-                                <span class="option-text option-text-update">Đang sửa chữa</span>
-                            </li>
-                            <li class="option option-update">
-                                <i class="fa-solid fa-circle-xmark" style="color: #f44e4e;"></i>
-                                <span class="option-text option-text-update">Đã ngừng hoạt động</span>
-                            </li>
-                        </ul>
-                    </div>
+                    
 
                     
 
@@ -289,15 +276,40 @@
                                     <input readonly="readonly" type="text" class="form__input update-station-form__input"> 
                                 </div>
                                 <div class="form__group update-station-form__group">
-                                    <span class="form__title update-station-form__title">Tên nhà ga</span>
+                                    <span class="form__title update-station-form__title">Tên nhà ga
+                                        <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                    </span>
                                     <input type="text" class="form__input update-station-form__input" placeholder="Nhập tên nhà ga"> 
                                 </div>
                                 <div class="form__group update-station-form__group">
-                                    <span class="form__title update-station-form__title">Mô tả vị trí</span>
+                                    <span class="form__title update-station-form__title">Mô tả vị trí
+                                        <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                    </span>
                                     <textarea  class="form__textarea update-station-form__textarea" rows="4" cols="50"></textarea> 
                                 </div>
                                 <div class="form__group update-station-form__group">
                                     <span class="form__title update-station-form__title margin_bottom">Tình trạng hoạt động</span>
+
+                                    <div class="select-menu select-menu-update">
+                                        <div class="select-btn select-btn-update">
+                                            <span class="sBtn-text sBtn-text-update">Tình trạng hoạt động</span>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                        <ul class="options">
+                                            <li class="option option-update">
+                                                <i class="fa-solid fa-circle-dot" style="color: #25ef68;"></i>
+                                                <span class="option-text option-text-update">Bình thường</span>
+                                            </li>
+                                            <li class="option option-update">
+                                                <i class="fa-solid fa-wrench" style="color: #949494;"></i>
+                                                <span class="option-text option-text-update">Đang sửa chữa</span>
+                                            </li>
+                                            <li class="option option-update">
+                                                <i class="fa-solid fa-circle-xmark" style="color: #f44e4e;"></i>
+                                                <span class="option-text option-text-update">Đã ngừng hoạt động</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div> 

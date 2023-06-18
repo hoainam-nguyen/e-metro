@@ -94,7 +94,7 @@
                                 <input class="search-detail" type="text" placeholder="Tìm kiếm"></input>
                                 <div class="search-company">
                                     <ul class="search-company-list">
-                                        <li class="search-company-item">
+                                        <!-- <li class="search-company-item">
                                             <a href="detail_company.html">
                                                 <div class="item__img">
                                                 </div>
@@ -103,78 +103,7 @@
                                                     <span class="item__name">Vạn Thịnh Phát</span>
                                                 </div>
                                             </a>
-                                        </li>
-                                        <li class="search-company-item">
-                                            <a href="detail_company.html">
-                                                <div class="item__img">
-                                                </div>
-                                                <div class="item__info">
-                                                    <span class="item__code">CT02</span>
-                                                    <span class="item__name">Tân Hiệp Phát</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="search-company-item">
-                                            <a href="detail_company.html">
-                                                <div class="item__img">
-                                                </div>
-                                                <div class="item__info">
-                                                    <span class="item__code">CT02</span>
-                                                    <span class="item__name">Tân Hiệp Phát</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="search-company-item">
-                                            <a href="detail_company.html">
-                                                <div class="item__img">
-                                                </div>
-                                                <div class="item__info">
-                                                    <span class="item__code">CT02</span>
-                                                    <span class="item__name">Tân Hiệp Phát</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="search-company-item">
-                                            <a href="detail_company.html">
-                                                <div class="item__img">
-                                                </div>
-                                                <div class="item__info">
-                                                    <span class="item__code">CT02</span>
-                                                    <span class="item__name">Tân Hiệp Phát</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="search-company-item">
-                                            <a href="detail_company.html">
-                                                <div class="item__img">
-                                                </div>
-                                                <div class="item__info">
-                                                    <span class="item__code">CT02</span>
-                                                    <span class="item__name">Tân Hiệp Phát</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="search-company-item">
-                                            <a href="detail_company.html">
-                                                <div class="item__img">
-                                                </div>
-                                                <div class="item__info">
-                                                    <span class="item__code">CT02</span>
-                                                    <span class="item__name">Tân Hiệp Phát</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="search-company-item">
-                                            <a href="detail_company.html">
-                                                <div class="item__img">
-                                                </div>
-                                                <div class="item__info">
-                                                    <span class="item__code">CT02</span>
-                                                    <span class="item__name">Tân Hiệp Phát</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        
+                                        </li> -->
                                     </ul>
                                     <li class="search-company-more">
                                         <a class="search-company-more__link" href="company.html">
@@ -196,10 +125,10 @@
                             <div class="separate"></div>
                             <div class="img-info-container">
                                 <div class="detail-img">
-                                    <label for="input-img-file">
+                                    <label for="input-img-file-update">
                                         <i class="fa-solid fa-camera-rotate detail-img-icon"></i>
                                     </label>
-                                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-img-file">
+                                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-img-file-update">
                                 </div>
                                 <div class="detail-info">
                                     <div class="form__input-container detail-company__input-container">
@@ -208,20 +137,48 @@
                                             <input readonly="readonly" type="text" class="form__input detail-company__input"> 
                                         </div>
                                         <div class="form__group detail-company__group">
-                                            <span class="form__title detail-company__title">Tên công ty</span>
+                                            <span class="form__title detail-company__title">Tên công ty
+                                                <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                            </span>
                                             <input type="text" class="form__input detail-company__input" placeholder="Nhập tên công ty"> 
                                         </div>
                                         <div class="form__group detail-company__group">
-                                            <span class="form__title detail-company__title">Website</span>
+                                            <span class="form__title detail-company__title">Website
+                                                <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                            </span>
                                             <input type="text" class="form__input detail-company__input" placeholder="Nhập website"> 
                                         </div>
                                         <div class="form__group detail-company__group">
-                                            <span class="form__title detail-company__title">Địa chỉ</span>
+                                            <span class="form__title detail-company__title">Địa chỉ
+                                                <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                            </span>
                                             <input type="text" class="form__input detail-company__input" placeholder="Nhập địa chỉ"> 
                                         </div>
                                         <div class="form__group detail-company__group">
-                                            <span class="form__title detail-company__title">Số điện thoại</span>
-                                            <input type="tel" class="form__input detail-company__input" placeholder="Nhập số điện thoại"> 
+                                            <span class="form__title detail-company__title">Số điện thoại
+                                                <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                            </span>
+                                            <input type="number" class="form__input detail-company__input" placeholder="Nhập số điện thoại"> 
+                                        </div>
+                                        <div class="form__group detail-company__group">
+                                            <span class="form__title detail-company__title">Tình trạng khai thác</span>
+                                            
+                                            <div class="select-menu select-menu-update">
+                                                <div class="select-btn select-btn-update">
+                                                    <span class="sBtn-text sBtn-text-update">Tình trạng khai thác</span>
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+                                                <ul class="options">
+                                                    <li class="option option-update">
+                                                        <i class="fa-solid fa-circle-dot" style="color: #25ef68;"></i>
+                                                        <span class="option-text option-text-update">Còn khai thác</span>
+                                                    </li>
+                                                    <li class="option option-update">
+                                                        <i class="fa-solid fa-circle-xmark" style="color: #f44e4e;"></i>
+                                                        <span class="option-text option-text-update">Dừng khai thác</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
     
@@ -254,6 +211,20 @@
 
                     <!-- Add Company Form -->
                     <div class="form add-company-form">
+
+                        <!-- LOADER -->
+                        <div class="add-modal-loader loader-add">
+
+                        </div>
+
+                        <div class="three-body add-loader loader-add">
+                            <div class="three-body__dot"></div>
+                            <div class="three-body__dot"></div>
+                            <div class="three-body__dot"></div>    
+                        </div>
+
+
+
                         <div class="form__header add-company-form__header">
                             <h1 class="form__heading add-company-form__heading">Thêm mới công ty</h1>
                         </div>
@@ -267,20 +238,28 @@
 
                             <div class="form__input-container add-company-form__input-container">
                                 <div class="form__group add-company-form__group">
-                                    <span class="form__title add-company-form__title">Tên công ty</span>
+                                    <span class="form__title add-company-form__title">Tên công ty
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
                                     <input type="text" class="form__input add-company-form__input" placeholder="Nhập tên công ty"> 
                                 </div>
                                 <div class="form__group add-company-form__group">
-                                    <span class="form__title add-company-form__title">Website</span>
+                                    <span class="form__title add-company-form__title">Website
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
                                     <input type="text" class="form__input add-company-form__input" placeholder="Nhập website"> 
                                 </div>
                                 <div class="form__group add-company-form__group">
-                                    <span class="form__title add-company-form__title">Địa chỉ</span>
+                                    <span class="form__title add-company-form__title">Địa chỉ
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
                                     <input type="text" class="form__input add-company-form__input" placeholder="Nhập địa chỉ"> 
                                 </div>
                                 <div class="form__group add-company-form__group">
-                                    <span class="form__title add-company-form__title">Số điện thoại</span>
-                                    <input type="tel" class="form__input add-company-form__input" placeholder="Nhập số điện thoại"> 
+                                    <span class="form__title add-company-form__title">Số điện thoại
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
+                                    <input type="number" class="form__input add-company-form__input" placeholder="Nhập số điện thoại"> 
                                 </div>
                             </div>
                         </div> 

@@ -602,7 +602,16 @@ hr {
     margin-right: 10px;
 }
 
+/* WARNING MESSAGE */
+.warning-message {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: red;
+    display: none;
+}
 
 
-
-
+/* FOOTER */
+.footer {
+    margin-top: 10rem;
+}

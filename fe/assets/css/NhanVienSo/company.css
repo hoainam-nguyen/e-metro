@@ -38,3 +38,37 @@
     color: yellow;
     transform: rotate(180deg);
 }
+
+/* SELECT MENU ADD FORM */
+/* 
+.add-company-form__group {
+    position: relative;
+}
+
+.select-menu-add {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+}
+
+.add-company-form__controls {
+    margin-top: 2rem;
+} */
+
+/* SELECT MENU UPDATE FORM */
+
+.update-company-form__group {
+    position: relative;
+}
+
+.select-menu-update {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+}
+
+.update-company-form__controls {
+    margin-top: 2rem;
+}
