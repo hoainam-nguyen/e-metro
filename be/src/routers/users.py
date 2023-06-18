@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
 from src.utils.utils import (SearchSchema, UpdateSchema, InsertSchema, ResponseModel)
-from src.methods.search import search_data_by_id, search_all_data
+from src.methods.search import search_data_by_id, search_all_data, search_passwd_by_useremail
 from src.methods.insert import insert_data_to_db
 from src.methods.update import update_data_to_db
 
@@ -26,16 +26,18 @@ async def insert_user(input_map: InsertSchema) -> ResponseModel:
     return ResponseModel(status_code=200, msg='Finish', data=dict(id=id))
 
 @router.get('/verify')
-async def verify_user(id, user_name, password) -> ResponseModel:
+async def verify_user(user_email, user_password) -> ResponseModel:
     status = False
+    user_id = None
     try:
-        data = search_data_by_id(table_name='users', id=id)[0]
-        if (data["user_name"] == user_name) and (str(data["password"]) == str(password)):
+        data = search_passwd_by_useremail(user_email)[0]
+        if (str(data["user_password"]) == str(user_password)):
             status = True
-    except:
-        pass 
+            user_id = data["id"]
+    except Exception as err:
+        print(err)
 
-    return ResponseModel(status_code=200, msg='Finish', data=dict(verified=status))
+    return ResponseModel(status_code=200, msg='Finish', data=dict(verified=status, user_id=user_id))
     
 @router.post('/update')
 async def update_user(input_map: UpdateSchema) -> ResponseModel:

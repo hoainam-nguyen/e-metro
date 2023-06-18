@@ -42,3 +42,21 @@ def search_data_by_id(table_name: str, id: int) -> List:
     
     result_dict = dict(zip(column_names, result))
     return [result_dict]
+
+
+def search_passwd_by_useremail(user_email: str):
+    _sql_str = f'''
+    SELECT * FROM users WHERE 1=1 and user_email='{user_email}' 
+    '''
+    conn = RESOUSCE_MAP['db']
+    cursor = conn.cursor()
+    cursor.execute(_sql_str)
+    
+    column_names = [desc.name for desc in cursor.description]
+    result = cursor.fetchone()
+    
+    conn.commit()
+    cursor.close()
+    
+    result_dict = dict(zip(column_names, result))
+    return [result_dict]
