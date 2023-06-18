@@ -94,7 +94,7 @@
                                 <input class="search-detail" type="text" placeholder="Tìm kiếm"></input>
                                 <div class="search-station">
                                     <ul class="search-station-list">
-                                        <li class="search-station-item">
+                                        <!-- <li class="search-station-item">
                                             <a href="detail_station.html">
                                                 <div class="item__img">
                                                 </div>
@@ -173,7 +173,7 @@
                                                     <span class="item__name">Bến Thành - Tham Lương</span>
                                                 </div>
                                             </a>
-                                        </li>
+                                        </li> -->
                                         
                                     </ul>
                                     <li class="search-more">
@@ -196,10 +196,10 @@
                             <div class="separate"></div>
                             <div class="img-info-container">
                                 <div class="detail-img">
-                                    <label for="input-img-file">
+                                    <label for="input-img-file-update">
                                         <i class="fa-solid fa-camera-rotate detail-img-icon"></i>
                                     </label>
-                                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-img-file">
+                                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-img-file-update">
                                 </div>
                                 <div class="detail-info">
                                     <div class="form__input-container detail-station__input-container">
@@ -208,12 +208,16 @@
                                             <input readonly="readonly" type="text" class="form__input detail-station__input"> 
                                         </div>
                                         <div class="form__group detail-station__group">
-                                            <span class="form__title detail-station__title">Tên nhà ga</span>
+                                            <span class="form__title detail-station__title">Tên nhà ga
+                                                <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                            </span>
                                             <input type="text" class="form__input detail-station__input" placeholder="Nhập tên nhà ga"> 
                                         </div>
                                         <div class="form__group detail-station__group">
-                                            <span class="form__title detail-station__title">Mô tả vị trí</span>
-                                            <textarea  class="form__textarea detail__textarea" rows="4" cols="50"></textarea>
+                                            <span class="form__title detail-station__title">Mô tả vị trí
+                                                <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                            </span>
+                                            <textarea  class="form__textarea detail__textarea detail-station__textarea" rows="4" cols="50"></textarea>
                                         </div>
                                         <div class="form__group detail-station__group">
                                             <span class="form__title detail-station__title">Tình trạng hoạt động</span>
@@ -284,15 +288,21 @@
 
                             <div class="form__input-container add-station-form__input-container">
                                 <div class="form__group add-station-form__group">
-                                    <span class="form__title add-station-form__title">Tên nhà ga</span>
+                                    <span class="form__title add-station-form__title">Tên nhà ga
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
                                     <input type="text" class="form__input add-station-form__input" placeholder="Nhập tên nhà ga"> 
                                 </div>
                                 <div class="form__group add-station-form__group">
-                                    <span class="form__title add-station-form__title">Mô tả vị trí</span>
+                                    <span class="form__title add-station-form__title">Mô tả vị trí
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
                                     <textarea  class="form__textarea add-station-form__textarea" rows="4" cols="50"></textarea>
                                 </div>
                                 <div class="form__group add-station-form__group">
-                                    <span class="form__title add-station-form__title margin_bottom">Tình trạng hoạt động</span>
+                                    <span class="form__title add-station-form__title margin_bottom">Tình trạng hoạt động
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
                                     <!-- SELECT OPTION ADD FORM -->
                                     <div class="select-menu select-menu-add">
                                         <div class="select-btn select-btn-add">
