@@ -1,0 +1,13 @@
+.separate-margin {
+    margin-top: 20px;
+}
+
+#input-img-file {
+    display: none;
+}
+
+.add-line-form__input-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
