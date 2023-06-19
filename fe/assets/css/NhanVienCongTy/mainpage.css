@@ -13,9 +13,6 @@ html {
     height: 66px;
     display: flex;
     justify-content: space-between;
-    /* padding-left: 200px; */
-    /* padding-right: 200px; */
-    /* margin: auto; */
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
@@ -401,4 +398,22 @@ hr {
 
 .filter{
     width: 188px;
+}
+
+.select-menu-update {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: "";
+    display: none;
+}
+
+.bar-chart_container {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 20px;
+    width: 100rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 16px 16px;
+    margin-bottom: 100px;
 }

@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+     <!--Boostrap-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ 
+     <!--Google font, font ansome-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese"
+         rel="stylesheet">
+     <link rel="stylesheet" href="/fe/assets/font/themify-icons/themify-icons.css" class="css">
+     <link rel="stylesheet" href="/fe/assets/font/fontawesome-free-6.4.0-web/css/all.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+ 
+    <!--CSS-->
+    <link rel="stylesheet" href="/fe/assets/css/base.css">  
+    <link rel="stylesheet" href="/fe/assets/css/NhanVienSo/station.css">
+    <link rel="stylesheet" href="/fe/assets/css/NhanVienCongTy/mainpage.css">
     <link rel="stylesheet" href="/fe/assets/css/NhanVienCongTy/trainmain.css">
-    <link rel="stylesheet" href="/fe/assets/css/NhanVienCongTy/trainbase.css">
-    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css" class="css">
-    <link rel="stylesheet" href="assets/font/fontawesome-free-6.4.0-web/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Train page</title>
 </head>
@@ -34,7 +39,7 @@
                         E -METRO
                     </span>
                 </div>
-                <div class="header__info__active">
+                <div class="header__info__active user-info-popup">
                     <div class="full__option">
                         <div class="avatar-wrapper">
                             <img class="profile-pic" src="/fe/assets/img/avatar.png" />
@@ -49,26 +54,44 @@
                             Bích Huyền
                         </span>
                     </div>
-                    <div class="icon__information">
-                        <div class="info__element">
-                            Thông tin cái nhân
+                    <div class="user-info">
+                        <div class="user-info__header">
+                            <div class="header2__info__active">
+                                <div class="avatar-wrapper2">
+                                    <img class="profile2-pic" src="/fe/assets/img/avatar.png" />
+                                    <div class="upload2-button">
+                                        <i class="fa fa-arrow-circle-up change-fa" aria-hidden="true"></i>
+                                    </div>
+                                    <input class="file2-upload" type="file" accept="image/*"/>
+                                </div>
+                                <div class="avatar__online__2"></div>  
+                            </div>
+                            <div class="user-info-acc">
+                                <div class="user-info-name">Bích Huyền</div>
+                                <div class="user-info-username">@huyendao</div>
+                            </div>
                         </div>
-                        <div class="info__element">
-                            Bảo mật và đăng nhập
-                        </div>
-                        <div class="info__element">
-                            Cài đặt
-                        </div>
-                        <div class="info__element">
-                            Đăng xuất
-                        </div>
-                    </div>  
+                        <hr class="seperate-info">
+                        <ul class="user-info__list">
+                            <a class="user-info-link" href="trangcanhan.html">
+                                <li class="user-info-item">Trang cá nhân</li>
+                            </a>
+                        </ul>
+                        <hr class="seperate-info">
+                        <ul class="user-info__list">
+                            <a class="user-info-link" href="trangcanhan.html">
+                                <li class="user-info-item">Cài đặt</li>
+                            </a>
+                            <a class="user-info-link" href="loginpage.html">
+                                <li class="user-info-item">Đăng xuất</li>
+                            </a>
+                        </ul>
+                    </div> 
                 </div>
                 
             </div>
         </header>
         <hr>
-        <div class="container">
             <div class="grid">
                 <nav class="tabs">
                     <a class="tab-item" href="trainhome.html">
@@ -86,7 +109,6 @@
                     <div class="line"></div>
                 </nav>
             </div>
-        </div>
         <div class="container">
             <nav class="navbar navbar-light d-flex mt-3 mb-5">
                 <form class="form-inline change__form__inline_2">
@@ -221,15 +243,12 @@
                     <div class="barcode"></div>
                 </div>
                 <div class="card cardRight">
-                    <div class="header2__info__active">
-                        <div class="avatar-wrapper2">
-                            <img class="profile2-pic" src="/assets/image/avatar.png" />
-                            <div class="upload2-button">
-                                <i class="fa fa-arrow-circle-up change-fa" aria-hidden="true"></i>
-                            </div>
-                            <input class="file2-upload" type="file" accept="image/*"/>
+                    <div class="header3__info__active">
+                        <div class="avatar-wrapper3">
+                            <img class="profile3-pic" src="/fe/assets/img/avatar.png" />
+                            <input class="file3-upload" type="file" accept="image/*"/>
                         </div>
-                        <div class="avatar__online__2"></div>  
+                        <div class="avatar__online__3"></div>  
                     </div>
                     <div class="information__staff ps-3 d-flex justify-content-between">
                         <div class="left__info">
