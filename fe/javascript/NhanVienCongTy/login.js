@@ -1,22 +1,3 @@
-
-
-// const forgotpass = document.querySelector('.reset');
-// const close = document.querySelector('.btn-close-change');
-// const modal = document.querySelector('.modal');
-
-// function OpenForgot(){
-//     modal.classList.add('open');
-// }
-
-// forgotpass.onclick = function(){
-//     modal.style.display = "block"
-// }
-
-// close.onclick = function(){
-//     modal.style.display = "none"
-// }
-
-// var checkUserApi = "https://aiclub.uit.edu.vn/namnh/emetro/users/verify?user_email=21522262@gm.uit.edu.vn&user_password=21522262";
 var getUserApi = "https://aiclub.uit.edu.vn/namnh/emetro/users/search/?id=";
 var resetPasswordApi = "https://aiclub.uit.edu.vn/namnh/emetro/users/reset?user_email=";
 
