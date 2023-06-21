@@ -104,6 +104,8 @@ hr {
     opacity: 0.6;
     cursor: pointer;
     transition: all 0.5s ease;
+    text-decoration: none;
+    color: #444;
 }
 
 .header__tabs .line {
@@ -119,9 +121,16 @@ hr {
 
 .tab-item:hover {
     opacity: 0.9;
+    color: var(--purple);
     border-color: var(--purple);
     background-color: rgba(83, 56, 158, 0.1);
 }
+
+
+.tab-item:hover .tab-item__text {
+    color: #444;
+}
+
 
 .tab-item.active {
     opacity: 1;
@@ -462,6 +471,8 @@ hr {
 .edit:hover {
     opacity: 0.8;
 }
+
+/* This is ticket seller css */
 .ticketseller{
     margin-top: 60px;
     height: 560px;
@@ -492,6 +503,7 @@ width: 400px;
     height: 47px;
     width: 400px;
 }
+/* Radio button */
 .radio{
 display: inline-flex;
 align-items: center;
@@ -531,6 +543,7 @@ transition: 300ms ease-in-out 0s;
 .radio__input:checked ~ .radio__radio:after{
     transform: translate(-50%,-50%) scale(1);
 }
+
 .seller_ticketid{
 width: 400px;
 height: 60px;
@@ -540,6 +553,7 @@ background-color:transparent ;
     margin-left: 15px;
     position: relative;
 }
+/* Text field */
 .text_field{
     border: 2px solid #6941C6;
     height: 45px;
@@ -549,6 +563,7 @@ background-color:transparent ;
     padding: 20px;
     border-radius: 10px;
     font-size: 12px;
+    font-weight: bold;
     transition: all .3s;
     outline: none;
     color:#6941C6;
@@ -610,24 +625,128 @@ background-color:transparent ;
     justify-content: center;
     align-items: flex-start;
 }
-.select_line{
-margin-left: 5px;
+/* Dropdown menu */
+.dropdown_number{
+width: 330px;
+margin-left: 35px;  
 }
-.dropdown_line{
-    margin-top: 5px;
-    margin-left: 0px;
-    width: 330px;
-    height: 55px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    border: 2px solid #6941C6;
-    color: #6941C6;
+.dropdown_number .select-btn{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 45px;
+    padding: 12px 15px;
+    background: #fff;
     font-size: 12px;
+    font-weight: 600;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between ;
+    color: #6941C6;
+    cursor: pointer;
+    border: #6941C6 solid 2px;
 }
+.caret{
+    width: 0;
+    width: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #6941C6;
+    transition: 0.3s;
+}
+.dropdown_number .options{
+    position: absolute;
+    padding: 10px;
+    font-size: 12px;
+    color: #6941C6;
+    width: 330px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    z-index: 2;
+}
+.dropdown_number.active .options{
+    display: block; 
+}
+.select-btn div{
+transition: 0.5s;   
+}
+.dropdown_number.active .select-btn div{
+    transform: rotate(-180deg); 
+}
+.options .option{
+    display: flex;
+    height: 15px;
+    cursor: pointer;
+    padding: 0 8px;
+    align-items: center;
+}
+.options .option:hover{
+    background: #6941C6;
+    color: #fff ;
+}
+/* dropdown_line */
+.dropdown_line{
+    margin-top: 15px;
+    width: 330px;
+    margin-left: 35px;  
+    }
+    .dropdown_line .select-btn{
+        display: flex;
+        height: 45px;
+        padding: 12px 15px;
+        background: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: space-between ;
+        color: #6941C6;
+        cursor: pointer;
+        border: #6941C6 solid 2px;
+    }
+    .caret{
+        width: 0;
+        width: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid #6941C6;
+        transition: 0.3s;
+    }
+    .dropdown_line .options{
+        position: absolute;
+        padding: 10px;
+        font-size: 12px;
+        color: #6941C6;
+        width: 330px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        display: none;
+        z-index: 2;
+    }
+    .dropdown_line.active .options{
+        display: block; 
+    }
+    .select-btn div{
+    transition: 0.5s;   
+    }
+    .dropdown_line.active .select-btn div{
+        transform: rotate(-180deg); 
+    }
+    .options .option{
+        display: flex;
+        height: 15px;
+        cursor: pointer;
+        padding: 0 8px;
+        align-items: center;
+    }
+    .options .option:hover{
+        background: #6941C6;
+        color: #fff ;
+    }
+/* date and status */
 .date_and_status{
+    margin-top: 10px;
     width: 400px;
     height: 70px;
     background-color: transparent;
@@ -635,10 +754,12 @@ margin-left: 5px;
 .date_choice{
     margin-left: 15px;
     position: relative;
+    z-index: 1;
 }
 .status{
     margin-top: -50px;
     position: relative;
+    z-index: 1;
 }
 .date_choice + .status{
     margin-left: 195px;
@@ -678,6 +799,7 @@ margin-left: 5px;
     margin-left: 5px;
 }
 .text_field_price{
+    position: relative;
     border: 2px solid #6941C6;
     height: 45px;
     width: 330px;
@@ -686,16 +808,18 @@ margin-left: 5px;
     padding-left: 20px;
     border-radius: 10px;
     font-size: 12px;
+    font-weight: bold;
     transition: all .3s;
     outline: none;
     color:#6941C6;
+    padding: 0 65px;
 }
 .tf_label_price{
     text-align: right;
     position: absolute;
     left: 35px;
     transform: all 0.2s;
-    padding: 0 2px;
+    padding: 5px 10px 0px 0;
     transform: translateY(-50%);
     z-index: 1;
     color:#6941C6;
@@ -732,3 +856,65 @@ margin-left: 5px;
 .accept-but:active{
     transform: translateY(2px);
 }
+/* toast */
+#success_toast{
+    position: fixed;
+    margin-left: 1110px;
+    width: 350px;
+}
+.toast{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    border-left: 4px solid #6941C6;
+    padding: 20px 0;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    transition: all linear 0.25s;
+    /* animation:  */
+}
+@keyframes slideinleft{
+    from  {
+        opacity: 0;
+        transform: translateX(calc(100% + 15px));
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeout{
+    to{
+        opacity: 0;
+    }
+}
+.toast_icon{
+    font-size: 24px;
+    color: #6941C6;
+}
+.toast_icon, .toast_close{
+    padding: 0 16px;
+}
+.toast + .toast{
+    margin-top: 15px;
+}
+.toast_body{
+
+}
+.toast_title{
+font-size: 16px;
+font-weight: 600;
+color: #6941C6;
+}
+.toast_msg{
+    font-size: 14px;
+    color: #333;
+}
+.toast_close{
+    margin-left: 50px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
