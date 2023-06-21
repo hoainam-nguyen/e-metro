@@ -2,7 +2,10 @@
     position: relative;
 }
 
-.select-company {
+
+
+
+/* .select-company {
     position: absolute;
     content: "";
     top: 50%;
@@ -13,14 +16,10 @@
     border-radius: 5px;
     transform: translate(-50%, -50%);
     z-index: 3;
+} */
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    display: none;
-}
-
+/* 
 .select-company__search {
     width: 550px;
     margin-top: 50px;
@@ -48,4 +47,4 @@
 
 .search-company-name {
     
-}
+} */

@@ -81,6 +81,9 @@ btnLogin.onclick = function() {
                             case 1:
                                 window.location.href = 'home.html';
                                 break;
+                            case 2:
+                                window.location.href = 'line_home.html';
+                                break;
                         }
                     });
 
@@ -92,9 +95,9 @@ btnLogin.onclick = function() {
 }
 
 
-var blur = function() {
+var focus = function() {
     return function(e) {
-        e.target.style.borderColor = "rgba(0, 0, 0, 0.5)";
+        e.target.style.borderColor = "var(--purple)";
     };
 }
 
@@ -109,12 +112,12 @@ function checkLoginForm() {
 
         if (username.value == "") {
             username.style.borderColor = 'red';
-            username.addEventListener('blur', blur());
+            username.addEventListener('focus', focus());
         } 
 
         if (password.value == "") {
             password.style.borderColor = 'red';
-            password.addEventListener('blur', blur());
+            password.addEventListener('focus', focus());
         } 
 
         alert("Vui lòng nhập đầy đủ thông tin!");    

@@ -27,10 +27,6 @@
     padding: 10px;
 }
 
-/* ADD LINE FORM */
-.add-line-form {
-    display: none;
-}
 
 /* SELECT COMPANY */
 .select-company-form {
@@ -81,14 +77,6 @@
     margin-top: 100px;
 }
 
-/* .btn + .btn {
-    margin-top: 20px;
-} */
-
-.btn-margin {
-    margin-top: 20px;
-}
-
 .select-route-form__content {
     margin-bottom: 30px;
 }
@@ -137,20 +125,39 @@
 }
 
 
-/* SORT | ARROW ICON IN TABLE */
-.arrow_icon_margin {
-    margin-left: 2.5px;
-    margin-right: 2.5px;   
-}
-.table_heading:hover {
-    opacity: 0.92;
+/*  */
+.update-line__group {
+    position: relative;
 }
 
-.table_heading_active_asc .fa-arrow-up{
-    color: yellow;
+.select-menu-update {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
 }
 
-.table_heading_active_desc .fa-arrow-up{
-    color: yellow;
-    transform: rotate(180deg);
+.search-company-item:hover {
+    cursor: pointer;
+}
+
+.btn-margin {
+    margin-top: 20px;
+}
+
+/*  */
+
+.select-menu-container {
+    display: flex;
+}
+
+.margin-form {
+    margin-left: 200px;
+}
+
+.select-menu-update2 {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0; 
 }

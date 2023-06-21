@@ -5,6 +5,7 @@ const upload_button = document.querySelector('.upload-button')
 const profile2_pic = document.querySelector('.profile2-pic')
 const file2_upload = document.querySelector('.file2-upload')
 const upload2_button = document.querySelector('.upload2-button')
+const profile3_pic = document.querySelector('.profile3-pic')
 
 file_upload.addEventListener('change',function() {
     if (this.files && this.files[0]) {
@@ -20,6 +21,13 @@ file_upload.addEventListener('change',function() {
         }
   
         profile2_pic.src = URL.createObjectURL(this.files[0]); // set src to blob url
+    }
+    if (this.files && this.files[0]) {
+        profile3_pic.onload = () => {
+            URL.revokeObjectURL(profile3_pic.src);  // no longer needed, free memory
+        }
+  
+        profile3_pic.src = URL.createObjectURL(this.files[0]); // set src to blob url
     }
 });
 

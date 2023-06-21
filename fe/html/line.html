@@ -22,7 +22,6 @@
     <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/main.css">
     <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienCongTy/main.css">
     <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienCongTy/line.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/station.css"> -->
 
 </head>
 <body>
@@ -73,11 +72,11 @@
         <nav class="top-nav">
             <div class="grid">
                 <nav class="tabs">
-                    <a class="tab-item" href="home.html">
+                    <a class="tab-item" href="line_home.html">
                         <i class="tab-item__icon fa-solid fa-house"></i>
                         <span class="tab-item__text">TRANG CHỦ</span>
                     </a>
-                    <a class="tab-item active" href="station.html">
+                    <a class="tab-item active" href="line.html">
                         <i class="tab-item__icon fa-solid fa-train"></i>
                         <span class="tab-item__text">TUYẾN TÀU</span>
                     </a>
@@ -100,11 +99,11 @@
                             </div>
                             <hr class="seperate-filter">
                             <label class="container">Tốc hành
-                                <input class="checkbox" type="checkbox" checked="checked" value="Bình thường">
+                                <input class="checkbox" type="checkbox" checked="checked" value="Tốc hành">
                                 <span class="checkmark"></span>
                             </label>
                             <label class="container">Thường
-                                <input class="checkbox" type="checkbox" checked="checked" value="Đang sửa chữa">
+                                <input class="checkbox" type="checkbox" checked="checked" value="Thường">
                                 <span class="checkmark"></span>
                             </label>
 
@@ -114,11 +113,11 @@
                             </div>
                             <hr class="seperate-filter">
                             <label class="container">Còn hoạt động
-                                <input class="checkbox" type="checkbox" checked="checked" value="Đã ngừng hoạt động">
+                                <input class="checkbox" type="checkbox" checked="checked" value="Còn hoạt động">
                                 <span class="checkmark"></span>
                             </label>
                             <label class="container">Không hoạt động
-                                <input class="checkbox" type="checkbox" checked="checked" value="Đã ngừng hoạt động">
+                                <input class="checkbox" type="checkbox" checked="checked" value="Không hoạt động">
                                 <span class="checkmark"></span>
                             </label>
                         </div>
@@ -136,13 +135,13 @@
                             <table id="dataTable" class="table">
                                 <thead>
                                     <tr>
-                                        <th class="table_heading">ID
-                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin"></i>
-                                        </th>
-                                        <th class="table_heading">Tên công ty
+                                        <th class="table_heading">Mã tuyến tàu
                                             <i class="arrow fa-solid fa-arrow-up arrow_icon_margin"></i>
                                         </th>
                                         <th class="table_heading">Tên tuyến tàu
+                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin"></i>
+                                        </th>
+                                        <th class="table_heading">Loại tuyến
                                             <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
                                         </th>
                                         <th class="table_heading">Trạng thái
@@ -151,37 +150,40 @@
                                         <th class="table_heading">Giá vé
                                             <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
                                         </th>
-                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <!-- <tr>
                                         <td>MT01</td>
-                                        <td>Bến Thành</td>
-                                        <td>Nằm bên dưới khu vực chợ Bến Thành</td>
-                                        <td>Bình thường</td>
-                                        <td><i class="fa-sharp fa-solid fa-pen-to-square edit"></i></td>
+                                        <td>Bến Thành - Suối Tiên</td>
+                                        <td>15 - Tập đoàn Đèo Cả</td>
+                                        <td>Tốc hành</td>
+                                        <td>Còn hoạt động</td>
+                                        <td>50000</td>
                                     </tr>
                                     <tr>
-                                        <td>MT02</td>
-                                        <td>Suối Tiên</td>
-                                        <td>Đối diện khu du lịch Suối Tiên</td>
-                                        <td>Đang sửa chữa</td>
-                                        <td><i class="fa-sharp fa-solid fa-pen-to-square edit"></i></td>
+                                        <td>MT01</td>
+                                        <td>Bến Thành - Suối Tiên</td>
+                                        <td>15 - Tập đoàn Đèo Cả</td>
+                                        <td>Tốc hành</td>
+                                        <td>Còn hoạt động</td>
+                                        <td>50000</td>
                                     </tr>
                                     <tr>
-                                        <td>MT03</td>
-                                        <td>Nhà hát thành phố</td>
-                                        <td>Nằm bên dưới khu vực nhà hát thành phố</td>
-                                        <td>Đã ngừng hoạt động</td>
-                                        <td><i class="fa-sharp fa-solid fa-pen-to-square edit"></i></td>
+                                        <td>MT01</td>
+                                        <td>Bến Thành - Suối Tiên</td>
+                                        <td>15 - Tập đoàn Đèo Cả</td>
+                                        <td>Tốc hành</td>
+                                        <td>Còn hoạt động</td>
+                                        <td>50000</td>
                                     </tr>
                                     <tr>
-                                        <td>MT04</td>
-                                        <td>Thủ Đức</td>
-                                        <td>Gần khu vực ngã tư Thủ Đức</td>
-                                        <td>Đã ngừng hoạt động</td>
-                                        <td><i class="fa-sharp fa-solid fa-pen-to-square edit"></i></td>
+                                        <td>MT01</td>
+                                        <td>Bến Thành - Suối Tiên</td>
+                                        <td>15 - Tập đoàn Đèo Cả</td>
+                                        <td>Tốc hành</td>
+                                        <td>Còn hoạt động</td>
+                                        <td>50000</td>
                                     </tr> -->
                                 </tbody>
                             </table>
@@ -203,41 +205,18 @@
             <div class="modal__body">
                 <div class="modal__inner">
 
-                    <!-- SELECT OPTION ADD FORM -->
-                    <!-- <div class="select-menu select-menu-add">
-                        <div class="select-btn select-btn-add">
-                            <span class="sBtn-text sBtn-text-add">Tình trạng hoạt động</span>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="options">
-                            <li class="option option-add">
-                                <i class="fa-solid fa-circle-dot" style="color: #25ef68;"></i>
-                                <span class="option-text option-text-add">Bình thường</span>
-                            </li>
-                            <li class="option option-add">
-                                <i class="fa-solid fa-wrench" style="color: #949494;"></i>
-                                <span class="option-text option-text-add">Đang sửa chữa</span>
-                            </li>
-                            <li class="option option-add">
-                                <i class="fa-solid fa-circle-xmark" style="color: #f44e4e;"></i>
-                                <span class="option-text option-text-add">Đã ngừng hoạt động</span>
-                            </li>
-                        </ul>
-                    </div> -->
-
-
-                    <!-- Add Station Form -->
+                    <!-- ADD LINE FORM -->
                     <div class="form add-line-form">
                         <div class="form__header add-line-form__header">
                             <h1 class="form__heading add-line-form__heading">Thêm mới tuyến tàu</h1>
                         </div>
                         <div class="form__content add-line-form__content">
-                            <div class="form__img add-line-form__img">
+                            <!-- <div class="form__img add-line-form__img">
                                 <label for="input-img-file">
                                     <i class="fa-solid fa-camera-rotate form__img-icon add-line-form__img-icon"></i>
                                 </label>
                                 <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-img-file">
-                            </div>
+                            </div> -->
 
                             <div class="form__input-container add-line-form__input-container">
                                 <div class="form__group add-line-form__group">
@@ -250,37 +229,42 @@
                                     <span class="form__title add-line-form__title">Giá vé
                                         <span class="warning-message warning-add">* Không được bỏ trống</span>
                                     </span>
-                                    <input type="text" class="form__input add-line-form__input" placeholder="Nhập giá vé"> 
+                                    <input type="number" class="form__input add-line-form__input ticket_price" placeholder="Nhập giá vé"> 
                                 </div>
                                 <div class="form__group add-line-form__group">
                                     <span class="form__title add-line-form__title">Thời gian dừng ở mỗi ga
                                         <span class="warning-message warning-add">* Không được bỏ trống</span>
                                     </span>
-                                    <input type="text" class="form__input add-line-form__input" placeholder="Nhập thời gian dừng"> 
-                                </div>
-                                <div class="form__group add-line-form__group">
-                                    <span class="form__title add-line-form__title">Thời gian đợi ở mỗi ga
-                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
-                                    </span>
-                                    <input type="text" class="form__input add-line-form__input" placeholder="Nhập thời gian đợi"> 
+                                    <div class="min-sec-container">
+                                        <input type="number" max="10" min="0" class="min-sec-option min" placeholder="MM">
+                                        <span class="min-sec-separate">:</span>
+                                        <input type="number" max="59" min="0" class="min-sec-option sec" placeholder="SS">
+                            
+                                    </div>
                                 </div>
                                 <div class="form__group add-line-form__group">
                                     <span class="form__title add-line-form__title">Thời gian bắt đầu
                                         <span class="warning-message warning-add">* Không được bỏ trống</span>
                                     </span>
-                                    <input type="text" class="form__input add-line-form__input" placeholder="Nhập thời gian bắt đầu"> 
+                                    <input type="time" class="form__input add-line-form__input" placeholder="Nhập thời gian bắt đầu"> 
                                 </div>
                                 <div class="form__group add-line-form__group">
                                     <span class="form__title add-line-form__title">Thời gian kết thúc
                                         <span class="warning-message warning-add">* Không được bỏ trống</span>
                                     </span>
-                                    <input type="text" class="form__input add-line-form__input" placeholder="Nhập thời gian kết thúc"> 
+                                    <input type="time" class="form__input add-line-form__input" placeholder="Nhập thời gian kết thúc"> 
                                 </div>
                                 <div class="form__group add-line-form__group">
                                     <span class="form__title add-line-form__title">Công ty khai thác
                                         <span class="warning-message warning-add">* Không được bỏ trống</span>
                                     </span>
-                                    <input readonly type="text" class="form__input add-line-form__input" placeholder="Chọn công ty khai thác"> 
+                                    <input readonly type="text" class="form__input add-line-form__input select-company__input" placeholder="Chọn công ty khai thác"> 
+                                </div>
+                                <div class="form__group add-line-form__group">
+                                    <span class="form__title add-line-form__title">Lộ trình đi qua
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
+                                    <input readonly type="text" class="form__input add-line-form__input select-route__input" placeholder="Chọn các nhà ga"> 
                                 </div>
                                 <div class="form__group add-line-form__group">
                                     <span class="form__title add-line-form__title">Loại tuyến
@@ -289,7 +273,7 @@
 
                                     <div class="select-menu select-menu-add">
                                         <div class="select-btn select-btn-add">
-                                            <span class="sBtn-text sBtn-text-add">Loại tuyến</span>
+                                            <span class="sBtn-text sBtn-text-add">Chọn loại tuyến</span>
                                             <i class="fa-solid fa-chevron-down"></i>
                                         </div>
                                         <ul class="options">
@@ -302,158 +286,101 @@
                                         </ul>
                                     </div> 
                                 </div>
-                            
-                                
-
-                                
-                                <!-- <div class="form__group add-line-form__group">
-                                    <span class="form__title add-line-form__title">Mô tả vị trí
-                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
-                                    </span>
-                                    <textarea  class="form__textarea add-line-form__textarea" rows="4" cols="50"></textarea>
-                                </div> -->
-                                <!-- <div class="form__group add-line-form__group">
-                                    <span class="form__title add-line-form__title margin_bottom">Tình trạng hoạt động
-                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
-                                    </span>
-                                    <input type="text" class="form__input add-line-form__input"> 
-                                </div> -->
                             </div>
                         </div> 
                         <div class="form__controls add-line-form__controls">
                             <button id="add_btn_cancel" class="btn margin_btn">HỦY</button>
                             <button id="add_btn_yes" class="btn btn--primary">THÊM</button>
                         </div>
+                    </div>
 
-                        <div class="select-company">
-                           
 
-                            <input type="text" class="form__input select-company__search" placeholder="Nhập tên hoặc mã công ty"> 
-                            
 
-                            <div class="search-company-container">
-                                <ul class="search-company-list">
-                                    <li class="search-company-item">
-                                        <span class="search-company-name">CT01 Vạn Thịnh Phát</span>
-                                    </li>
-                                    <li class="search-company-item">
-                                        <span class="search-company-name">CT01 Vạn Thịnh Phát</span>
-                                    </li>
-                                    <li class="search-company-item">
-                                        <span class="search-company-name">CT01 Vạn Thịnh Phát</span>
-                                    </li>
-                                    <li class="search-company-item">
-                                        <span class="search-company-name">CT01 Vạn Thịnh Phát</span>
-                                    </li>
-                                    <li class="search-company-item">
-                                        <span class="search-company-name">CT01 Vạn Thịnh Phát</span>
-                                    </li>
-                                    <li class="search-company-item">
-                                        <span class="search-company-name">CT01 Vạn Thịnh Phát</span>
-                                    </li>
-                                    <li class="search-company-item">
-                                        <span class="search-company-name">CT01 Vạn Thịnh Phát</span>
-                                    </li>
-                                    <li class="search-company-item">
-                                        <span class="search-company-name">CT01 Vạn Thịnh Phát</span>
-                                    </li>
-                                    <li class="search-company-item">
-                                        <span class="search-company-name">CT01 Vạn Thịnh Phát</span>
-                                    </li>
-                                    <li class="search-company-item">
-                                        <span class="search-company-name">CT01 Vạn Thịnh Phát</span>
-                                    </li>
-                                    <li class="search-company-item">
-                                        <span class="search-company-name">CT01 Vạn Thịnh Phát</span>
-                                    </li>
-                                    <li class="search-company-item">
-                                        <span class="search-company-name">CT01 Vạn Thịnh Phát</span>
-                                    </li>
 
+
+
+
+
+
+
+
+                    <!-- SELECT COMPANY FORM -->
+                    <div class="form select-company-form">
+                        <div class="form__header select-company-form__header">
+                            <h1 class="form__heading select-company-form__heading">Chọn công ty khai thác</h1>
+                        </div>
+                        <div class="form__content select-company-form__content">
+                            <div class="form__input-container select-company-form__input-container">
+
+                                <div class="form__group select-company-form__group">
+                                    <input type="text" class="form__input select-company-form__input select-company__search" placeholder="Nhập mã hoặc tên công ty"> 
+                                </div>
+
+
+                                <ul class="list-company">
                                 </ul>
+
+                            </div>
+                        </div> 
+                    </div>
+
+
+
+
+                    <!-- SELECT ROUTE -->
+
+                    <div class="form select-route-form">
+                        <div class="form__header select-route-form__header">
+                            <h1 class="form__heading select-route-form__heading">Chọn công ty khai thác</h1>
+                        </div>
+                        <div class="form__content select-route-form__content">
+                            <div class="form__input-container select-route-form__input-container">
+                                
+                                <div class="form__group add-line-form__group">
+                                    <span class="form__title add-line-form__title title">Lộ trình các nhà ga đi qua</span>
+                                </div>
+                               
+                                <ul class="list list-added">
+                                    <!-- <li class="item item-added">
+                                        <span class="name name-added">1. NG01 - Bến Thành</span>
+                                    </li> -->
+                                </ul>
+
+                              
                             </div>
 
+                            <div class="select-route__controls">
+                                <button id="select-route_btn_delete" class="btn">DELETE</button>
+                                <button id="select-route_btn_add" class="btn btn--primary btn-margin">ADD</button>
+                            </div>
 
-                            <!-- <div class="form__controls add-line-form__controls add_company_controls">
-                                <button id="add_company_cancel" class="btn margin_btn">HỦY</button>
-                                <button id="add_company_yes" class="btn btn--primary">THÊM</button>
+                            <!-- <div class="form__controls select-route__controls">
+                                <button id="select-route_btn_delete" class="btn margin_btn">DELETE</button>
+                                <button id="select-route_btn_add" class="btn btn--primary">ADD</button>
                             </div> -->
+
+                            <div class="form__input-container select-route-form__input-container">
+
+                                <div class="form__group select-route-form__group">
+                                    <input type="text" class="form__input select-route-form__input select-route__search" placeholder="Nhập mã hoặc tên nhà ga"> 
+                                </div>
+
+                                <ul class="list list-station">   
+                            
+                                </ul>
+
+                              
+                            </div>
+                        </div> 
+                        <div class="form__controls select-route__controls2">
+                            <button id="select-route_form_btn_yes" class="btn btn--primary">XONG</button>
                         </div>
                     </div>
 
-                    
-                    <!-- SELECT OPTION UPDATE FORM -->
-                    
-
-                    
-
-                    <!-- Update Station Form -->
-                    <!-- <div class="form update-station-form">
-                        <div class="form__header update-station-form__header">
-                            <h1 class="form__heading update-station-form__heading">Cập nhật thông tin nhà ga</h1>
-                        </div>
-                        <div class="form__content update-station-form__content">
-                            <div class="form__img update-station-form__img">
-                                <label for="input-img-file-update">
-                                    <i class="fa-solid fa-camera-rotate form__img-icon update-station-form__img-icon"></i>
-                                </label>
-                                <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-img-file-update">
-                            </div>
-
-                            <div class="form__input-container update-station-form__input-container">
-                                <div class="form__group update-station-form__group">
-                                    <span class="form__title update-station-form__title">Mã nhà ga</span>
-                                    <input readonly="readonly" type="text" class="form__input update-station-form__input"> 
-                                </div>
-                                <div class="form__group update-station-form__group">
-                                    <span class="form__title update-station-form__title">Tên nhà ga
-                                        <span class="warning-message warning-update">* Không được bỏ trống</span>
-                                    </span>
-                                    <input type="text" class="form__input update-station-form__input" placeholder="Nhập tên nhà ga"> 
-                                </div>
-                                <div class="form__group update-station-form__group">
-                                    <span class="form__title update-station-form__title">Mô tả vị trí
-                                        <span class="warning-message warning-update">* Không được bỏ trống</span>
-                                    </span>
-                                    <textarea  class="form__textarea update-station-form__textarea" rows="4" cols="50"></textarea> 
-                                </div>
-                                <div class="form__group update-station-form__group">
-                                    <span class="form__title update-station-form__title margin_bottom">Tình trạng hoạt động</span>
-
-                                    <div class="select-menu select-menu-update">
-                                        <div class="select-btn select-btn-update">
-                                            <span class="sBtn-text sBtn-text-update">Tình trạng hoạt động</span>
-                                            <i class="fa-solid fa-chevron-down"></i>
-                                        </div>
-                                        <ul class="options">
-                                            <li class="option option-update">
-                                                <i class="fa-solid fa-circle-dot" style="color: #25ef68;"></i>
-                                                <span class="option-text option-text-update">Bình thường</span>
-                                            </li>
-                                            <li class="option option-update">
-                                                <i class="fa-solid fa-wrench" style="color: #949494;"></i>
-                                                <span class="option-text option-text-update">Đang sửa chữa</span>
-                                            </li>
-                                            <li class="option option-update">
-                                                <i class="fa-solid fa-circle-xmark" style="color: #f44e4e;"></i>
-                                                <span class="option-text option-text-update">Đã ngừng hoạt động</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="form__controls update-station-form__controls">
-                            <button id="update_btn_cancel" class="btn margin_btn">HỦY</button>
-                            <button id="update_btn_yes" class="btn btn--primary">CẬP NHẬT</button>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- <script src="/fe/javascript/NhanVienSo/main.js"></script> -->
-    <!-- <script src="/fe/javascript/NhanVienSo/station.js"></script> -->
     <script src="/fe/javascript/NhanVienCongTy/main.js"></script>
     <script src="/fe/javascript/NhanVienCongTy/line.js"></script>
 </body>

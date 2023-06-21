@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-METRO</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/main.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/detail_company.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienCongTy/detail_line.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <!--  -->
+                <div class="header__info">
+                    <a class="header__info-item app-info" href="/fe/html/home.html">
+                        <div class="app-info__logo-container">
+                            <i class="app-info__logo fa-solid fa-train"></i>
+                        </div>
+                        <h1 class="app-info__name">
+                            <span class="app-info__name-E">E</span>
+                            -METRO
+                        </h1>
+                    </a>
+                    <div class="header__info-item user-acc user-info-popup">
+                        <img src="https://plus.unsplash.com/premium_photo-1666184129932-e443a8de06e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" class="user-acc__avt">
+                        <span class="user-acc__name">Phạm Kiệt</span>
+
+                        
+                        <div class="user-info">
+                            <div class="user-info__header">
+                                <img src="https://plus.unsplash.com/premium_photo-1666184129932-e443a8de06e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" class="user-info-avt">
+                                <div class="user-info-acc">
+                                    <div class="user-info-name">Phạm Kiệt</div>
+                                    <div class="user-info-username">@phamkiet</div>
+                                </div>
+                            </div>
+                            <hr class="seperate-info">
+                            <ul class="user-info__list">
+                                <li class="user-info-item">Trang cá nhân</li>
+                            </ul>
+                            <hr class="seperate-info">
+                            <ul class="user-info__list">
+                                <li class="user-info-item">Cài đặt</li>
+                                <li class="user-info-item">Đăng xuất</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <hr>
+
+        <nav class="top-nav">
+            <div class="grid">
+                <nav class="tabs">
+                    <a class="tab-item" href="home.html">
+                        <i class="tab-item__icon fa-solid fa-house"></i>
+                        <span class="tab-item__text">TRANG CHỦ</span>
+                    </a>
+                    <a class="tab-item active" href="line.html">
+                        <i class="tab-item__icon fa-solid fa-train"></i>
+                        <span class="tab-item__text">TUYẾN TÀU</span>
+                    </a>
+                    <div class="line"></div>
+                </nav>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-12">
+                        <div class="detail-container tool-container">
+                            <div class="search-container">
+                                <input class="search-detail" type="text" placeholder="Tìm kiếm"></input>
+                                <div class="search-company">
+                                    <ul class="search-company-list">
+                                        <!-- <li class="search-company-item">
+                                            <a href="detail_company.html">
+                                                <div class="item__img">
+                                                </div>
+                                                <div class="item__info">
+                                                    <span class="item__code">CT01</span>
+                                                    <span class="item__name">Vạn Thịnh Phát</span>
+                                                </div>
+                                            </a>
+                                        </li> -->
+                                    </ul>
+                                    <li class="search-company-more">
+                                        <a class="search-company-more__link" href="line.html">
+                                            <span>Xem tất cả</span>
+                                        </a>
+                                    </li>
+                                </div>
+                            </div>
+                            <!-- <div class="btn-container add-container">
+                                <i class="fa-solid fa-circle-plus icon-margin"></i> 
+                                Thêm mới công ty
+                            </div> -->
+                        </div>
+
+                        <div class="detail-container info-container">
+                            <div class="info-header">
+                                <div class="info-heading">Hồ Sơ Tuyến Tàu</div>
+                            </div>
+                            <div class="separate"></div>
+                            <div class="img-info-container">
+                                <div class="form__input-container detail-company__input-container">
+                                    <div class="form__group update-line__group">
+                                        <span class="form__title update-line__title">Mã tuyến tàu</span>
+                                        <input readonly type="text" class="form__input update-line__input"> 
+                                    </div>
+                                    <div class="form__group update-line__group">
+                                        <span class="form__title update-line__title">Tên tuyến tàu
+                                            <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                        </span>
+                                        <input type="text" class="form__input update-line__input" placeholder="Nhập tên tuyến tàu"> 
+                                    </div>
+                                    <div class="form__group update-line__group">
+                                        <span class="form__title update-line__title">Giá vé
+                                            <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                        </span>
+                                        <input type="number" class="form__input update-line__input ticket_price" placeholder="Nhập giá vé"> 
+                                    </div>
+                                    <div class="form__group update-line__group">
+                                        <span class="form__title update-line__title">Thời gian dừng ở mỗi ga
+                                            <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                        </span>
+                                        <div class="min-sec-container">
+                                            <input type="number" max="10" min="0" class="min-sec-option min" placeholder="MM">
+                                            <span class="min-sec-separate">:</span>
+                                            <input type="number" max="59" min="0" class="min-sec-option sec" placeholder="SS">
+                                
+                                        </div>
+                                    </div>
+                                    <div class="form__group update-line__group">
+                                        <span class="form__title update-line__title">Thời gian bắt đầu
+                                            <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                        </span>
+                                        <input type="time" class="form__input update-line__input" placeholder="Nhập thời gian bắt đầu"> 
+                                    </div>
+                                    <div class="form__group update-line__group">
+                                        <span class="form__title update-line__title">Thời gian kết thúc
+                                            <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                        </span>
+                                        <input type="time" class="form__input update-line__input" placeholder="Nhập thời gian kết thúc"> 
+                                    </div>
+                                    <div class="form__group update-line__group">
+                                        <span class="form__title update-line__title">Công ty khai thác
+                                            <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                        </span>
+                                        <input readonly type="text" class="form__input update-line__input select-company__input" placeholder="Chọn công ty khai thác"> 
+                                    </div>
+                                    <div class="form__group update-line__group">
+                                        <span class="form__title update-line__title">Lộ trình đi qua
+                                            <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                        </span>
+                                        <input readonly type="text" class="form__input update-line__input select-route__input" placeholder="Chọn các nhà ga"> 
+                                    </div>
+
+                                    <div class="select-menu-container">
+                                        <div class="form__group update-line__group">
+                                            <span class="form__title update-line__title">Loại tuyến
+                                                <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                            </span>
+        
+                                            <div class="select-menu select-menu-update">
+                                                <div class="select-btn select-btn-update">
+                                                    <span class="sBtn-text sBtn-text-update">Chọn loại tuyến</span>
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+                                                <ul class="options">
+                                                    <li class="option option-update">
+                                                        <span class="option-text option-text-update">Tốc hành</span>
+                                                    </li>
+                                                    <li class="option option-update">
+                                                        <span class="option-text option-text-update">Thường</span>
+                                                    </li>
+                                                </ul>
+                                            </div> 
+                                        </div>
+                                        <div class="form__group update-line__group margin-form">
+                                            <span class="form__title update-line__title">Tình trạng
+                                                <span class="warning-message warning-update">* Không được bỏ trống</span>
+                                            </span>
+        
+                                            <div class="select-menu select-menu-update2">
+                                                <div class="select-btn select-btn-update2">
+                                                    <span class="sBtn-text sBtn-text-update2">Chọn tình trạng</span>
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+                                                <ul class="options">
+                                                    <li class="option option-update2">
+                                                        <span class="option-text option-text-update2">Còn hoạt động</span>
+                                                    </li>
+                                                    <li class="option option-update2">
+                                                        <span class="option-text option-text-update2">Không hoạt động</span>
+                                                    </li>
+                                                </ul>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                   
+                                </div>
+    
+                            
+                            </div>
+                            <div class="update-button-container">
+                                <div class="btn-container update-container">
+                                    <i class="fa-solid fa-square-pen icon-margin"></i>
+                                    Cập nhật
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer-container">
+                
+            </div>
+        </footer>
+
+        <!-- Modal Layout -->
+        <div class="modal">
+            <div class="modal__overlay"></div>
+
+            <div class="modal__body">
+                <div class="modal__inner">
+
+                   <!-- SELECT COMPANY FORM -->
+                   <div class="form select-company-form">
+                    <div class="form__header select-company-form__header">
+                        <h1 class="form__heading select-company-form__heading">Chọn công ty khai thác</h1>
+                    </div>
+                    <div class="form__content select-company-form__content">
+                        <div class="form__input-container select-company-form__input-container">
+
+                            <div class="form__group select-company-form__group">
+                                <input type="text" class="form__input select-company-form__input select-company__search" placeholder="Nhập mã hoặc tên công ty"> 
+                            </div>
+
+
+                            <ul class="list-company">
+                            </ul>
+
+                        </div>
+                    </div> 
+                </div>
+
+
+
+
+
+
+
+                <!-- SELECT ROUTE -->
+
+                <div class="form select-route-form">
+                    <div class="form__header select-route-form__header">
+                        <h1 class="form__heading select-route-form__heading">Chọn công ty khai thác</h1>
+                    </div>
+                    <div class="form__content select-route-form__content">
+                        <div class="form__input-container select-route-form__input-container">
+                            
+                            <div class="form__group add-line-form__group">
+                                <span class="form__title add-line-form__title title">Lộ trình các nhà ga đi qua</span>
+                            </div>
+                           
+                            <ul class="list list-added">
+                                <!-- <li class="item item-added">
+                                    <span class="name name-added">1. NG01 - Bến Thành</span>
+                                </li> -->
+                            </ul>
+
+                          
+                        </div>
+
+                        <div class="select-route__controls">
+                            <button id="select-route_btn_delete" class="btn">DELETE</button>
+                            <button id="select-route_btn_add" class="btn btn--primary btn-margin">ADD</button>
+                        </div>
+
+                        <!-- <div class="form__controls select-route__controls">
+                            <button id="select-route_btn_delete" class="btn margin_btn">DELETE</button>
+                            <button id="select-route_btn_add" class="btn btn--primary">ADD</button>
+                        </div> -->
+
+                        <div class="form__input-container select-route-form__input-container">
+
+                            <div class="form__group select-route-form__group">
+                                <input type="text" class="form__input select-route-form__input select-route__search" placeholder="Nhập mã hoặc tên nhà ga"> 
+                            </div>
+
+                            <ul class="list list-station">   
+                        
+                            </ul>
+
+                          
+                        </div>
+                    </div> 
+                    <div class="form__controls select-route__controls2">
+                        <button id="select-route_form_btn_yes" class="btn btn--primary">XONG</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/fe/javascript/NhanVienCongTy/main.js"></script>
+    <script src="/fe/javascript/NhanVienCongTy/detail_line.js"></script>
+</body>
+</html>
