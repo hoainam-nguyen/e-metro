@@ -191,6 +191,7 @@
     font-weight: inherit;
     color: #333333;
 }
+/* button style  */
 .profile_edit{
     width: 100px;
     height: 35px;
@@ -216,6 +217,22 @@
     cursor: pointer;
     margin-top: 10px;
     margin-left: 30px;
+}
+.save_profile:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.save_profile:active{
+    box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
+.profile_edit:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.profile_edit:active{
+    box-shadow: 0 1px #666;
+  transform: translateY(4px);
 }
 #img-update{
     display: none;
