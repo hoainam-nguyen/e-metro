@@ -78,13 +78,12 @@ input:focus {
 }
 
 
-.forgot-password-box {
-    align-self: flex-end;
-    margin-top: 15px;
+.forgot-password-box {  
     font-size: 1.4rem;
-    margin-left: 1px;
+    margin-left: 180px;
     font-weight: 600;
     color: var(--purple);
+    margin-top: 15px;
 }
 
 .forgot-password-box a:hover {
@@ -112,6 +111,12 @@ input:focus {
     font-size: 8rem;
     color: var(--purple);
     margin-top: 20px;
+}
+
+.show-pass {
+    display: flex;
+    font-size: 1.4rem;
+    align-items: center;
 }
 
 

@@ -164,3 +164,15 @@ function checkLoginForm_Forgot() {
 
     return isValid;
 }
+
+var showPass = $(".show-pass-input");
+
+showPass.onclick = function() {
+    let x = $("#password");
+
+    if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+}
