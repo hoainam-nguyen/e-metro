@@ -157,7 +157,7 @@ function checkLoginForm_Forgot() {
         isValid = false;
 
         username.style.borderColor = 'red';
-        username.addEventListener('blur', blur());
+        username.addEventListener('focus', focus());
         
         alert("Vui lòng nhập email!");
     }
