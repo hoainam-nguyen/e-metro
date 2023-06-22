@@ -311,3 +311,11 @@
 .add-station-form__controls {
     margin-top: 32px;
 }
+
+.change-password-form {
+    display: none;
+}
+
+.add-station-form {
+    display: none;
+}

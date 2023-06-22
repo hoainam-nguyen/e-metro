@@ -267,3 +267,21 @@ html {
     left: 0;
     animation: wobble2 var(--uib-speed) infinite ease-in-out;
 }
+
+/*  */
+
+.user-acc__avt {
+    background-image: url('/fe/assets/img/blank_img.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.user-info-avt {
+    background-image: url('/fe/assets/img/blank_img.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.change-password-form {
+    display: none;
+}
