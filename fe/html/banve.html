@@ -7,6 +7,7 @@
         <title>E-METRO_TICKETSELLER</title>
         <link rel="stylesheet" href="/fe/assets/css/reset.css">
         <link rel="stylesheet" href="/fe/assets/css/base.css">
+        <link rel="stylesheet" href="/fe/assets/css/NhanVienSo/main.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -129,7 +130,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="dropdown_line">
+
+                    <div class="form__group">
+                        <input readonly type="text" class="form__input" placeholder="Chọn tuyến tàu"> 
+                    </div>
+                    <!-- <div class="dropdown_line">
                         <div class="select-btn">
                             <span class="sBtn-text"> Chọn tuyến</span>
                             <div class="caret"></div>
@@ -145,7 +150,7 @@
                                 <span class="option-text">Bình Chánh- Thủ Đức</span>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                     <div class="date_and_status">
                         <div class="date_choice">
                             <input type="text" name="date_select" class="text_field" id="tf_date_select" disabled style="background-color: #ffffff;">
@@ -175,6 +180,37 @@
                 </div>
             </div>
         </div> 
+
+
+        <div class="modal">
+            <div class="modal__overlay"></div>
+
+            <div class="modal__body">
+                <div class="modal__inner">
+
+                    <!-- SELECT COMPANY FORM -->
+                    <div class="form select-company-form">
+                        <div class="form__header select-company-form__header">
+                            <h1 class="form__heading select-company-form__heading">Chọn tuyến tàu</h1>
+                        </div>
+                        <div class="form__content select-company-form__content">
+                            <div class="form__input-container select-company-form__input-container">
+
+                                <div class="form__group select-company-form__group">
+                                    <input type="text" class="form__input select-company-form__input select-company__search" placeholder="Nhập mã hoặc tên tuyến tàu"> 
+                                </div>
+
+
+                                <ul class="list-company">
+                                </ul>
+
+                            </div>
+                        </div> 
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </body>
     <script src="/fe/javascript/NhanVienSo/NhanVienBanVe/ticketseller.js"></script>
 </html>

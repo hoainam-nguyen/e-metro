@@ -16,10 +16,10 @@ options.forEach(option =>{
     });
 });
 //dropdown_line
-var optionmenu1 = document.querySelector(".dropdown_line"),
-selectbtn1 = optionmenu1.querySelector(".select-btn"),
-options1 = optionmenu1.querySelectorAll(".option"),
-sbtn_text1 = optionmenu1.querySelector(".sBtn-text");
+// var optionmenu1 = document.querySelector(".dropdown_line"),
+// selectbtn1 = optionmenu1.querySelector(".select-btn"),
+// options1 = optionmenu1.querySelectorAll(".option"),
+// sbtn_text1 = optionmenu1.querySelector(".sBtn-text");
 
 //Check
 var type;
@@ -99,7 +99,34 @@ function showToast()
         duration: 4000
     });
 }
-//api
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// SELECT DIALOG
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
+var modal = $(".modal");
+var selectLineForm = $(".select-company-form");
+
+var selectLineInput = $(".form__input");
+
+selectLineInput.onclick = function() {
+    modal.style.display = "block";
+    selectLineForm.style.display = "block"
+}
 
 var getlines = "https://aiclub.uit.edu.vn/namnh/emetro/lines/getall";
 
@@ -113,30 +140,72 @@ async function getAlllines(callback) {
             console.log(err);
         });
 }
+
 async function renderLines(lines) {
     var data = lines.data;
-    let dropdownlines = document.querySelector('.dropdown_line ul');
+
+    let tableCompanies = $(".list-company"); 
 
     let htmls = data.map(function(line) {
-        return `<li class="option">
-                <span class="option-text">${line.name}</span>
+
+        return `<li class="item-company">
+                    <span class="name-company">${line.id} - ${line.name}</span>
                 </li>`;
     });
-    dropdownlines.innerHTML = htmls.join('');
+
+    tableCompanies.innerHTML = htmls.join('');
+    setOnClickListCompany();
 }
 
 getAlllines(renderLines);
 
-async function getlineoncbb(){
+function setOnClickListCompany() {
+    let listRowsCompany = $$(".item-company");
 
-    selectbtn1.addEventListener("click", ()=> optionmenu1.classList.toggle("active"));
-    options1.forEach(option =>{  
-        option.addEventListener("click", ()=>{
-            let selectedoption = option.querySelector(".option-text").innerText;
-            sbtn_text1.innerText = selectedoption;
-            
-            optionmenu1.classList.remove("active");
-        });
-    });
+    for (let i=0; i<listRowsCompany.length; i++) {
+        setOnClickItemCompany(listRowsCompany[i]);
+    }
 }
-getlineoncbb();
+
+function setOnClickItemCompany(item) {
+    var onClickRow = function(row) {
+        return function() {
+            var rowSpan = row.getElementsByTagName("span");
+            
+            const arr = rowSpan[0].innerText.split(" - ");
+            
+            companySelected = {
+                id: Number(arr[0]),
+                name: arr[1]
+            }
+
+            let input = $(".form__input");
+
+            input.value = rowSpan[0].innerText;
+            selectLineForm.style.display = "none";
+            modal.style.display = "none";
+        };
+    }; 
+    item.addEventListener('click', onClickRow(item)); 
+}
+
+var searchBar = $(".select-company__search");
+
+searchBar.addEventListener('keyup', function() {
+    var keyword = this.value;
+    keyword = keyword.toUpperCase();
+
+    let all_tr = $$(".item-company");
+
+    for (var i=0; i<all_tr.length; i++){
+        var all_columns = all_tr[i].getElementsByTagName("span");
+
+        var column_value = all_columns[0].textContent || all_columns[0].innerText;
+        column_value = column_value.toUpperCase();
+        if (column_value.indexOf(keyword) > -1){
+            all_tr[i].style.display = ""; // show
+        } else { 
+            all_tr[i].style.display = "none"; // hide
+        }
+    }
+});
