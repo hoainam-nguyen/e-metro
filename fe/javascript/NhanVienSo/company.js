@@ -514,6 +514,7 @@ function checkUpdateForm() {
 // CLICK ON TABLE
 
 function setOnClickTable() {
+    updateTotal();
     var rows = dataTable.getElementsByTagName("tr");
     for (i = 1; i < rows.length; i++) {
         var currentRow = dataTable.rows[i];
@@ -697,4 +698,11 @@ checkbox.forEach(function(checkbox) {
 });
 
 
+// UPDATE TOTAL
+function updateTotal() {
+    let total = $(".result");
+    let all_rows = $$("table tbody tr");
+
+    total.innerText = "Total: " + all_rows.length;
+}
 

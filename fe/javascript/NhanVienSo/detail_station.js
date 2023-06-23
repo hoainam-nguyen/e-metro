@@ -30,9 +30,11 @@ options_add.forEach(option =>{
 });
 
 var modal = $(".modal");
+var addStationForm = $(".add-station-form");
 
 function openAddModal() {
     modal.style.display = "block"
+    addStationForm.style.display = "block"
 }
 
 
@@ -61,7 +63,8 @@ function clearAddForm() {
     add_img.style.backgroundImage = "url('/fe/assets/img/blank_img.png')";
 
 
-    modal.style.display = "none";
+    modal.style.display = "none"; 
+    addStationForm.style.display = "none";
 }
 
 

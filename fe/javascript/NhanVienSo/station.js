@@ -79,6 +79,7 @@ async function renderStations(stations) {
 }
 
 function setOnClickTable() {
+    updateTotal();
     var rows = dataTable.getElementsByTagName("tr");
     for (let i = 1; i < rows.length; i++) {
         onClickTable(rows[i]);
@@ -679,5 +680,14 @@ var checkbox = $$(".checkbox");
 checkbox.forEach(function(checkbox) {
     checkbox.addEventListener('click', RowWithFilter(checkbox));
 });
+
+
+// UPDATE TOTAL
+function updateTotal() {
+    let total = $(".result");
+    let all_rows = $$("table tbody tr");
+
+    total.innerText = "Total: " + all_rows.length;
+}
 
 

@@ -66,33 +66,38 @@ async function resetPassword(email) {
 
 var btnLogin = $(".login-box");
 
-btnLogin.onclick = function() {
-    if (checkLoginForm()) {
-        let username = $("#username");
-        let password = $("#password");
-
-        checkUser(username.value, password.value)
-            .then(function (user_id) {
-                if (user_id != null) {
-                    getUser(user_id)
-                    .then(function (type) {
-
-                        switch (type) {
-                            case 1:
-                                window.location.href = 'home.html';
-                                break;
-                            case 2:
-                                window.location.href = 'line_home.html';
-                                break;
-                        }
-                    });
-
-                } else {
-                    alert("Email hoặc mật khẩu chưa chính xác!");
-                }
-            });
+if (btnLogin != null) {
+    btnLogin.onclick = function() {
+        if (checkLoginForm()) {
+            let username = $("#username");
+            let password = $("#password");
+    
+            checkUser(username.value, password.value)
+                .then(function (user_id) {
+                    if (user_id != null) {
+                        sessionStorage.setItem("id_user", user_id);
+    
+                        getUser(user_id)
+                        .then(function (type) {
+    
+                            switch (type) {
+                                case 1:
+                                    window.location.href = 'home.html';
+                                    break;
+                                case 2:
+                                    window.location.href = 'line_home.html';
+                                    break;
+                            }
+                        });
+    
+                    } else {
+                        alert("Email hoặc mật khẩu chưa chính xác!");
+                    }
+                });
+        }
     }
 }
+
 
 
 var focus = function() {
@@ -129,23 +134,25 @@ function checkLoginForm() {
 
 var forgotpass = $(".forgot-password");
 
-
-forgotpass.onclick = function() {
-    if (checkLoginForm_Forgot()) {
-        if (confirm("Bạn có chắc chắn cấp lại mật khẩu?") == true) {
-            let username = $("#username");
-            resetPassword(username.value)
-            .then(function (status) {
-                if (status == "Finish") {
-                    alert("Mật khẩu mới đã được cấp qua email!");
-                } else {
-                    alert("Email không chính xác");
-                }
-            });
+if (forgotpass != null) {
+    forgotpass.onclick = function() {
+        if (checkLoginForm_Forgot()) {
+            if (confirm("Bạn có chắc chắn cấp lại mật khẩu?") == true) {
+                let username = $("#username");
+                resetPassword(username.value)
+                .then(function (status) {
+                    if (status == "Finish") {
+                        alert("Mật khẩu mới đã được cấp qua email!");
+                    } else {
+                        alert("Email không chính xác");
+                    }
+                });
+            }
         }
+        
     }
-    
 }
+
 
 
 function checkLoginForm_Forgot() {
@@ -157,7 +164,7 @@ function checkLoginForm_Forgot() {
         isValid = false;
 
         username.style.borderColor = 'red';
-        username.addEventListener('blur', blur());
+        username.addEventListener('focus', focus());
         
         alert("Vui lòng nhập email!");
     }
@@ -167,12 +174,15 @@ function checkLoginForm_Forgot() {
 
 var showPass = $(".show-pass-input");
 
-showPass.onclick = function() {
-    let x = $("#password");
-
-    if (x.type === "password") {
-        x.type = "text";
-      } else {
-        x.type = "password";
-      }
+if (showPass != null) {
+    showPass.onclick = function() {
+        let x = $("#password");
+    
+        if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+    }
 }
+

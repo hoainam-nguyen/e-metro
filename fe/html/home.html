@@ -44,30 +44,29 @@
                         </h1>
                     </a>
                     <div class="header__info-item user-acc user-info-popup">
-                        <img src="https://plus.unsplash.com/premium_photo-1666184129932-e443a8de06e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" class="user-acc__avt">
+                        <div class="user-acc__avt"></div>
                         <span class="user-acc__name">Duy Khiêm</span>
 
                         
                         <div class="user-info">
                             <div class="user-info__header">
-                                <img src="https://plus.unsplash.com/premium_photo-1666184129932-e443a8de06e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" class="user-info-avt">
+                                <div class="user-info-avt"></div>
                                 <div class="user-info-acc">
                                     <div class="user-info-name">Duy Khiêm</div>
-                                    <div class="user-info-username">@phamkiet</div>
                                 </div>
                             </div>
                             <hr class="seperate-info">
                             <ul class="user-info__list">
-                                <a class="user-info-link" href="trangcanhan.html">
+                                <a class="user-info-link">
                                     <li class="user-info-item">Trang cá nhân</li>
                                 </a>
                             </ul>
                             <hr class="seperate-info">
                             <ul class="user-info__list">
-                                <a class="user-info-link" href="trangcanhan.html">
-                                    <li class="user-info-item">Cài đặt</li>
+                                <a class="user-info-link changepass">
+                                    <li class="user-info-item">Đổi mật khẩu</li>
                                 </a>
-                                <a class="user-info-link" href="trangcanhan.html">
+                                <a class="user-info-link logout">
                                     <li class="user-info-item">Đăng xuất</li>
                                 </a>
                             </ul>
@@ -129,28 +128,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- <div class="grid__row">
-                    <div class="grid__column-12">
-
-                        <div class="chart-row">
-                            <div class="bar-chart_container">
-                                <div class="bar-chart__header">
-                                    BAR CHART
-                                </div>
-                                <canvas id="bar-chart" class="bar-chart"></canvas>
-                            </div>
-                            
-                            <div class="line-chart-container">
-                                <div class="line-chart__header">
-                                    LINE CHART
-                                </div>
-                                <canvas id="line-chart" class="line-chart"></canvas>
-                            </div>
-                        </div>
-                
-                    </div>
-                </div> -->
             </div>
         </div>
     
@@ -159,8 +136,57 @@
                 
             </div>
         </footer>
+
+        <div class="modal">
+            <div class="modal__overlay"></div>
+
+            <div class="modal__body">
+                <div class="modal__inner">
+
+
+             
+                    <div class="form change-password-form">
+                        <div class="form__header">
+                            <h1 class="form__heading">Đổi mật khẩu</h1>
+                        </div>
+                        <div class="form__content">
+                            <div class="form__input-container">
+
+                                <div class="form__group">
+                                    <span class="form__title">Mật khẩu hiện tại
+                                        <span class="warning-message warning-pass">* Không được bỏ trống</span>
+                                    </span>
+                                    <input type="text" class="form__input pass_input" placeholder="Nhập mật khẩu hiện tại"> 
+                                </div>
+                                <div class="form__group">
+                                    <span class="form__title">Mật khẩu mới
+                                        <span class="warning-message warning-pass">* Không được bỏ trống</span>
+                                    </span>
+                                    <input type="text" class="form__input pass_input" placeholder="Nhập mật khẩu mới"> 
+                                </div>
+                                <div class="form__group">
+                                    <span class="form__title">Xác nhận mật khẩu mới
+                                        <span class="warning-message warning-pass">* Không được bỏ trống</span>
+                                    </span>
+                                    <input type="text" class="form__input pass_input" placeholder="Nhập mật khẩu mới"> 
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="form__controls">
+                            <button id="pass_cancel" class="btn margin_btn">HỦY</button>
+                            <button id="pass_ok" class="btn btn--primary">XÁC NHẬN</button>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+        </div>
     </div>
     <script src="/fe/javascript/NhanVienSo/main.js"></script>
     <script src="/fe/javascript/NhanVienSo/home.js"></script>
+    <script src="/fe/javascript/NhanVienCongTy/login.js"></script>
+    <script src="/fe/javascript/base.js"></script>
 </body>
 </html>
