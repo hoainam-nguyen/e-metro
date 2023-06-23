@@ -5,11 +5,17 @@ from email.mime.multipart import MIMEMultipart
 from threading import Thread
 import time
 
+import os
+from dotenv import load_dotenv, find_dotenv
+
+_ = load_dotenv(find_dotenv())
+
 
 class EmailThread(Thread):
     def __init__(self, contact):
-        self.user_name = "20520075@gm.uit.edu.vn"
-        self.password = "1314955038"
+        self.user_name = os.environ["USER_EMAIL"]
+        self.password = os.environ["USER_PASSWORD"]
+        
         self.title = "[E-Metro System] Reset Password"
         self.template = open('src/utils/template_send_mail.html').read()
         self.count = 0
@@ -39,19 +45,3 @@ class EmailThread(Thread):
 
             print(f'[INFO] DONE! Sent mail to {self.contact["user_email"]}')
             print("-"*15)
-
-
-# if __name__ == "__main__":
-
-#     username = "20520075@gm.uit.edu.vn"
-#     password = "1314955038"
-
-#     title = "[E-Metro System] Reset Password"
-
-#     # change here
-
-#     template = open('src/utils/template_send_mail.html').read()
-
-#     contact = {"user_email": "hoainam1001.nhn@gmail.com", "user_password": "123456"}
-#     thread1 = EmailThread(username, password, title, contact, template)
-#     thread1.start()
