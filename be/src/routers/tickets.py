@@ -1,12 +1,12 @@
-import random 
 import datetime
 
 from fastapi import APIRouter
 
-from src.utils.utils import (SearchSchema, UpdateSchema, InsertSchema, ResponseModel, BuyTicket)
-from src.methods.search import search_data_by_id, search_all_data
 from src.methods.insert import insert_data_to_db
+from src.methods.search import search_all_data, search_data_by_id
 from src.methods.update import update_data_to_db
+from src.utils.utils import (BuyTicket, InsertSchema, ResponseModel,
+                             SearchSchema, UpdateSchema)
 
 router = APIRouter(prefix="/tickets",tags=["tickets"])
 
@@ -28,12 +28,10 @@ async def insert_user(input_map: InsertSchema) -> ResponseModel:
     id = insert_data_to_db(table_name="tickets", data=input_map.data)
     return ResponseModel(status_code=200, msg='Finish', data=dict(id=id))
     
-    
 @router.post('/update')
 async def update_user(input_map: UpdateSchema) -> ResponseModel:
     id = update_data_to_db(table_name="tickets", id=input_map.id, data=input_map.data)
     return ResponseModel(status_code=200, msg='Finish', data=dict(id=id))
-
 
 @router.get('/selled')
 async def selled_ticker():
@@ -41,7 +39,6 @@ async def selled_ticker():
     data = [d for d in data if d['is_effective']]
     return ResponseModel(status_code=200, msg='Finish', data=data)
   
-
 @router.post('/buy')
 async def buy_tickets(input_map: BuyTicket) -> ResponseModel:
     num = input_map.num

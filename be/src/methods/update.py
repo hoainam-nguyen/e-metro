@@ -6,6 +6,7 @@ from psycopg2 import sql
 from src.const import RESOUSCE_MAP
 from src.methods.search import search_data_by_id
 
+
 def update_data_to_db(table_name: str, id: int, data: Dict):
     columns = data.keys()
     values = data.values()
@@ -31,7 +32,6 @@ def update_data_to_db(table_name: str, id: int, data: Dict):
         sql.SQL(where_clause)
     )
 
-        
     conn = RESOUSCE_MAP['db']
     cursor = conn.cursor()
     try:
