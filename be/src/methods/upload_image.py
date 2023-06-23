@@ -1,7 +1,6 @@
-import os
-import uuid 
 import base64
 from io import BytesIO
+
 from minio import Minio
 from PIL import Image
 

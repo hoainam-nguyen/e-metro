@@ -1,12 +1,13 @@
-import os 
-import uvicorn
+import os
 
+import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from src.db import load_database
 from src.const import RESOUSCE_MAP
-from src.routers import system, users, companies, lines, stations, trains, tickets, base
+from src.db import load_database
+from src.routers import (base, companies, lines, stations, system, tickets,
+                         trains, users)
 
 RESOUSCE_MAP['db'] = load_database()
 

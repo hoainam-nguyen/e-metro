@@ -1,27 +1,26 @@
-import smtplib, ssl
-import pandas as pd
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from threading import Thread
-import time
-
 import os
-from dotenv import load_dotenv, find_dotenv
+import smtplib
+import ssl
+import time
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from threading import Thread
+
+from dotenv import find_dotenv, load_dotenv
 
 _ = load_dotenv(find_dotenv())
 
 
 class EmailThread(Thread):
     def __init__(self, contact):
-        self.user_name = os.environ["USER_EMAIL"]
-        self.password = os.environ["USER_PASSWORD"]
+        self.user_name = os.environ["ADMIN_EMAIL"]
+        self.password = os.environ["ADMIN_PASSWORD"]
         
         self.title = "[E-Metro System] Reset Password"
         self.template = open('src/utils/template_send_mail.html').read()
         self.count = 0
         self.contact = contact
         Thread.__init__(self)
-
 
     def run(self):
         context = ssl.create_default_context()
@@ -36,7 +35,6 @@ class EmailThread(Thread):
 
             html = self.template.format(**self.contact)
             message.attach(MIMEText(html, "html"))
-
 
             server.sendmail(
                 self.user_name,

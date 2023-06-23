@@ -1,12 +1,14 @@
-import random 
+import random
 
 from fastapi import APIRouter
 
-from src.utils.utils import (SearchSchema, UpdateSchema, InsertSchema, ResponseModel)
-from src.methods.search import search_data_by_id, search_all_data, search_passwd_by_useremail
 from src.methods.insert import insert_data_to_db
-from src.methods.update import update_data_to_db
+from src.methods.search import (search_all_data, search_data_by_id,
+                                search_passwd_by_useremail)
 from src.methods.send_mail import EmailThread
+from src.methods.update import update_data_to_db
+from src.utils.utils import (InsertSchema, ResponseModel, SearchSchema,
+                             UpdateSchema)
 
 router = APIRouter(prefix="/users",tags=["users"])
 
@@ -65,6 +67,5 @@ async def reset_passwd(user_email: str) -> ResponseModel:
     except Exception as err:
         print(err)
         return ResponseModel(status_code=200, msg='Error', data={})
-
 
     return ResponseModel(status_code=200, msg='Finish', data=contact)

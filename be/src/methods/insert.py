@@ -5,6 +5,7 @@ from psycopg2 import sql
 
 from src.const import RESOUSCE_MAP
 
+
 def insert_data_to_db(table_name: str, data: Dict):
     columns = data.keys()
     values = data.values()
@@ -15,7 +16,6 @@ def insert_data_to_db(table_name: str, data: Dict):
         sql.SQL(', ').join(sql.Placeholder() * len(values))
     )
     
-
     _values_str = []
     for v in list(values):
         if isinstance(v, dict):
