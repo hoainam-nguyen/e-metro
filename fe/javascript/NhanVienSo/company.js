@@ -151,6 +151,7 @@ async function uploadImage(newImage, isRender) {
             return response.json();
         })
         .then(function(res) {
+            console.log(res);
             let data = res.data;
             if (isRender == true) {
                 getIdToRender(data.id); 

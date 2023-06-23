@@ -49,13 +49,13 @@ var btnLogOut = $(".logout");
 btnLogOut.onclick = function() {    
     if (confirm("Bạn có chắc chắn muốn đăng xuất?") == true) {
         window.location.href = 'loginpage.html';
-        preventBack();
+        // preventBack();
     }
 }
 
-function preventBack() { window.history.forward(); }
-setTimeout("preventBack()", 0);
-window.onunload = function () { null };
+// function preventBack() { window.history.forward(); }
+// setTimeout("preventBack()", 0);
+// window.onunload = function () { null };
 
 
 // CHANGE PASSWORD
