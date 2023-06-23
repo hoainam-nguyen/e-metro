@@ -25,6 +25,8 @@ function renderUser(user) {
 
     objectUser = data;
 
+    sessionStorage.setItem("objectUser", objectUser);
+
     let name1 = $(".user-acc__name");
     let name2 = $(".user-info-name");
 

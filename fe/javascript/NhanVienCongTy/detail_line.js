@@ -142,39 +142,67 @@ ticket_price.onkeypress = function (e) {
 }
 
 // SET LINE DATA
-async function getAllLine(callback) {
+async function getAllLine(company_id) {
     fetch(getAllLineApi)
         .then(function (response) {
             return response.json();
         })
-        .then(callback)
+        .then(function(lines) {
+            renderAllLine(lines, company_id);
+        })
         .catch(function (err) {
             console.log(err);
         });
 }
 
-function renderAllLine(lines) {
+function renderAllLine(lines, company_id) {
     var data = lines.data;
 
     let tableCompanies = $(".search-company-list");
 
     let htmls = data.map(function (line) {
 
-        return `<li class="search-company-item">
-                    <a>
-                        <div class="item__info">
-                            <span class="item__code">${line.id}</span>
-                            <span class="item__name">${line.name}</span>
-                        </div>
-                    </a>
-                </li>`;
+        if (line.company_id == company_id) {
+            return `<li class="search-company-item">
+                        <a>
+                            <div class="item__info">
+                                <span class="item__code">${line.id}</span>
+                                <span class="item__name">${line.name}</span>
+                            </div>
+                        </a>
+                    </li>`;
+        } else {
+            return "";
+        }
+
     });
 
     tableCompanies.innerHTML = htmls.join('');
     setOnClickAllItem();
 }
 
-getAllLine(renderAllLine);
+function getUser(id) {
+    fetch("https://aiclub.uit.edu.vn/namnh/emetro/users/search/?id=" + id)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(user) {
+            let data = user.data[0];
+
+            getAllLine(data.company_id);
+        })
+        .catch(function(err) {
+            console.log(err);
+        });
+}
+
+getUser(sessionStorage.getItem("id_user"));
+
+
+
+
+
+
 
 
 function setOnClickAllItem() {
@@ -200,107 +228,107 @@ function setOnClickItem(id_line, item) {
 
 
 // SELECT COMPANY
-var btnSelectCompany = $(".select-company__input");
-var selectCompanyForm = $(".select-company-form");
+// var btnSelectCompany = $(".select-company__input");
+// var selectCompanyForm = $(".select-company-form");
 
-btnSelectCompany.onclick = function () {
-    var selectCompanyForm = $(".select-company-form");
+// btnSelectCompany.onclick = function () {
+//     var selectCompanyForm = $(".select-company-form");
 
-    modal.style.display = "block"
-    selectCompanyForm.style.display = "block";
-}
-
-
-
-var getAllCompaniesApi = "https://aiclub.uit.edu.vn/namnh/emetro/companies/getall";
-
-async function getCompanies(callback) {
-    fetch(getAllCompaniesApi)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(callback)
-        .catch(function (err) {
-            console.log(err);
-        });
-}
-
-getCompanies(renderCompanies);
-
-async function renderCompanies(companies) {
-    var data = companies.data;
-    let tableCompanies = $(".list-company");
-
-    let htmls = data.map(function (company) {
-
-        return `<li class="item-company">
-                    <span class="name-company">${company.id} - ${company.name}</span>
-                </li>`;
-    });
-
-    tableCompanies.innerHTML = htmls.join('');
-    setOnClickListCompany();
-}
-
-function setOnClickListCompany() {
-    let listRowsCompany = $$(".item-company");
-
-    for (let i = 0; i < listRowsCompany.length; i++) {
-        setOnClickItemCompany(listRowsCompany[i]);
-    }
-}
-
-function setOnClickItemCompany(item) {
-    var onClickRow = function (row) {
-        return function () {
-            var rowSpan = row.getElementsByTagName("span");
-
-            const arr = rowSpan[0].innerText.split(" - ");
-
-            companySelected = {
-                id: Number(arr[0]),
-                name: arr[1]
-            }
-
-            selectCompanyForm.style.display = "none";
-            modal.style.display = "none";
-            btnSelectCompany.value = rowSpan[0].innerText;
-
-        };
-    };
-    item.addEventListener('click', onClickRow(item));
-}
+//     modal.style.display = "block"
+//     selectCompanyForm.style.display = "block";
+// }
 
 
-function resetSelectCompanyForm() {
-    searchBar.value = "";
-    let all_tr = $$(".item-company");
 
-    for (var i = 0; i < all_tr.length; i++) {
-        all_tr[i].style.display = ""; // show
-    }
-}
+// var getAllCompaniesApi = "https://aiclub.uit.edu.vn/namnh/emetro/companies/getall";
 
-var searchBar = $(".select-company__search");
+// async function getCompanies(callback) {
+//     fetch(getAllCompaniesApi)
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(callback)
+//         .catch(function (err) {
+//             console.log(err);
+//         });
+// }
 
-searchBar.addEventListener('keyup', function () {
-    var keyword = this.value;
-    keyword = keyword.toUpperCase();
+// getCompanies(renderCompanies);
 
-    let all_tr = $$(".item-company");
+// async function renderCompanies(companies) {
+//     var data = companies.data;
+//     let tableCompanies = $(".list-company");
 
-    for (var i = 0; i < all_tr.length; i++) {
-        var all_columns = all_tr[i].getElementsByTagName("span");
+//     let htmls = data.map(function (company) {
 
-        var column_value = all_columns[0].textContent || all_columns[0].innerText;
-        column_value = column_value.toUpperCase();
-        if (column_value.indexOf(keyword) > -1) {
-            all_tr[i].style.display = ""; // show
-        } else {
-            all_tr[i].style.display = "none"; // hide
-        }
-    }
-});
+//         return `<li class="item-company">
+//                     <span class="name-company">${company.id} - ${company.name}</span>
+//                 </li>`;
+//     });
+
+//     tableCompanies.innerHTML = htmls.join('');
+//     setOnClickListCompany();
+// }
+
+// function setOnClickListCompany() {
+//     let listRowsCompany = $$(".item-company");
+
+//     for (let i = 0; i < listRowsCompany.length; i++) {
+//         setOnClickItemCompany(listRowsCompany[i]);
+//     }
+// }
+
+// function setOnClickItemCompany(item) {
+//     var onClickRow = function (row) {
+//         return function () {
+//             var rowSpan = row.getElementsByTagName("span");
+
+//             const arr = rowSpan[0].innerText.split(" - ");
+
+//             companySelected = {
+//                 id: Number(arr[0]),
+//                 name: arr[1]
+//             }
+
+//             selectCompanyForm.style.display = "none";
+//             modal.style.display = "none";
+//             btnSelectCompany.value = rowSpan[0].innerText;
+
+//         };
+//     };
+//     item.addEventListener('click', onClickRow(item));
+// }
+
+
+// function resetSelectCompanyForm() {
+//     searchBar.value = "";
+//     let all_tr = $$(".item-company");
+
+//     for (var i = 0; i < all_tr.length; i++) {
+//         all_tr[i].style.display = ""; // show
+//     }
+// }
+
+// var searchBar = $(".select-company__search");
+
+// searchBar.addEventListener('keyup', function () {
+//     var keyword = this.value;
+//     keyword = keyword.toUpperCase();
+
+//     let all_tr = $$(".item-company");
+
+//     for (var i = 0; i < all_tr.length; i++) {
+//         var all_columns = all_tr[i].getElementsByTagName("span");
+
+//         var column_value = all_columns[0].textContent || all_columns[0].innerText;
+//         column_value = column_value.toUpperCase();
+//         if (column_value.indexOf(keyword) > -1) {
+//             all_tr[i].style.display = ""; // show
+//         } else {
+//             all_tr[i].style.display = "none"; // hide
+//         }
+//     }
+// });
 
 
 // SELECT ROUTE
