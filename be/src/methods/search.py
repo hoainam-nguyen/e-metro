@@ -21,7 +21,10 @@ def search_all_data(table_name: str):
         results_dict.append(
             dict(zip(column_names, result))
         )
-        
+
+    conn.commit()
+    cursor.close()
+
     return results_dict
     
 def search_data_by_id(table_name: str, id: int) -> List:
