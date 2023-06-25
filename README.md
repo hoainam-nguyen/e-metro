@@ -1,8 +1,11 @@
 # THE E_METRO SYSTEM MANAGEMENT
 
-The software engineering introductory project (Course SE104 | UIT) is guided by [Msc. Nguyen Thi Thanh Truc](mailto:trucntt@uit.edu.vn)
+- The final projec for Introduction to Software Engineering (Course SE104 | UIT) 
+- Guided by [Msc. Nguyễn Thị Thanh Trúc](mailto:trucntt@uit.edu.vn)
 
-<img src="images/img_2.png"  width="80%" height="50%">
+<p align="center">
+    <img src="images/img_2.png"  width="80%" height="50%">
+</p>
 
 ## Team members
 | Name         | Email               | Position   |
@@ -22,19 +25,23 @@ Allowing the admin to manage, create, delete, and assign user permissions.
 ### Company management
 Allowing city transportation department staff to manage, search, create, and edit operating companies.
 
+<p align="center">
 <img src="images/img_3.png"  width="50%" height="50%">
-
+</p>
 
 ### Station management
 Allowing city transportation department staff to manage, search, create, and edit stations.
 
+<p align="center">
 <img src="images/img_4.png"  width="50%" height="50%">
-
+</p>
 
 ### Route management
 Allowing employees of each operating company to manage, search, create, and edit information about train routes.
 
+<p align="center">
 <img src="images/img_5.png"  width="50%" height="50%">
+</p>
 
 ### Ticket management
 Allowing ticketing staff to manage tickets and review sold tickets.
