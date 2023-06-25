@@ -141,7 +141,7 @@ docker compose up
 | Lê Võ Duy Khiêm    | 21522215@gm.uit.edu.vn | Front-end Developer  |
 
 
-If you have any questions, suggestions, or need assistance, please feel free to contact us using the following information.
+If you have any questions, suggestions, or need assistance, please feel free to contact us using the above information.
 
 ## Copyright
 ```
