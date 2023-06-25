@@ -34,21 +34,21 @@ Allowing the admin to manage, create, delete, and assign user permissions.
 Allowing city transportation department staff to manage, search, create, and edit operating companies.
 
 <p align="center">
-<img src="images/img_3.png"  width="50%" height="50%">
+<img src="images/img_3.png"  width="70%" height="50%">
 </p>
 
 ### Station management
 Allowing city transportation department staff to manage, search, create, and edit stations.
 
 <p align="center">
-<img src="images/img_4.png"  width="50%" height="50%">
+<img src="images/img_4.png"  width="70%" height="50%">
 </p>
 
 ### Route management
 Allowing employees of each operating company to manage, search, create, and edit information about train routes.
 
 <p align="center">
-<img src="images/img_5.png"  width="50%" height="50%">
+<img src="images/img_5.png"  width="70%" height="50%">
 </p>
 
 ### Ticket management
@@ -68,16 +68,16 @@ Below is a list of the key technologies used in the projec:
 ## Directory Structure
 
 ```bash
-├── docs/                         # Project documentation
-├── backend/                   # Backend source code
-│   ├── src/                      # Main source code
+├── docs/               # Project documentation
+├── backend/                # Backend source code
+│   ├── src/                # Main source code
 │   ├── docker-compose.yml      
-├── fronend/                    # Frontend source code
+├── fronend/                # Frontend source code
 │   ├── assets/                 
-│   ├── html/                   # UI source 
+│   ├── html/               # UI source 
 │   ├── javascripts/            
-├── images/                     # Sample data
-└── README.md          # Main README file of the project
+├── images/             # Sample data
+└── README.md               # Main README file of the project
 
 ```
 
