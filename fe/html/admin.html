@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>E-METRO</title>
+    
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+   
+   
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- CHARTJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/main.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/home.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/admin.css">
+    
+</head>
+<body>
+    <div class="app">
+        <div id="toast"></div>
+        <header class="header">
+            <div class="grid">
+                <!--  -->
+                <div class="header__info">
+                    <a class="header__info-item app-info" href="admin.html">
+                        <div class="app-info__logo-container">
+                            <i class="app-info__logo fa-solid fa-train"></i>
+                        </div>
+                        <h1 class="app-info__name">
+                            <span class="app-info__name-E">E</span>
+                            -METRO
+                        </h1>
+                    </a>
+                    <div class="header__info-item user-acc user-info-popup">
+                        <div class="user-acc__avt"></div>
+                        <span class="user-acc__name">Duy Khiêm</span>
+
+                        
+                        <div class="user-info">
+                            <div class="user-info__header">
+                                <div class="user-info-avt"></div>
+                                <div class="user-info-acc">
+                                    <div class="user-info-name">Duy Khiêm</div>
+                                </div>
+                            </div>
+                            <hr class="seperate-info">
+                            <ul class="user-info__list">
+                                <a class="user-info-link profile">
+                                    <li class="user-info-item">Trang cá nhân</li>
+                                </a>
+                            </ul>
+                            <hr class="seperate-info">
+                            <ul class="user-info__list">
+                                <a class="user-info-link changepass">
+                                    <li class="user-info-item">Đổi mật khẩu</li>
+                                </a>
+                                <a class="user-info-link logout">
+                                    <li class="user-info-item">Đăng xuất</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <hr>    
+
+        <div class="content">
+            <div class="grid">
+                <div class="grid__row">
+
+                    <div class="grid__column-2">
+                        <div class="filter">
+                            <div class="filter__header">
+                                FILTER
+                            </div>
+                            <hr class="seperate-filter">
+                            <div class="filter__header">
+                                Loại nhân viên
+                            </div>
+                            <hr class="seperate-filter">
+                            <label class="container">Sở Giao Thông TP
+                                <input class="checkbox" type="checkbox" checked="checked" value="Sở Giao Thông TP">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Công Ty
+                                <input class="checkbox" type="checkbox" checked="checked" value="Công Ty">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Bán Vé
+                                <input class="checkbox" type="checkbox" checked="checked" value="Bán Vé">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="grid__column-10">
+                        <div class="body-container">
+                            <div class="search-add-container">
+                                <input class="search" type="text" placeholder="Search"></input>
+                                <div class="add">+ Thêm mới nhân viên</div>
+                            </div>
+                            <div class="result-sort-container">
+                                <div class="result">Total: 3</div>
+                            </div>
+                            <table id="dataTable" class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="table_heading">Mã nhân viên
+                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin"></i>
+                                        </th>
+                                        <th class="table_heading">Tên nhân viên
+                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
+                                        </th>
+                                        <th class="table_heading">Email
+                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
+                                        </th>
+                                        <th class="table_heading">Loại nhân viên
+                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                   
+                </div>
+            </div>
+        </div>
+    
+        <footer class="footer">
+            <div class="footer-container">
+                
+            </div>
+        </footer>
+
+        <div class="modal">
+            <div class="modal__overlay"></div>
+
+            <div class="modal__body">
+                <div class="modal__inner">
+
+
+                    <div class="form add-user-form">
+                        <div class="form__header add-user-form__header">
+                            <h1 class="form__heading add-user-form__heading">Thêm mới nhân viên</h1>
+                        </div>
+                        <div class="form__content add-user-form__content">
+                            <div class="form__img add-user-form__img">
+                                <label for="input-img-file">
+                                    <i class="fa-solid fa-camera-rotate form__img-icon add-user-form__img-icon"></i>
+                                </label>
+                                <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-img-file">
+                            </div>
+
+                            <div class="form__input-container add-user-form__input-container">
+                                <div class="form__group add-user-form__group">
+                                    <span class="form__title add-user-form__title">Tên nhân viên 
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span> 
+                                    </span>
+                                    <input type="text" class="form__input add-user-form__input" placeholder="Nhập tên nhân viên"> 
+                                </div>
+                                <div class="form__group add-user-form__group">
+                                    <span class="form__title add-user-form__title">Email
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
+                                    <input type="text" class="form__input add-user-form__input" placeholder="Nhập email"> 
+                                </div>
+                                <div class="form__group add-user-form__group">
+                                    <span class="form__title add-user-form__title">Mật khẩu
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
+                                    <input type="text" class="form__input add-user-form__input" placeholder="Nhập mật khẩu"> 
+                                </div>
+                                <div class="form__group add-user-form__group">
+                                    <span class="form__title add-user-form__title">Số điện thoại
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
+                                    <input type="text" class="form__input add-user-form__input phone" placeholder="Nhập số điện thoại"> 
+                                </div>
+                                <div class="form__group add-user-form__group">
+                                    <span class="form__title add-user-form__title">Ngày sinh
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
+                                    <input type="date" class="form__input add-user-form__input"> 
+                                </div>
+                                <div class="form__group add-user-form__group">
+                                    <span class="form__title add-user-form__title">Địa chỉ
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
+                                    <input type="text" class="form__input add-user-form__input" placeholder="Nhập địa chỉ"> 
+                                </div>
+                                <div class="form__group add-user-form__group">
+                                    <span class="form__title add-user-form__title">Loại nhân viên
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
+                                    
+                                    <div class="select-menu select-menu-add">
+                                        <div class="select-btn select-btn-add">
+                                            <span class="sBtn-text sBtn-text-add">Loại nhân viên</span>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                        <ul class="options">
+                                            <li class="option option-add">
+                                                <span class="option-text option-text-add">Sở Giao Thông TP</span>
+                                            </li>
+                                            <li class="option option-add">
+                                                <span class="option-text option-text-add">Công Ty</span>
+                                            </li>
+                                            <li class="option option-add">
+                                                <span class="option-text option-text-add">Bán Vé</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="form__group add-user-form__group select-company__group">
+                                    <span class="form__title add-user-form__title">Công ty trực thuộc
+                                        <span class="warning-message warning-add">* Không được bỏ trống</span>
+                                    </span>
+                                    <input readonly type="text" class="form__input add-user-form__input select-company__input" placeholder="Chọn công ty"> 
+                                </div>
+
+                            </div>
+                        </div> 
+                        <div class="form__controls add-user-form__controls">
+                            <button id="add_form_cancel" class="btn margin_btn">HỦY</button>
+                            <button id="add_form_ok" class="btn btn--primary">THÊM</button>
+                        </div>
+                    </div>
+
+
+                     <!-- SELECT COMPANY FORM -->
+                     <div class="form select-company-form">
+                        <div class="form__header select-company-form__header">
+                            <h1 class="form__heading select-company-form__heading">Chọn công ty trực thuộc</h1>
+                        </div>
+                        <div class="form__content select-company-form__content">
+                            <div class="form__input-container select-company-form__input-container">
+
+                                <div class="form__group select-company-form__group">
+                                    <input type="text" class="form__input select-company-form__input select-company__search" placeholder="Nhập mã hoặc tên công ty"> 
+                                </div>
+
+
+                                <ul class="list-company">
+                                </ul>
+
+                            </div>
+                        </div> 
+                    </div>
+
+
+                    <!-- CHANGE PASSWORD FORM -->
+                    <div class="form change-password-form">
+                        <div class="form__header">
+                            <h1 class="form__heading">Đổi mật khẩu</h1>
+                        </div>
+                        <div class="form__content">
+                            <div class="form__input-container">
+
+                                <div class="form__group">
+                                    <span class="form__title">Mật khẩu hiện tại
+                                        <span class="warning-message warning-pass">* Không được bỏ trống</span>
+                                    </span>
+                                    <input type="text" class="form__input pass_input" placeholder="Nhập mật khẩu hiện tại"> 
+                                </div>
+                                <div class="form__group">
+                                    <span class="form__title">Mật khẩu mới
+                                        <span class="warning-message warning-pass">* Không được bỏ trống</span>
+                                    </span>
+                                    <input type="text" class="form__input pass_input" placeholder="Nhập mật khẩu mới"> 
+                                </div>
+                                <div class="form__group">
+                                    <span class="form__title">Xác nhận mật khẩu mới
+                                        <span class="warning-message warning-pass">* Không được bỏ trống</span>
+                                    </span>
+                                    <input type="text" class="form__input pass_input" placeholder="Nhập mật khẩu mới"> 
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="form__controls">
+                            <button id="pass_cancel" class="btn margin_btn">HỦY</button>
+                            <button id="pass_ok" class="btn btn--primary">XÁC NHẬN</button>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="/fe/javascript/NhanVienCongTy/main.js"></script>
+    <script src="/fe/javascript/NhanVienCongTy/login.js"></script>
+    <script src="/fe/javascript/base.js"></script>
+    <script src="/fe/javascript/NhanVienSo/admin.js"></script>
+</body>
+</html>

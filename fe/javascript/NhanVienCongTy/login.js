@@ -81,6 +81,9 @@ if (btnLogin != null) {
                         .then(function (type) {
     
                             switch (type) {
+                                case 0:
+                                    window.location.href = 'admin.html';
+                                    break;
                                 case 1:
                                     window.location.href = 'home.html';
                                     break;

@@ -1,0 +1,73 @@
+/* SORT | ARROW ICON IN TABLE */
+.arrow_icon_margin {
+    margin-left: 2.5px;
+    margin-right: 2.5px;   
+}
+.table_heading:hover {
+    opacity: 0.92;
+}
+
+.table_heading_active_asc .fa-arrow-up{
+    color: yellow;
+}
+
+.table_heading_active_desc .fa-arrow-up{
+    color: yellow;
+    transform: rotate(180deg);
+}
+
+#input-img-file {
+    display: none;
+}
+
+.add-user-form {
+    display: none;
+}
+
+.add-user-form__input-container {
+    height: 500px;
+    overflow-y: auto;
+}
+
+.select-company__group {
+    display: none;
+}
+
+.select-company__input {
+    margin-top: 5px;
+}
+
+/* SELECT COMPANY */
+.select-company-form {
+    display: none;
+    min-height: 600px;
+}
+
+.select-company-form__content {
+   
+}
+
+.select-company-form__group {
+    margin-top: -10px;
+}
+
+.list-company {
+    margin-bottom: 40px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.item-company {
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.item-company:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.name-company {
+    padding: 10px;
+}
+

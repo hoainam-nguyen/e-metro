@@ -608,7 +608,6 @@ searchBar.addEventListener('keyup', function() {
 
 const table_headings = $$(".table_heading");
 
-
 table_headings.forEach(function(head,i) {
     head.onclick = () => {
         if (head.classList.contains('table_heading_active_asc')) {

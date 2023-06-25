@@ -1,0 +1,22 @@
+.select-company__group {
+    display: none;
+}
+
+.select-company__input {
+    margin-top: 5px;
+}
+
+.update-user-form__group {
+    position: relative;
+}
+
+.select-menu-update {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+}
+
+.detail-img {
+    background-image: url('/fe/assets/img/blank_img.png');
+}

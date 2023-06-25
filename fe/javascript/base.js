@@ -54,6 +54,9 @@ function renderUser(user) {
 
     btnLogo.onclick = function() {
         switch (data.type) {
+            case 0:
+                window.location.href = 'admin.html';
+                break;
             case 1:
                 window.location.href = 'home.html';
                 break;
