@@ -15,6 +15,8 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"/>
         <link rel="stylesheet" href="/fe/assets/css/NhanvienBanve/main.css">
         <link rel="stylesheet" href="/fe/assets/css/NhanvienBanve/history.css">
+        <link rel="stylesheet" href="/fe/assets/css/NhanVienSo/main.css">
+        <script src="/fe/javascript/NhanVienSo/NhanVienBanVe/history.js"></script>
     </head>
     <body>
         <div class="app_ticketseller">
@@ -62,19 +64,21 @@
             <nav class="top-nav">
                 <div class="grid">
                     <nav class="tabs">
-                        <div class="tab-item">
-                            <i class="tab-item__icon fa-solid fa-house">
-                            </i>
-                            TRANG CHỦ
-                        </div>
-                        <div class="tab-item">
-                            <i class="tab-item__icon fa-solid fa-ticket"></i>
-                            MUA VÉ
-                        </div>
-                        <div class="tab-item">
-                            <i class="tab-item__icon fa-solid fa-history"></i>
-                            LỊCH SỬ VÉ
-                        </div>
+                        <nav class="tabs">
+                            <a class="tab-item">
+                                <i class="tab-item__icon fa-solid fa-house"></i>
+                                <span class="tab-item__text">TRANG CHỦ</span>
+                            </a>
+                            <a class="tab-item" href="banve.html">
+                                <i class="tab-item__icon fa-solid fa-ticket"></i>
+                                <span class="tab-item__text">BÁN VÉ</span>
+                            </a>
+                            <a class="tab-item active" href="ticket_history.html">
+                                <i class="tab-item__icon fa-solid fa-history"></i>
+                                <span class="tab-item__text">LỊCH SỬ VÉ</span>
+                            </a>
+                            <div class="line"></div>
+                        </nav>
                     </nav>
                 </div>
             </nav>
@@ -83,33 +87,95 @@
                     <div class="filter_tb">
                         FILTER
                     </div>
+                    <div class="ticket_tb">
+                        Loại vé
+                    </div>
                     <label class="filter-radio">
-                        <input type="radio" name="filter_type" value="ticketid_radio" class="filter__input">
+                        <input type="checkbox" name="ticket_type" value="normal_radio" class="filter__input">
                         <div class="filter__radio"></div>
-                        Mã vé   
+                        Vé thường  
                     </label>
                     <label class="filter-radio">
-                        <input type="radio" name="filter_type" value="lineid_radio" class="filter__input">
+                        <input type="checkbox" name="ticket_type" value="month_radio" class="filter__input">
                         <div class="filter__radio"></div>
-                        Mã tuyến 
+                        Vé tháng
                     </label>
-                    <label class="filter-radio">
-                        <input type="radio" name="filter_type" value="status_radio" class="filter__input">
-                        <div class="filter__radio"></div>
+                    <div class="ticket_tb">
                         Tình trạng
+                    </div>
+                    <label class="filter-radio">
+                        <input type="checkbox" name="status_type" value="inuse_radio" class="filter__input">
+                        <div class="filter__radio"></div>
+                        Còn hạn  
+                    </label>
+                    <label class="filter-radio">
+                        <input type="checkbox" name="status_type" value="cantuse_radio" class="filter__input">
+                        <div class="filter__radio"></div>
+                        Hết hạn
                     </label>
                 </div>
                 <div class="history_ticket_grid">
                     <div>
                         <div class="history_searchbar">
-                            <input type="text" name="searchbar" class="text_field-searchbar" id="td_searchbar" placeholder="Search...">
+                            <input type="text" class="searchbar" placeholder="Search...">
                         </div>
                         <button class="history-search-button">
                             <i class="fa-solid fa-magnifying-glass fa-rotate-90 fa-xl" style="color:#6941C6"></i>
                         </button>
                     </div>
+                    <table id="dataTable" class="table">
+                        <thead>
+                            <tr>
+                                <th class="table_heading">Mã vé
+                                    <i class="arrow fa-solid fa-arrow-up arrow_icon_margin"></i>
+                                </th>
+                                <th class="table_heading">Mã tuyến
+                                    <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
+                                </th>
+                                <th class="table_heading">Tuyến
+                                    <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
+                                </th>
+                                <th class="table_heading">Loại vé
+                                    <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
+                                </th>
+                                <th class="table_heading">Tình trạng
+                                    <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
+                                </th>
+                                <th class="table_heading">Ngày mua
+                                    <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>VT01</td>
+                                <td>T03</td>
+                                <td>Chợ Bến Thành- Ngã tư Thủ Đức</td>
+                                <td>Vé thường</td>
+                                <td>Còn hạn</td>
+                                <td>17/2/2023</td>
+                            </tr>
+                            <tr>
+                                <td>VT03</td>
+                                <td>T01</td>
+                                <td>Chợ Bến Thành- Cầu vượt Linh Xuân</td>
+                                <td>Vé thường</td>
+                                <td>Còn hạn</td>
+                                <td>18/2/2023</td>
+                            </tr>
+                            <tr>
+                                <td>VT05</td>
+                                <td>T03</td>
+                                <td>Chợ Bến Thành- Ngã tư Thủ Đức</td>
+                                <td>Vé tháng</td>
+                                <td>Hết hạn</td>
+                                <td>11/2/2023</td>
+                            </tr>
+                        </tbody>
+                    </table>    
                 </div>
             </div>
         </div>
+        <script src="/fe/javascript/NhanVienSo/NhanVienBanVe/history.js"></script>
     </body>
 </html>

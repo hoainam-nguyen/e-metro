@@ -6,7 +6,7 @@ from src.methods.insert import insert_data_to_db
 from src.methods.search import (search_all_data, search_data_by_id,
                                 search_passwd_by_useremail)
 from src.methods.send_mail import EmailThread
-from src.methods.update import update_data_to_db
+from src.methods.update import update_data_to_db, delete_user_by_id
 from src.utils.utils import (InsertSchema, ResponseModel, SearchSchema,
                              UpdateSchema)
 
@@ -69,3 +69,13 @@ async def reset_passwd(user_email: str) -> ResponseModel:
         return ResponseModel(status_code=200, msg='Error', data={})
 
     return ResponseModel(status_code=200, msg='Finish', data=contact)
+
+@router.get('/delete')
+async def delete_user(id: int) -> ResponseModel:
+    try:
+        delete_user_by_id(id=id)
+    except:
+        return ResponseModel(status_code=500, msg='Error', data={})
+
+    return ResponseModel(status_code=200, msg='Finish', data={})
+

@@ -327,6 +327,7 @@ var input_img_file = $("#input-img-file");
 
 if (input_img_file != null) {
     input_img_file.onchange = function() {
+
         let imgURL = URL.createObjectURL(input_img_file.files[0]); 
         fileAdd = input_img_file.files[0];
         company_avt_add.style.backgroundImage = `url(${imgURL})`;

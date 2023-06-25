@@ -46,6 +46,7 @@ def upload_image_handler(image_base64, image_name):
     try:
         image_data = base64.b64decode(image_base64)
         image_pil = Image.open(BytesIO(image_data))
+        image_pil = image_pil.convert('RGB')
 
         image_url = upload_image_to_minio(image_pil=image_pil, object_name=image_name)
         return image_url

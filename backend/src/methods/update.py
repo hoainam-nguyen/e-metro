@@ -69,3 +69,22 @@ def update_via_image(type: str, id: int, image_url: str):
         data["image_url"] = image_url
         update_data_to_db(table_name="stations", id=id, data=data)
 
+
+def delete_user_by_id(id):
+    _sql_str = f'''
+    DELETE FROM users WHERE 1=1 and id={id}
+    '''
+    conn = RESOUSCE_MAP['db']
+    cursor = conn.cursor()
+    
+    try:
+        cursor.execute(_sql_str)        
+        conn.commit()
+        cursor.close()
+        
+    except Exception as e:
+        print(f"[ERROR] {e}")
+        conn.commit()
+        cursor.close()
+    
+
