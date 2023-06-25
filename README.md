@@ -7,16 +7,22 @@
     <img src="images/img_1.png"  width="80%" height="50%">
 </p>
 
-## Team members
-| Name         | Email               | Position   |
-|--------------|---------------------|------------|
-| Đào Thị Bích Huyền | 21522174@gm.uit.edu.vn | Team Leader  |
-| Nguyễn Hoài Nam    | 20520075@gm.uit.edu.vn | Back-end Developer  |
-| Phạm Tuấn Kiệt     | 21522262@gm.uit.edu.vn | Front-end Developer  |
-| Lê Võ Duy Khiêm    | 21522215@gm.uit.edu.vn | Front-end Developer  |
 
+## Introduction
+Welcome to the E-Metro System Management project! This project is developed as part of the Introduction to Software Engineering course (SE104) at UIT.
 
-## Features 
+The E-Metro System Management is a software application designed to manage and streamline the operations of a metro transportation system. It provides various features to facilitate the efficient management of users, companies, stations, routes, and tickets within the metro system.
+
+### Agenda
+
+- [Introduction](#introduction)
+- [Key Features](#key-features)
+- [Technologies](#technologies-used)
+- [Directory-structure](#directory-structure)
+- [How to use?](#how-to-use)
+- [Team Members](#team-members)
+
+## Key Features 
 
 Below are the key features of the project:
 
@@ -83,7 +89,7 @@ Below is a list of the key technologies used in the project:
 
 ## How to use ?
 
-- We using Docker and Docker Compose (Containerization Technology) for deployment the application. Supports both Mac, Windows, Linux.
+- We using Docker and Docker Compose (Containerization Technology) for deployment the application. Supports both MacÓS, Windows, Linux.
 
 - Belowing, we will guide end-to-end step for setup  the application. We will using shell command line.
 
@@ -122,4 +128,22 @@ docker compose up
 - Shutdown all service using docker compose
 ```bash
 docker compose up
+```
+
+
+## Team Members
+
+| Name         | Email               | Position   |
+|--------------|---------------------|------------|
+| Đào Thị Bích Huyền | 21522174@gm.uit.edu.vn | Team Leader  |
+| Nguyễn Hoài Nam    | 20520075@gm.uit.edu.vn | Back-end Developer  |
+| Phạm Tuấn Kiệt     | 21522262@gm.uit.edu.vn | Front-end Developer  |
+| Lê Võ Duy Khiêm    | 21522215@gm.uit.edu.vn | Front-end Developer  |
+
+
+If you have any questions, suggestions, or need assistance, please feel free to contact us using the following information.
+
+## Copyright
+```
+© 6/2023 Copyright Hoai-Nam Nguyen. All rights reserved.
 ```
