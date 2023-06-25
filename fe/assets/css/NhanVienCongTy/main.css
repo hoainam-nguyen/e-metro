@@ -1,0 +1,50 @@
+.modal__inner {
+    position: relative;
+}
+
+
+
+
+/* .select-company {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+} */
+
+
+/* 
+.select-company__search {
+    width: 550px;
+    margin-top: 50px;
+}
+
+.search-company-container {
+    height: 500px;
+    margin-top: 10px;
+}
+.search-company-list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+.search-company-item {
+    width: 500px;
+    background-color: #fff;
+    padding: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.search-company-item:hover {
+    cursor: pointer;
+    background-color: #f5f5f5;
+}
+
+.search-company-name {
+    
+} */

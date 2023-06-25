@@ -53,7 +53,7 @@
 .detail-img {
     width: 300px;
     height: 300px; 
-    background-image:url('https://avatars.githubusercontent.com/u/103875393?s=400&u=45b000740a9cfdc553f7fb1ea8208f117f84a58e&v=4');
+    background-image:url('/fe/assets/img/blank_img.png');
     background-position: center;
     background-size: cover;
     border-radius: 5px;
@@ -108,6 +108,10 @@
 }
 
 #input-img-file {
+    display: none;
+}
+
+#input-img-file-update {
     display: none;
 }
 
@@ -173,6 +177,10 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.search-station-item:hover {
+    cursor: pointer;
+}
+
 .search-station-item:first-child {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -193,7 +201,7 @@
 .item__img {
     width: 50px;
     height: 50px; 
-    background-image:url('https://avatars.githubusercontent.com/u/103875393?s=400&u=45b000740a9cfdc553f7fb1ea8208f117f84a58e&v=4');
+    background-image:url('/fe/assets/img/blank_img.png');
     background-position: center;
     background-size: cover;
     border-radius: 5px;
@@ -302,4 +310,12 @@
 
 .add-station-form__controls {
     margin-top: 32px;
+}
+
+.change-password-form {
+    display: none;
+}
+
+.add-station-form {
+    display: none;
 }

@@ -1,0 +1,122 @@
+.background {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #f5f5f5; */
+    background-image: url('https://e0.pxfuel.com/wallpapers/340/839/desktop-wallpaper-gray-gradient-9-color-high-resolution-full-purple-and-gray.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    background-color: white;
+    width: 500px;
+    height: 580px;
+    border-radius: 5px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.header + .header {
+    margin-top: 10px;
+}
+
+.webname {
+    color: var(--purple);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.welcome {
+    font-size: 2.5rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #EE786C;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+
+    font-size: 1.6rem;
+}
+
+.input-container + .input-container {
+    margin-top: 20px;
+}
+
+input {
+    font-size: 1.6rem;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 5px;
+
+    border: 1px solid var(--purple);
+    background-color: #f5f5f5;
+
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid var(--purple);
+}
+
+
+.forgot-password-box {  
+    font-size: 1.4rem;
+    margin-left: 180px;
+    font-weight: 600;
+    color: var(--purple);
+    margin-top: 15px;
+}
+
+.forgot-password-box a:hover {
+    cursor: pointer;
+}
+
+.login-box {
+    background-color: var(--purple);
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 450px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.login-box:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.logo {
+    font-size: 8rem;
+    color: var(--purple);
+    margin-top: 20px;
+}
+
+.show-pass {
+    display: flex;
+    font-size: 1.4rem;
+    align-items: center;
+}
+
+

@@ -56,12 +56,15 @@
     position: relative;
 }
 
+.update-station-form__group {
+    position: relative;
+}
+
 .select-menu-update {
     position: absolute;
-    top: 387px;
-    left: 263px;
-    margin-top: 2px;
-    display: none;
+    top: 50%;
+    left: 0;
+    content: "";
 }
 
 

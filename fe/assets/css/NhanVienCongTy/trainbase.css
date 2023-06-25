@@ -1,0 +1,79 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --brown-color: #4D2700;
+    --green--color: #12B76A;
+    --black--color: #000000;
+    --red--color: #e84c3d;
+    --grey--color: #ecedef;
+    --black1--color: #343434;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;  /* kích thước chữ mặc định là 16px */ 
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+p{
+    font-size: 1rem;  /* kích thước chữ mặc định là 16px */  
+}
+
+.grid{
+    width: 1320px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__fullwidth{   
+    width: 100%;
+}
+
+.grid-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+@keyframes FadeIn {
+    from{
+        opacity: 0;
+    }   
+    to{
+        opacity: 1;     
+    }
+}
+.clear{
+    clear: both;
+}
+
+@keyframes FadeOut {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }   
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes track {
+    0% {transform: translateY(70px) rotateX(45deg);}
+    100% {transform: translateY(0px) rotateX(45deg);}
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0);}
+    25% {transform: rotate(2deg);}
+    50% {transform: rotate(0);}
+    75% {transform: rotate(-2deg);}
+    100% {transform: rotate(0);}
+}
+.close{
+    display: none;
+}
