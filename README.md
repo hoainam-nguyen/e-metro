@@ -145,5 +145,5 @@ If you have any questions, suggestions, or need assistance, please feel free to 
 
 ## Copyright
 ```
-© 6/2023 Copyright Hoai-Nam Nguyen. All rights reserved.
+© 6/2023 Copyright Hoai-Nam Nguyen.
 ```
