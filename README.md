@@ -18,7 +18,7 @@ The E-Metro System Management is a software application designed to manage and s
 - [Introduction](#introduction)
 - [Key Features](#key-features)
 - [Technologies](#technologies-used)
-- [Directory-structure](#directory-structure)
+- [Directory Structure](#directory-structure)
 - [How to use?](#how-to-use)
 - [Team Members](#team-members)
 
@@ -121,7 +121,7 @@ docker compose up
     - PostgreSQL run at `localhost:5432`
 
 - Enjoy:
-    - Experience now with with http://localhost:8010/fe/html/loginpage.html
+    - Now's experiment at `http://localhost:8010/fe/html/loginpage.html`
 
 ### Shutdown
 
@@ -135,7 +135,7 @@ docker compose up
 
 | Name         | Email               | Position   |
 |--------------|---------------------|------------|
-| Đào Thị Bích Huyền | 21522174@gm.uit.edu.vn | Team Leader  |
+| Đào Bích Huyền | 21522174@gm.uit.edu.vn | Team Leader  |
 | Nguyễn Hoài Nam    | 20520075@gm.uit.edu.vn | Back-end Developer  |
 | Phạm Tuấn Kiệt     | 21522262@gm.uit.edu.vn | Front-end Developer  |
 | Lê Võ Duy Khiêm    | 21522215@gm.uit.edu.vn | Front-end Developer  |
