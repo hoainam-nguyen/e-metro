@@ -1,10 +1,10 @@
-# THE E_METRO SYSTEM MANAGEMENT
+# THE E-METRO SYSTEM MANAGEMENT
 
-- The final projec for Introduction to Software Engineering (Course SE104 | UIT) 
+- The project for Introduction to Software Engineering (Course SE104 | UIT) 
 - Guided by [Msc. Nguyễn Thị Thanh Trúc](mailto:trucntt@uit.edu.vn)
 
 <p align="center">
-    <img src="images/img_2.png"  width="80%" height="50%">
+    <img src="images/img_1.png"  width="80%" height="50%">
 </p>
 
 ## Team members
@@ -17,6 +17,14 @@
 
 
 ## Features 
+
+Below are the key features of the project:
+
+- [User management](#user-management)
+- [Company management](#company-management)
+- [Station management](#station-management)
+- [Route management](#route-management)
+- [Ticket management](#ticket-management)
 
 ### User management
 Allowing the admin to manage, create, delete, and assign user permissions.
@@ -45,3 +53,33 @@ Allowing employees of each operating company to manage, search, create, and edit
 
 ### Ticket management
 Allowing ticketing staff to manage tickets and review sold tickets.
+
+## Technologies Used
+
+Below is a list of the key technologies used in the projec:
+
+- Programming Language: HTML, CSS, JS, Python
+- Framework: [FastAPI](https://fastapi.tiangolo.com)
+- Database: [PostgreSQL](https://www.postgresql.org)
+- Storage: [MinIO](https://min.io)
+- Deployment: [Docker](https://www.docker.com)
+- Version Control: [Git](https://git-scm.com)
+
+## Directory Structure
+
+```bash
+├── docs/                         # Project documentation
+├── backend/                   # Backend source code
+│   ├── src/                      # Main source code
+│   ├── docker-compose.yml      
+├── fronend/                    # Frontend source code
+│   ├── assets/                 
+│   ├── html/                   # UI source 
+│   ├── javascripts/            
+├── images/                     # Sample data
+└── README.md          # Main README file of the project
+
+```
+
+## How to use ?
+
