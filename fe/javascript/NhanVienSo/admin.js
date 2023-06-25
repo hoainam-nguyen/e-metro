@@ -15,7 +15,12 @@ function getAllUsers(callback) {
         })
         .then(callback)
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -96,6 +101,7 @@ function onClickTable(currentRow)
                 .then(function() {
                     let dataTable = $(".table");
                     dataTable.deleteRow(currentRow.rowIndex);
+                    updateTotal();
                 });
             }
         };
@@ -154,7 +160,12 @@ async function getUser(id, callback) {
         })
         .then(callback)
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 

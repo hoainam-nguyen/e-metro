@@ -92,91 +92,91 @@ let hengio = setInterval(function() {
 
 //Toast function
 
-function toast(
-    {
-        title= '',
-        message= '',
-        type= 'info',
-        duration = 3000
-    }){
-        const main =  document.getElementById('success_toast');
-        if (main)
-        {
-            const toast = document.createElement('div');
+// function toast(
+//     {
+//         title= '',
+//         message= '',
+//         type= 'info',
+//         duration = 3000
+//     }){
+//         const main =  document.getElementById('success_toast');
+//         if (main)
+//         {
+//             const toast = document.createElement('div');
 
-            const autoremove = setTimeout(function(){
-                main.removeChild(toast);
-            }, duration + 1000);
+//             const autoremove = setTimeout(function(){
+//                 main.removeChild(toast);
+//             }, duration + 1000);
 
-            toast.onclick= function(e){
-                if (e.target.closest('.toast_close'))
-                {
-                    main.removeChild(toast);
-                    clearTimeout(autoremove);
-                }
-            }
-            toast.classList.add('toast');
-            const delay = (duration/1000).toFixed(2);
-            toast.style.animation = `slideinleft ease .3s, fadeout 1s ${delay}s forwards`;
+//             toast.onclick= function(e){
+//                 if (e.target.closest('.toast_close'))
+//                 {
+//                     main.removeChild(toast);
+//                     clearTimeout(autoremove);
+//                 }
+//             }
+//             toast.classList.add('toast');
+//             const delay = (duration/1000).toFixed(2);
+//             toast.style.animation = `slideinleft ease .3s, fadeout 1s ${delay}s forwards`;
 
-            toast.innerHTML = `
-            <div class="toast_icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <div class="toast_body">
-                        <h3 class="toast_title">${title}</h3>
-                        <p class="toast_msg">${message}</p>
-                    </div>
-                    <div class="toast_close">
-                        <i class="fas fa-times"></i>
-                    </div>
-            `;
-            main.appendChild(toast);
-        }
-    }
+//             toast.innerHTML = `
+//             <div class="toast_icon">
+//                         <i class="fas fa-check-circle"></i>
+//                     </div>
+//                     <div class="toast_body">
+//                         <h3 class="toast_title">${title}</h3>
+//                         <p class="toast_msg">${message}</p>
+//                     </div>
+//                     <div class="toast_close">
+//                         <i class="fas fa-times"></i>
+//                     </div>
+//             `;
+//             main.appendChild(toast);
+//         }
+//     }
 
-    function toastfail(
-        {
-            title= '',
-            message= '',
-            type= 'info',
-            duration = 3000
-        }){
-            const main =  document.getElementById('success_toast');
-            if (main)
-            {
-                const toast = document.createElement('div');
+//     function toastfail(
+//         {
+//             title= '',
+//             message= '',
+//             type= 'info',
+//             duration = 3000
+//         }){
+//             const main =  document.getElementById('success_toast');
+//             if (main)
+//             {
+//                 const toast = document.createElement('div');
     
-                const autoremove = setTimeout(function(){
-                    main.removeChild(toast);
-                }, duration + 1000);
+//                 const autoremove = setTimeout(function(){
+//                     main.removeChild(toast);
+//                 }, duration + 1000);
     
-                toast.onclick= function(e){
-                    if (e.target.closest('.toast_close'))
-                    {
-                        main.removeChild(toast);
-                        clearTimeout(autoremove);
-                    }
-                }
-                toast.classList.add('toast_fail');
-                const delay = (duration/1000).toFixed(2);
-                toast.style.animation = `slideinleft ease .3s, fadeout 1s ${delay}s forwards`;
+//                 toast.onclick= function(e){
+//                     if (e.target.closest('.toast_close'))
+//                     {
+//                         main.removeChild(toast);
+//                         clearTimeout(autoremove);
+//                     }
+//                 }
+//                 toast.classList.add('toast_fail');
+//                 const delay = (duration/1000).toFixed(2);
+//                 toast.style.animation = `slideinleft ease .3s, fadeout 1s ${delay}s forwards`;
     
-                toast.innerHTML = `
-                <div class="toast_icon">
-                            <i class="fas fa-exclamation-circle" style="color:#dc143c;"></i>
-                        </div>
-                        <div class="toast_body">
-                            <h3 class="toast_title">${title}</h3>
-                            <p class="toast_msg">${message}</p>
-                        </div>
-                        <div class="toast_close">
-                            <i class="fas fa-times"></i>
-                        </div>
-                `;
-                main.appendChild(toast);
-            }
-        }
+//                 toast.innerHTML = `
+//                 <div class="toast_icon">
+//                             <i class="fas fa-exclamation-circle" style="color:#dc143c;"></i>
+//                         </div>
+//                         <div class="toast_body">
+//                             <h3 class="toast_title">${title}</h3>
+//                             <p class="toast_msg">${message}</p>
+//                         </div>
+//                         <div class="toast_close">
+//                             <i class="fas fa-times"></i>
+//                         </div>
+//                 `;
+//                 main.appendChild(toast);
+//             }
+//         }
 
 //Createticket
 var ticketsapi = "https://aiclub.uit.edu.vn/namnh/emetro/tickets/insert"
@@ -261,20 +261,21 @@ function showToast()
         }
 
         toast({
-            title: 'Success',
-            message: 'Tạo vé tự động thành công!',
-            type: 'success',
-            duration: 4000
-        });
+            title: "Xuất vé hành công!",
+            message: "Bạn đã xuất vé thành công!",
+            type: "success",
+            duration: 3000
+          });
+
     }
     else
     {
-        toastfail({
-            title: 'Fail',
-            message: 'Không thành công, vui lòng chọn đủ thông tin!',
-            type: 'fail',
-            duration: 4000
-        });
+        toast({
+            title: "Thất bại!",
+            message: "Vui lòng chọn đầy đủ thông tin!",
+            type: "error",
+            duration: 3000
+          });
     }
 }
 

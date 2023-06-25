@@ -16,7 +16,12 @@ function getUser(id, callback) {
         })
         .then(callback)
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -71,7 +76,12 @@ async function getCompany(id) {
            return company.data[0].name;
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -96,7 +106,12 @@ async function getCompanies(callback) {
         })
         .then(callback)
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -167,7 +182,12 @@ async function getAllUsers() {
             renderAllUsers(users);
         })
         .catch(function (err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 

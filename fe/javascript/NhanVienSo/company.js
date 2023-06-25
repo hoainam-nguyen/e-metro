@@ -47,7 +47,12 @@ async function getCompanies(callback) {
         })
         .then(callback)
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -95,7 +100,12 @@ async function createCompany(newCompany, callback) {
         })
         .then(callback)
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         }); 
 }
 
@@ -159,7 +169,12 @@ async function uploadImage(newImage, isRender) {
             return "done";
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         }); 
 }
 
@@ -187,7 +202,12 @@ async function updateCompany(newCompany) {
             return res;
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -200,7 +220,12 @@ async function getCompany(id, callback) {
         })
         .then(callback)
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -363,6 +388,13 @@ btnOk.onclick = async function() {
        
         await createCompany(newCompany, callBackForUploadImage);
 
+        toast({
+            title: "Thêm mới thành công!",
+            message: "Bạn đã thêm mới công ty thành công!",
+            type: "success",
+            duration: 3000
+          });
+
         clearAddForm();
     }
 }
@@ -475,6 +507,12 @@ OkUpdateForm.onclick = async function() {
                         console.log(res);
                     });
                 getCompany(Number(id), renderCompany);
+                toast({
+                    title: "Cập nhật thành công!",
+                    message: "Bạn đã cập nhật công ty thành công!",
+                    type: "success",
+                    duration: 3000
+                  });
                 clearUpdateForm();
             });
     }

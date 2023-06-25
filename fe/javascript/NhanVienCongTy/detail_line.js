@@ -25,7 +25,12 @@ function getLine(id, callback) {
         })
         .then(callback)
         .catch(function (err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -86,7 +91,12 @@ async function getCompany(id) {
             return company.data[0].name;
         })
         .catch(function (err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -151,7 +161,12 @@ async function getAllLine(company_id) {
             renderAllLine(lines, company_id);
         })
         .catch(function (err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -192,7 +207,12 @@ function getUser(id) {
             getAllLine(data.company_id);
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -346,7 +366,12 @@ function getStation(id) {
             return station.data[0];
         })
         .catch(function (err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -398,7 +423,12 @@ async function getAllStations(callback) {
         })
         .then(callback)
         .catch(function (err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -672,6 +702,12 @@ btnUpdate.onclick = function() {
         updateLine(newLine)
         .then(function (result) {
             console.log(result);
+            toast({
+                title: "Cập nhật thành công!",
+                message: "Bạn đã cập nhật tuyến tàu thành công!",
+                type: "success",
+                duration: 3000
+              });
         });
     }
 }
@@ -696,7 +732,12 @@ async function updateLine(newLine) {
             return result;
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 

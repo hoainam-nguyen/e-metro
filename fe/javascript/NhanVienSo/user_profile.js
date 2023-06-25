@@ -89,7 +89,12 @@ function getNameCompany(id) {
             listInput[1].value = data.name;
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 

@@ -208,7 +208,12 @@ function getCompanyFromId(id) {
             getAllLines(data.id);
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -223,7 +228,12 @@ function getUser(id) {
             getCompanyFromId(data.company_id);
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -268,7 +278,12 @@ async function getAllLines(company_id) {
             renderLines(lines, company_id);
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -281,7 +296,12 @@ async function getCompany(id) {
             return company.data[0].name;
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -344,7 +364,12 @@ async function createLine(newLine) {
             return line.data.id;
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         }); 
 }
 
@@ -357,7 +382,12 @@ async function getAllStations(callback) {
         })
         .then(callback)
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -634,6 +664,12 @@ btnOk.onclick = function() {
             modal.style.display = "none";
             clearAddForm();
             resetSelectRouteForm();
+            toast({
+                title: "Thêm mới thành công!",
+                message: "Bạn đã thêm mới tuyến tàu thành công!",
+                type: "success",
+                duration: 3000
+              });
             // resetSelectCompanyForm();
         });
     }

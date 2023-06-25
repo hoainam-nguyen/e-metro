@@ -54,7 +54,15 @@ function getCompany(callback) {
         .then(function(response) {
             return response.json();
         })
-        .then(callback);
+        .then(callback)
+        .catch(function() {
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
+        });
 }
 
 function renderCompany(company) {
@@ -90,7 +98,15 @@ async function getCompanies(callback) {
         .then(function(response) {
             return response.json();
         })
-        .then(callback);
+        .then(callback)
+        .catch(function() {
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
+        });
 }
 
 async function renderCompanies(companies) {
@@ -184,7 +200,12 @@ async function uploadImage(newImage) {
             return data.id;
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         }); 
 }
 
@@ -209,7 +230,12 @@ async function updateCompany(newCompany) {
             return true;
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -230,7 +256,12 @@ async function createCompany(newCompany, callback) {
         })
         .then(callback)
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         }); 
 }
 
@@ -348,6 +379,13 @@ btnUpdate.onclick = async function() {
                         if (result == true) {
                             sessionStorage.setItem("id_company", id);
                             getCompany(renderCompany);
+
+                            toast({
+                                title: "Cập nhật thành công!",
+                                message: "Bạn đã cập nhật công ty thành công!",
+                                type: "success",
+                                duration: 3000
+                              });
                         }
                     });
             });

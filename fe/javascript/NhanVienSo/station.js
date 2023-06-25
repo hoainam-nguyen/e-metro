@@ -45,7 +45,12 @@ async function getAllStations(callback) {
         })
         .then(callback)
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Lỗi!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -124,7 +129,12 @@ async function uploadImage(newImage) {
             return data.id;
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         }); 
 }
 
@@ -148,7 +158,12 @@ async function updateStation(newStation) {
             console.log(res);
         })
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -160,7 +175,12 @@ function getStation(id, callback) {
         })
         .then(callback)
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         });
 }
 
@@ -202,7 +222,12 @@ async function createStation(newStation, callback) {
         })
         .then(callback)
         .catch(function(err) {
-            console.log(err);
+            toast({
+                title: "Thất bại!",
+                message: "Có lỗi xảy ra!",
+                type: "error",
+                duration: 3000
+              });
         }); 
 }
 
@@ -329,6 +354,12 @@ btnOk.onclick = async function() {
         await createStation(newStation, callBackForUploadImage)
             .then(function(id) {
                 getStation(id, renderStationEndList);
+                toast({
+                    title: "Thêm mới thành công!",
+                    message: "Bạn đã thêm mới nhà ga thành công!",
+                    type: "success",
+                    duration: 3000
+                  });
             });
 
         clearAddForm();
@@ -531,6 +562,12 @@ btnOk_update.onclick = async function() {
                 updateStation(newStation);
                 getStation(Number(listInputUpdate[0].value), renderStation);
                 // console.log(result);
+                toast({
+                    title: "Cập nhật thành công!",
+                    message: "Bạn đã cập nhật nhà ga thành công!",
+                    type: "success",
+                    duration: 3000
+                  });
                 closeUpdateForm();
             });
 
