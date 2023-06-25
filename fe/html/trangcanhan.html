@@ -15,6 +15,7 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"/>
         <link rel="stylesheet" href="/fe/assets/css/NhanvienBanve/main.css">
         <link rel="stylesheet" href="/fe/assets/css/NhanvienBanve/profile.css">
+        <script src="/fe/javascript/NhanVienSo/NhanVienBanVe/profile.js"></script>
     </head>
     <body>
         <div class="app">
@@ -58,7 +59,7 @@
                     </div>
                 </div>
             </header>
-    
+            
             <hr>
     
                 <nav class="top-nav">
@@ -86,15 +87,30 @@
                         </nav>
                     </div>
                 </nav>
+                <div id="success_toast">
+                    <!-- <div class="toast">
+                        <div class="toast_icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="toast_body">
+                            <h3 class="toast_title">Success</h3>
+                            <p class="toast_msg">Tạo vé tự động thành công</p>
+                        </div>
+                        <div class="toast_close">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div> -->
+                </div>
             <div class="profile_layout">
                 <div class="cover_image" style="background-image: url(https://khoinguonsangtao.vn/wp-content/uploads/2021/09/mau-anh-bia-facebook-dep.jpeg);">
                 </div>
                 <div class="profile_firstgrid">
-                    <div class="profile_avt" >
+                    <div class="profile_avt" id="profile-avt">
                     </div>
-                    <button class="change_avt-but">
-                        <i class="fa-solid fa-camera fa-xl" style="color: #ffffff;"></i>
-                    </button>
+                    <label for="img-update" class="change_avt-but">
+                        <i class="fa-solid fa-camera fa-xl" style="margin-left: 10px; margin-top: 16px; color: #ffffff"></i>
+                        <input type="file" accept="image/jpeg, image/png, image/jpg" id="img-update" onchange="document.getElementById('profile-avt').style.backgroundImage = 'url(' + window.URL.createObjectURL(this.files[0]) + ')';">
+                    </label>
                     <div class="profile_username">
                         Duy Khiêm
                     </div>
@@ -105,49 +121,37 @@
                         Mã NV: 0611
                     </div>
                 </div>
-                <div class="profile_secondgrid">
+                <form class="profile_secondgrid">
                     <div class="username_tb">
                         Họ và tên
                     </div>
-                    <div class="username-tb">
-                        Lê Võ Duy Khiêm
-                    </div>
+                    <input type="text" class="username-tb" value="Lê Võ Duy Khiêm" >
                     <div class="phonenum">
                         Số điện thoại
                     </div>
-                    <div class="phonenum-tb">
-                        0961826917
-                    </div>
+                    <input type="text" class="phonenum-tb" value="0961826917" >
                     <div class="email">
                         Email liên lạc
                     </div>
-                    <div class="email-tb">
-                        khiem6112003@gmail.com
-                    </div>
+                    <input type="text" class="email-tb" value="khiem06112003@gmail.com" > 
                     <div class="dob">
                         Ngày sinh
                     </div>
-                    <div class="dob-tb">
-                        06/11/2003
-                    </div>
-                    <button class="calendar">
-                        <i class="fa-regular fa-calendar-days fa-xl" style="color: #6941C6;"></i>
-                    </button>
+                    <input type="date" id="datepicker" class="dob-tb" value="06-11-2003">
+
                     <div class="address">
                         Địa chỉ
                     </div>
-                    <div class="address-tb">
-                        45b Đ.số 8, Linh Trung, Thủ Đức
-                    </div>
+                    <input type="text" class="address-tb" value="45b Đ.số 8, Linh Trung" >
                     <div>
-                        <button class="profile_edit">
+                        <button onclick="EnableEditProfile()" class="profile_edit" type="button">
                             Chỉnh sửa
                         </button>
-                        <button class="save_profile">
+                        <button onclick="DisableEditProfile()" class="save_profile" type="button">
                             Lưu
                         </button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </body>

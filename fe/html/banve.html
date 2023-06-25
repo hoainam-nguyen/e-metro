@@ -7,6 +7,7 @@
         <title>E-METRO_TICKETSELLER</title>
         <link rel="stylesheet" href="/fe/assets/css/reset.css">
         <link rel="stylesheet" href="/fe/assets/css/base.css">
+        <link rel="stylesheet" href="/fe/assets/css/NhanVienSo/main.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -61,26 +62,40 @@
             <nav class="top-nav">
                 <div class="grid">
                     <nav class="tabs">
-                        <div class="tab-item">
-                            <i class="tab-item__icon fa-solid fa-house">
-                            </i>
-                            TRANG CHỦ
-                        </div>
-                        <div class="tab-item">
+                        <a class="tab-item">
+                            <i class="tab-item__icon fa-solid fa-house"></i>
+                            <span class="tab-item__text">TRANG CHỦ</span>
+                        </a>
+                        <a class="tab-item active" href="banve.html">
                             <i class="tab-item__icon fa-solid fa-ticket"></i>
-                            MUA VÉ
-                        </div>
-                        <div class="tab-item">
+                            <span class="tab-item__text">BÁN VÉ</span>
+                        </a>
+                        <a class="tab-item" href="ticket_history.html">
                             <i class="tab-item__icon fa-solid fa-history"></i>
-                            LỊCH SỬ VÉ
-                        </div>
+                            <span class="tab-item__text">LỊCH SỬ VÉ</span>
+                        </a>
+                        <div class="line"></div>
                     </nav>
                 </div>
             </nav>
+            <div id="success_toast">
+                <!-- <div class="toast">
+                    <div class="toast_icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="toast_body">
+                        <h3 class="toast_title">Success</h3>
+                        <p class="toast_msg">Tạo vé tự động thành công</p>
+                    </div>
+                    <div class="toast_close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div> -->
+            </div>
         <div class="ticketseller">
             <div class="ticketseller-item">
                 <div class="ticketseller-item_img" style="background-image: url(https://www.purplelinemd.com/images/jch-optimize/ng/images_frontpage_showcase_FP__Showcase__Test.webp);">
-                <div class="ticketseller-item_sellerlayout">
+                <form class="ticketseller-item_sellerlayout">
                     <div class="seller_header">
                         <h1 style="font-size: 25px; margin-top: 15px; font-style:normal;color:white"> 
                             BÁN VÉ TRỰC TUYẾN
@@ -98,50 +113,131 @@
                                 Vé tháng
                             </label>
                     </div>
-                    <div class="seller_ticketid">
-                        <div class="ticketid">
-                            <input type="text" name="ticket_id" class="text_field" id="tf_ticket_id">
-                            <label for="tf_ticket_id" class="tf_label"> Mã vé </label>
+                    <div class="dropdown_number">
+                        <div class="select-btn">
+                            <span class="sBtn-text"> Số lượng</span>
+                            <div class="caret"></div>
                         </div>
-                        <div class="lineid">
-                            <input type="text" name="line_id" class="text_field" id="tf_line_id">
-                            <label for="tf_line_id" class="tf_label"> Mã tuyến </label>
+                        <ul class="options">
+                            <li class="option">
+                                <span class="option-text">1</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">2</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">3</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">4</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">5</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">6</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">7</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">8</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">9</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">10</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="form__group">
+                        <input readonly type="text" class="form__input" placeholder="Chọn tuyến tàu"> 
+                    </div>
+                    <!-- <div class="dropdown_line">
+                        <div class="select-btn">
+                            <span class="sBtn-text"> Chọn tuyến</span>
+                            <div class="caret"></div>
                         </div>
-                    </div>
-                    <div class="line_choice">
-                        <div class="dropdown_line">
-                            <span class="select_line"> Chọn tuyến</span>
-                        <i class="fa-solid fa-caret-down" style="color: #6941C6;margin-right: 15px;"></i>
-                        </div>                        
-                    </div>
+                        <ul class="options">
+                            <li class="option">
+                                <span class="option-text">Thủ Đức- Bình Chánh</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">Thủ Đức- Tân Phú</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">Bình Chánh- Thủ Đức</span>
+                            </li>
+                        </ul>
+                    </div> -->
                     <div class="date_and_status">
                         <div class="date_choice">
-                            <input type="text" name="date_select" class="text_field" id="tf_date_select">
+                            <input type="text" name="date_select" class="text_field" id="tf_date_select" disabled style="background-color: #ffffff;">
                             <label for="tf_date_select" class="tf_label_date"> Ngày mua 
                             </label>
-                            <button class="date_choosing">
+                            <button class="date_choosing" type="button" onclick="GetDate()">
                                 <i class="fa-regular fa-calendar-days" style="color: #6941C6;"></i>
                             </button>
                         </div>
                         <div class="status">
-                            <input type="text" name="status-item" class="text_field" id="tf_status">
+                            <input type="text" name="status-item" class="text_field" id="tf_status" disabled style="background-color: #ffffff;">
                             <label for="tf_status" class="tf_label"> Tình trạng </label>
                         </div>
                     </div>
                     <div class="ticket_price">
                         <div class="price">
-                            <input type="text" name="price-item" disabled style="background-color: #ffffff;" class="text_field_price" id="tf_price" >
+                            <input type="text" name="price-item" style="background-color: #ffffff;" class="text_field_price" id="tf_price" disabled>
                             <label for="tf_price" class="tf_label_price"> Giá vé: </label>
                         </div>
                     </div>
+                    <div class="ticket_price">
+                        <div class="price">
+                            <input type="text" style="background-color: #ffffff;" class="text_field_price" id="total_price" disabled>
+                            <label for="total_price" class="tf_label_totalprice"> Tổng tiền: </label>
+                        </div>
+                    </div>
                     <div class="button_accept">
-                        <button class="accept-but">
+                        <button class="accept-but" type="button" onclick="showToast()">
                             XÁC NHẬN
                         </button>
                     </div>
-                </div>
+                </form>
                 </div>
             </div>
         </div> 
+
+
+        <div class="modal">
+            <div class="modal__overlay"></div>
+
+            <div class="modal__body">
+                <div class="modal__inner">
+
+                    <!-- SELECT COMPANY FORM -->
+                    <div class="form select-company-form">
+                        <div class="form__header select-company-form__header">
+                            <h1 class="form__heading select-company-form__heading">Chọn tuyến tàu</h1>
+                        </div>
+                        <div class="form__content select-company-form__content">
+                            <div class="form__input-container select-company-form__input-container">
+
+                                <div class="form__group select-company-form__group">
+                                    <input type="text" class="form__input select-company-form__input select-company__search" placeholder="Nhập mã hoặc tên tuyến tàu"> 
+                                </div>
+
+
+                                <ul class="list-company">
+                                </ul>
+
+                            </div>
+                        </div> 
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </body>
+    <script src="/fe/javascript/NhanVienSo/NhanVienBanVe/ticketseller.js"></script>
 </html>
