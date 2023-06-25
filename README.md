@@ -2,6 +2,8 @@
 
 The software engineering introductory project (Course SE104 | UIT) is guided by [Msc. Nguyen Thi Thanh Truc](mailto:trucntt@uit.edu.vn)
 
+<img src="images/img_2.png"  width="80%" height="50%">
+
 ## Team members
 | Name         | Email               | Position   |
 |--------------|---------------------|------------|
@@ -13,23 +15,26 @@ The software engineering introductory project (Course SE104 | UIT) is guided by 
 
 ## Features 
 
-1. User management
-
+### User management
 Allowing the admin to manage, create, delete, and assign user permissions.
 
 
-2. Company management
-
+### Company management
 Allowing city transportation department staff to manage, search, create, and edit operating companies.
 
-3. Station management
+<img src="images/img_3.png"  width="50%" height="50%">
 
+
+### Station management
 Allowing city transportation department staff to manage, search, create, and edit stations.
 
-4. Route management
+<img src="images/img_4.png"  width="50%" height="50%">
 
+
+### Route management
 Allowing employees of each operating company to manage, search, create, and edit information about train routes.
 
-5. Ticket management
+<img src="images/img_5.png"  width="50%" height="50%">
 
+### Ticket management
 Allowing ticketing staff to manage tickets and review sold tickets.
