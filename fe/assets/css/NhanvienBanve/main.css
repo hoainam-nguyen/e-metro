@@ -693,7 +693,7 @@ transition: 0.5s;
     .dropdown_line .select-btn{
         display: flex;
         height: 45px;
-        padding: 12px 15px;
+        padding: 12px 10px;
         background: #fff;
         font-size: 12px;
         font-weight: 600;
@@ -752,6 +752,7 @@ transition: 0.5s;
     background-color: transparent;
 }
 .date_choice{
+    margin-top: -15px;
     margin-left: 15px;
     position: relative;
     z-index: 1;
@@ -795,8 +796,16 @@ transition: 0.5s;
     margin-left: -35px;
 }
 .ticket_price{
+    margin-top: -15px;
     position: relative;
     margin-left: 5px;
+}
+.ticket_price + .ticket_price{
+    margin-top: 10px;
+}
+#total_price{
+    padding-left: 85px;
+    margin-top: 0px;
 }
 .text_field_price{
     position: relative;
@@ -819,14 +828,26 @@ transition: 0.5s;
     position: absolute;
     left: 35px;
     transform: all 0.2s;
-    padding: 5px 10px 0px 0;
+    padding: 5px 0px 0px 0px;
     transform: translateY(-50%);
     z-index: 1;
     color:#6941C6;
     transition: 0.25s ease;
     font-size: 11px;
 }
-.text_field_price + .tf_label_price, 
+.tf_label_totalprice{
+    text-align: right;
+    position: absolute;
+    left: 35px;
+    transform: all 0.2s;
+    padding: 45px 0px 0px 15px;
+    transform: translateY(-50%);
+    z-index: 1;
+    color:#6941C6;
+    transition: 0.25s ease;
+    font-size: 12px;
+}
+.text_field_price + .tf_label_price,
 .filled{
     top: 13px;
     margin-left: 15px;
@@ -874,6 +895,26 @@ transition: 0.5s;
     transition: all linear 0.25s;
     /* animation:  */
 }
+.toast_fail{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    border-left: 4px solid #dc143c;
+    padding: 20px 0;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    transition: all linear 0.25s;
+    /* animation:  */
+}
+.toast_fail + .toast_fail{
+    margin-top: 10px;
+}
+.toast + .toast_fail{
+    margin-top: 10px;
+}
+.toast_fail + .toast{
+    margin-top: 10px;
+}
 @keyframes slideinleft{
     from  {
         opacity: 0;
@@ -899,9 +940,6 @@ transition: 0.5s;
 .toast + .toast{
     margin-top: 15px;
 }
-.toast_body{
-
-}
 .toast_title{
 font-size: 16px;
 font-weight: 600;
@@ -922,12 +960,19 @@ color: #333;
 .form__group {
     width: 330px;
     margin-left: 35px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .form__input {
-    border: 2px solid var(--purple);
-    color: var(--purple);
+    padding-left: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid #6941C6;
+    color: #6941C6;
+}
+.form__input::placeholder{
+    color: #6941C6;
 }
 
 .separate-margin {
@@ -970,9 +1015,9 @@ color: #333;
     min-height: 600px;
 }
 
-.select-company-form__content {
+/* .select-company-form__content {
    
-}
+} */
 
 .select-company-form__group {
     margin-top: -10px;

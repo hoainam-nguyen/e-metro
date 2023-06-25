@@ -33,16 +33,60 @@ monthTicket.addEventListener("click", ()=>{
    type = monthTicket.value;
    ischecked = true;
 })
-setInterval(function() {
-    if (sbtn_text.innerText !== "Số lượng" && ischecked && sbtn_text1.innerText !== "Chọn tuyến")
+async function Getpricebyid(callback) {
+    fetch(getprice)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(callback)
+        .catch(function(err) {
+            console.log(err);
+        });
+}
+
+var getprice = `https://aiclub.uit.edu.vn/namnh/emetro/lines/search?id=`;
+
+async function renderprice(lines) {
+    var data = lines.data;
+
+    let divprice = $(".price"); 
+
+    let htmls = data.map(function(line) {
+
+        return `<input type="text" name="price-item" style="background-color: #ffffff;" class="text_field_price" id="tf_price" value="${line.ticket_price}" disabled>
+        <label for="tf_price" class="tf_label_price"> Giá vé: </label>`;
+    });
+
+    divprice.innerHTML = htmls.join('');
+}
+
+
+var checkline = document.querySelector('.form__input');
+
+let hengio = setInterval(function() {
+    if (sbtn_text.innerText !== "Số lượng" && ischecked && checkline.value !== "")
     {
+        var str = checkline.value;
+        var index = str.indexOf("-");
+        var result = str.substring(0, index);
+
+        getprice = `https://aiclub.uit.edu.vn/namnh/emetro/lines/search?id=${result}`
+
         var today = new Date();
         var date = today.toLocaleDateString('vi-VN', { day: 'numeric', month: 'numeric', year: 'numeric' });
         document.getElementById("tf_date_select").value = date;
         document.getElementById("tf_status").value = "Còn hạn";
-        document.getElementById("tf_price").value = 150000 * sbtn_text.innerText + " VND";
+
+        var ticketnum = sbtn_text.innerText;
+
+        
+        var tfprice = document.getElementById('tf_price').value;
+
+        document.getElementById('total_price').value = Number(ticketnum) * Number(tfprice);
+        
+        Getpricebyid(renderprice);
     }
-}, 100);
+}, 500);
 
 // Xác nhận tạo vé
 
@@ -90,28 +134,149 @@ function toast(
             main.appendChild(toast);
         }
     }
+
+    function toastfail(
+        {
+            title= '',
+            message= '',
+            type= 'info',
+            duration = 3000
+        }){
+            const main =  document.getElementById('success_toast');
+            if (main)
+            {
+                const toast = document.createElement('div');
+    
+                const autoremove = setTimeout(function(){
+                    main.removeChild(toast);
+                }, duration + 1000);
+    
+                toast.onclick= function(e){
+                    if (e.target.closest('.toast_close'))
+                    {
+                        main.removeChild(toast);
+                        clearTimeout(autoremove);
+                    }
+                }
+                toast.classList.add('toast_fail');
+                const delay = (duration/1000).toFixed(2);
+                toast.style.animation = `slideinleft ease .3s, fadeout 1s ${delay}s forwards`;
+    
+                toast.innerHTML = `
+                <div class="toast_icon">
+                            <i class="fas fa-exclamation-circle" style="color:#dc143c;"></i>
+                        </div>
+                        <div class="toast_body">
+                            <h3 class="toast_title">${title}</h3>
+                            <p class="toast_msg">${message}</p>
+                        </div>
+                        <div class="toast_close">
+                            <i class="fas fa-times"></i>
+                        </div>
+                `;
+                main.appendChild(toast);
+            }
+        }
+
+//Createticket
+var ticketsapi = "https://aiclub.uit.edu.vn/namnh/emetro/tickets/insert"
+// async function Createticket(data, callback)
+// {
+//     var opt = {
+//         method: 'POST',
+//         headers: {'Content-Type':'application/json'},
+//         body: JSON.stringify(data)
+//     };
+//     fetch(ticketsapi, opt).then(function(response){
+//         response.json();
+//     }).then(callback);
+// }
+async function Createticket(newticket) {
+    var options = {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        mode: "cors",      
+        body: JSON.stringify(newticket)
+    };
+
+    return fetch(ticketsapi, options) 
+        .then(function(response) {
+            return response.json(); 
+        })
+        .then(function(ticket) {
+            console.log(ticket);
+            return ticket.data.id;
+        })
+        .catch(function(err) {
+            console.log(err);
+        }); 
+}
+    //Xác nhận bán vé
 function showToast()
 {
-    toast({
-        title: 'Success',
-        message: 'Tạo vé tự động thành công',
-        type: 'success',
-        duration: 4000
-    });
+    if (sbtn_text.innerText !== "Số lượng" && ischecked && checkline.value !== "")
+    {
+        var typeint;
+        if (type == "normal_ticket")
+        {
+            typeint = 0;
+        }
+        else{
+            typeint = 1;
+        }
+        var number = sbtn_text.innerHTML;
+
+        for (var i=0; i < number; i++)
+        {
+        }
+        var str = checkline.value;
+        var index = str.indexOf("-");
+        var result = str.substring(0, index);
+
+        var lineid = result;
+
+        var purchasedate = document.getElementById("tf_date_select").value;
+
+        var status = true;
+
+        var ticketprice = document.getElementById('tf_price').value;
+        
+        let ticketdata = {
+            data: {
+            type: typeint,
+            price: ticketprice,
+            line_id: lineid,
+            is_effective: status,
+            no_used:0,
+            // purchase_date : purchasedate
+            }
+        };
+
+
+        for (var i=0; i < number;i++)
+        {
+            Createticket(ticketdata);
+        }
+
+        toast({
+            title: 'Success',
+            message: 'Tạo vé tự động thành công!',
+            type: 'success',
+            duration: 4000
+        });
+    }
+    else
+    {
+        toastfail({
+            title: 'Fail',
+            message: 'Không thành công, vui lòng chọn đủ thông tin!',
+            type: 'fail',
+            duration: 4000
+        });
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // SELECT DIALOG
@@ -140,7 +305,6 @@ async function getAlllines(callback) {
             console.log(err);
         });
 }
-
 async function renderLines(lines) {
     var data = lines.data;
 
