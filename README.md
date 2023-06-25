@@ -56,7 +56,7 @@ Allowing ticketing staff to manage tickets and review sold tickets.
 
 ## Technologies Used
 
-Below is a list of the key technologies used in the projec:
+Below is a list of the key technologies used in the project:
 
 - Programming Language: HTML, CSS, JS, Python
 - Framework: [FastAPI](https://fastapi.tiangolo.com)
@@ -71,11 +71,11 @@ Below is a list of the key technologies used in the projec:
 ├── docs/               # Project documentation
 ├── backend/                # Backend source code
 │   ├── src/                # Main source code
-│   ├── docker-compose.yml      
 ├── fronend/                # Frontend source code
 │   ├── assets/                 
 │   ├── html/               # UI source 
-│   ├── javascripts/            
+│   ├── javascripts/ 
+├── docker-compose.yml/             # Define service          
 ├── images/             # Sample data
 └── README.md               # Main README file of the project
 
@@ -83,3 +83,43 @@ Below is a list of the key technologies used in the projec:
 
 ## How to use ?
 
+- We using Docker and Docker Compose (Containerization Technology) for deployment the application. Supports both Mac, Windows, Linux.
+
+- Belowing, we will guide end-to-end step for setup  the application. We will using shell command line.
+
+### Setup
+
+- [Install Docker and Docker Compose](https://docs.docker.com/compose/install/). After check the version.
+```
+docker version && docker compose version
+```
+- Download source code.
+
+```bash
+git clone https://github.com/hoainam-nguyen/e-metro
+```
+
+### Deploy
+
+- Deploy application using docker compose
+```
+cd e-metro
+docker compose up
+```
+
+- Service running
+    - API server run at `localhost:5002`
+    - Web UI run at `localhost:8010`
+    - MinIO GUI run at `localhost:9001`
+    - MinIO Server run at `localhost:9000`
+    - PostgreSQL run at `localhost:5432`
+
+- Enjoy:
+    - Experience now with with http://localhost:8010/fe/html/loginpage.html
+
+### Shutdown
+
+- Shutdown all service using docker compose
+```bash
+docker compose up
+```
