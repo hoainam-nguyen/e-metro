@@ -5,22 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>E-METRO</title>
-
+    
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+   
+   
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    
+
+    <!-- CHARTJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/fe/assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/fe/assets/css/base.css">
     <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/main.css">
-    <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/ticket_history.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/home.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienCongTy/line_home.css">
+    <link rel="stylesheet" type="text/css" href="/fe/assets/css/NhanVienSo/ticket_home.css">
 
 </head>
 <body>
@@ -77,7 +84,7 @@
         <nav class="top-nav">
             <div class="grid">
                 <nav class="tabs">
-                    <a class="tab-item" href="home.html">
+                    <a class="tab-item active" href="ticket_home.html">
                         <i class="tab-item__icon fa-solid fa-house"></i>
                         <span class="tab-item__text">TRANG CHỦ</span>
                     </a>
@@ -85,7 +92,7 @@
                         <i class="tab-item__icon fa-solid fa-ticket"></i>
                         <span class="tab-item__text">BÁN VÉ</span>
                     </a>
-                    <a class="tab-item active">
+                    <a class="tab-item" href="ticket_history.html">
                         <i class="tab-item__icon fa-solid fa-history"></i>
                         <span class="tab-item__text">LỊCH SỬ VÉ</span>
                     </a>
@@ -97,78 +104,33 @@
         <div class="content">
             <div class="grid">
                 <div class="grid__row">
-                    <div class="grid__column-2">
-                        <div class="filter">
-                            <div class="filter__header">
-                                FILTER
-                            </div>
-                            <hr class="seperate-filter">
-                            <div class="filter__header">
-                                Loại vé
-                            </div>
-                            <hr class="seperate-filter">
-                            <label class="container">Thường
-                                <input class="checkbox" type="checkbox" checked="checked" value="Thường">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Tốc hành
-                                <input class="checkbox" type="checkbox" checked="checked" value="Tốc hành">
-                                <span class="checkmark"></span>
-                            </label>
+
+                    <div class="grid__column-12">
+                        <div class="title-container">
+                            <span class="title">THỐNG KÊ</span>
                         </div>
                     </div>
 
-                    <div class="grid__column-10">
-                        <div class="body-container">
-                            <div class="search-add-container">
-                                <input class="search" type="text" placeholder="Search"></input>
+                    <div class="grid__column-12">
+                        <div class="row">
+                            <div class="chart-container">
+                                <div class="chart-header">
+                                    DOANH THU
+                                </div>
+                                <canvas id="bar-chart" class="bar-chart"></canvas>
                             </div>
-                            <div class="result-sort-container">
-                                <div class="result">Total: 3</div>
-                            </div>
-                            <table id="dataTable" class="table">
-                                <thead>
-                                    <tr>
-                                        <th class="table_heading">Mã vé
-                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin"></i>
-                                        </th>
-                                        <th class="table_heading">Tuyến
-                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
-                                        </th>
-                                        <th class="table_heading">Loại vé
-                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
-                                        </th>
-                                        <th class="table_heading">Giá vé
-                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
-                                        </th>
-                                        <th class="table_heading">Ngày xuất vé
-                                            <i class="arrow fa-solid fa-arrow-up arrow_icon_margin">
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- <tr>
-                                        <td>1</td>
-                                        <td>[ 1 ] Bến Thành - Suối Tiên</td>
-                                        <td>Thường</td>
-                                        <td>20000</td>
-                                        <td>06/28/2023 14:52</td>
-                                        <td class="hide">Còn hạn sử dụng</td>
-                                        <td class="hide">1</td>
-                                    </tr> -->
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+    
         <footer class="footer">
             <div class="footer-container">
                 
             </div>
         </footer>
+
 
         <div class="modal">
             <div class="modal__overlay"></div>
@@ -176,55 +138,8 @@
             <div class="modal__body">
                 <div class="modal__inner">
 
-                    <div class="form detail-ticket-form">
-                        <div class="form__header">
-                            <h1 class="form__heading">Thông tin vé tàu</h1>
-                        </div>
-                        <div class="form__content">
-                            <div class="form__input-container">
-                                <div class="form__group margin-mave">
-                                    <span class="form__title">Mã vé
-                                    </span>
-                                    <input readonly type="text" class="form__input detail-ticket-input"> 
-                                </div>
-                                <div class="form__group">
-                                    <span class="form__title">Tuyến
-                                    </span>
-                                    <input readonly type="text" class="form__input detail-ticket-input"> 
-                                </div>
-                                <div class="form__group">
-                                    <span class="form__title">Loại vé
-                                    </span>
-                                    <input readonly type="text" class="form__input detail-ticket-input"> 
-                                </div>
-                                <div class="form__group">
-                                    <span class="form__title">Giá vé
-                                    </span>
-                                    <input readonly type="text" class="form__input detail-ticket-input"> 
-                                </div>
-                                <div class="form__group">
-                                    <span class="form__title">Ngày xuất vé
-                                    </span>
-                                    <input readonly type="text" class="form__input detail-ticket-input"> 
-                                </div>
-                                <div class="form__group">
-                                    <span class="form__title">Thời hạn
-                                    </span>
-                                    <input readonly type="text" class="form__input detail-ticket-input"> 
-                                </div>
-                                <div class="form__group">
-                                    <span class="form__title">Số lần sử dụng
-                                    </span>
-                                    <input readonly type="text" class="form__input detail-ticket-input"> 
-                                </div>
-                                
-                            </div>
-                        </div> 
-                        <div class="form__controls">
-                            <button id="close-detail-form" class="btn margin-dong">ĐÓNG</button>
-                        </div>
-                    </div>
 
+             
                     <div class="form change-password-form">
                         <div class="form__header">
                             <h1 class="form__heading">Đổi mật khẩu</h1>
@@ -257,12 +172,15 @@
                             <button id="pass_ok" class="btn btn--primary">XÁC NHẬN</button>
                         </div>
                     </div>
+
+                    
                 </div>
             </div>
+
         </div>
     </div>
-    <script src="/fe/javascript/NhanVienSo/main.js"></script>
-    <script src="/fe/javascript/NhanVienSo/ticket_history.js"></script>
+    <script src="/fe/javascript/NhanVienCongTy/main.js"></script>
+    <script src="/fe/javascript/NhanVienSo/ticket_home.js"></script>
     <script src="/fe/javascript/NhanVienCongTy/login.js"></script>
     <script src="/fe/javascript/base.js"></script>
 </body>

@@ -1,0 +1,34 @@
+.hide {
+    display: none;
+}
+
+.detail-ticket-form {
+    display: none;
+}
+
+.margin-mave {
+    margin-top: -20px;
+}
+
+.margin-dong {
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+/* SORT | ARROW ICON IN TABLE */
+.arrow_icon_margin {
+    margin-left: 2.5px;
+    margin-right: 2.5px;   
+}
+.table_heading:hover {
+    opacity: 0.92;
+}
+
+.table_heading_active_asc .fa-arrow-up{
+    color: yellow;
+}
+
+.table_heading_active_desc .fa-arrow-up{
+    color: yellow;
+    transform: rotate(180deg);
+}

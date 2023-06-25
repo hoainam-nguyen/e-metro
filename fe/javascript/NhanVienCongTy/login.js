@@ -90,6 +90,9 @@ if (btnLogin != null) {
                                 case 2:
                                     window.location.href = 'line_home.html';
                                     break;
+                                case 3:
+                                    window.location.href = 'ticket_home.html';
+                                    break;
                             }
                         });
     
