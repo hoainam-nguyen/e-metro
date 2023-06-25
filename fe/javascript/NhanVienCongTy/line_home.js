@@ -6,36 +6,58 @@ var getAllLinesApi = "https://aiclub.uit.edu.vn/namnh/emetro/lines/getall";
 
 
 function start() {
-    getAllLines(renderLines);
+    // getAllLines(renderLines);
+    getUser(sessionStorage.getItem("id_user"));
     // getCompanies(renderCompanies);
 }
 
 start();
 
-// GET ALL LINES
-async function getAllLines(callback) {
-  fetch(getAllLinesApi)
+function getUser(id) {
+  fetch("https://aiclub.uit.edu.vn/namnh/emetro/users/search/?id=" + id)
       .then(function(response) {
           return response.json();
       })
-      .then(callback)
+      .then(function(user) {
+          let data = user.data[0];
+
+          getAllLines(data.company_id);
+      })
       .catch(function(err) {
           console.log(err);
       });
 }
 
-async function renderLines(lines) {
+
+
+// GET ALL LINES
+async function getAllLines(company_id) {
+  fetch(getAllLinesApi)
+      .then(function(response) {
+          return response.json();
+      })
+      .then(function(lines) {
+            renderLines(lines, company_id);
+      })
+      .catch(function(err) {
+          console.log(err);
+      });
+}
+
+async function renderLines(lines, company_id) {
   var data = lines.data;
 
   let ConHoatDong = 0, KhongHoatDong = 0; 
 
   data.map(function(line) {
 
+    if (line.company_id == company_id) {
       if (line.status == 0) {
           KhongHoatDong += 1;
       } else {
           ConHoatDong += 1;
       }
+    }
 
   });
 

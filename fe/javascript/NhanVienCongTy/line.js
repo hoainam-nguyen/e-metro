@@ -8,6 +8,7 @@ var companySelected = null;
 
 // 
 
+
 // 
 // var listStationAdded = []; 
 // var listStation = [];
@@ -91,109 +92,142 @@ ticket_price.onkeypress = function(e) {
 
 // SELECT COMPANY
 
-var btnSelectCompany = $(".select-company__input");
+// var btnSelectCompany = $(".select-company__input");
 
-var selectCompanyForm = $(".select-company-form");
+// var selectCompanyForm = $(".select-company-form");
 
-btnSelectCompany.onclick = function() {
-    var selectCompanyForm = $(".select-company-form");
+// btnSelectCompany.onclick = function() {
+//     var selectCompanyForm = $(".select-company-form");
 
-    add_form.style.display = "none";
-    selectCompanyForm.style.display = "block";
-}
+//     add_form.style.display = "none";
+//     selectCompanyForm.style.display = "block";
+// }
 
 
-var getAllCompaniesApi = "https://aiclub.uit.edu.vn/namnh/emetro/companies/getall";
+// var getAllCompaniesApi = "https://aiclub.uit.edu.vn/namnh/emetro/companies/getall";
 
-async function getCompanies(callback) {
-    fetch(getAllCompaniesApi)
+// async function getCompanies(callback) {
+//     fetch(getAllCompaniesApi)
+//         .then(function(response) {
+//             return response.json();
+//         })
+//         .then(callback)
+//         .catch(function(err) {
+//             console.log(err);
+//         });
+// }
+
+// getCompanies(renderCompanies);
+
+// async function renderCompanies(companies) {
+//     var data = companies.data;
+//     let tableCompanies = $(".list-company"); 
+
+//     let htmls = data.map(function(company) {
+
+//         return `<li class="item-company">
+//                     <span class="name-company">${company.id} - ${company.name}</span>
+//                 </li>`;
+//     });
+
+//     tableCompanies.innerHTML = htmls.join('');
+//     setOnClickListCompany();
+// }
+
+// function setOnClickListCompany() {
+//     let listRowsCompany = $$(".item-company");
+
+//     for (let i=0; i<listRowsCompany.length; i++) {
+//         setOnClickItemCompany(listRowsCompany[i]);
+//     }
+// }
+
+// function setOnClickItemCompany(item) {
+//     var onClickRow = function(row) {
+//         return function() {
+//             var rowSpan = row.getElementsByTagName("span");
+            
+//             const arr = rowSpan[0].innerText.split(" - ");
+            
+//             companySelected = {
+//                 id: Number(arr[0]),
+//                 name: arr[1]
+//             }
+
+//             selectCompanyForm.style.display = "none";
+//             btnSelectCompany.value = rowSpan[0].innerText;
+//             add_form.style.display = "block";
+//         };
+//     }; 
+//     item.addEventListener('click', onClickRow(item)); 
+// }
+
+
+// function resetSelectCompanyForm() {
+//     searchBar.value = "";
+//     let all_tr = $$(".item-company");
+
+//     for (var i=0; i<all_tr.length; i++){
+//         all_tr[i].style.display = ""; // show
+//     }
+// }
+
+
+// var searchBar = $(".select-company__search");
+
+// searchBar.addEventListener('keyup', function() {
+//     var keyword = this.value;
+//     keyword = keyword.toUpperCase();
+
+//     let all_tr = $$(".item-company");
+
+//     for (var i=0; i<all_tr.length; i++){
+//         var all_columns = all_tr[i].getElementsByTagName("span");
+
+//         var column_value = all_columns[0].textContent || all_columns[0].innerText;
+//         column_value = column_value.toUpperCase();
+//         if (column_value.indexOf(keyword) > -1){
+//             all_tr[i].style.display = ""; // show
+//         } else { 
+//             all_tr[i].style.display = "none"; // hide
+//         }
+//     }
+// });
+
+function getCompanyFromId(id) {
+    fetch("https://aiclub.uit.edu.vn/namnh/emetro/companies/search/?id=" + id)
         .then(function(response) {
             return response.json();
         })
-        .then(callback)
+        .then(function(company) {
+            let data = company.data[0];
+            let input = $(".select-company__input");
+
+            input.value = data.id + " - " + data.name;
+            
+            getAllLines(data.id);
+        })
         .catch(function(err) {
             console.log(err);
         });
 }
 
-getCompanies(renderCompanies);
+function getUser(id) {
+    fetch("https://aiclub.uit.edu.vn/namnh/emetro/users/search/?id=" + id)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(user) {
+            let data = user.data[0];
 
-async function renderCompanies(companies) {
-    var data = companies.data;
-    let tableCompanies = $(".list-company"); 
-
-    let htmls = data.map(function(company) {
-
-        return `<li class="item-company">
-                    <span class="name-company">${company.id} - ${company.name}</span>
-                </li>`;
-    });
-
-    tableCompanies.innerHTML = htmls.join('');
-    setOnClickListCompany();
+            getCompanyFromId(data.company_id);
+        })
+        .catch(function(err) {
+            console.log(err);
+        });
 }
 
-function setOnClickListCompany() {
-    let listRowsCompany = $$(".item-company");
-
-    for (let i=0; i<listRowsCompany.length; i++) {
-        setOnClickItemCompany(listRowsCompany[i]);
-    }
-}
-
-function setOnClickItemCompany(item) {
-    var onClickRow = function(row) {
-        return function() {
-            var rowSpan = row.getElementsByTagName("span");
-            
-            const arr = rowSpan[0].innerText.split(" - ");
-            
-            companySelected = {
-                id: Number(arr[0]),
-                name: arr[1]
-            }
-
-            selectCompanyForm.style.display = "none";
-            btnSelectCompany.value = rowSpan[0].innerText;
-            add_form.style.display = "block";
-        };
-    }; 
-    item.addEventListener('click', onClickRow(item)); 
-}
-
-
-function resetSelectCompanyForm() {
-    searchBar.value = "";
-    let all_tr = $$(".item-company");
-
-    for (var i=0; i<all_tr.length; i++){
-        all_tr[i].style.display = ""; // show
-    }
-}
-
-
-var searchBar = $(".select-company__search");
-
-searchBar.addEventListener('keyup', function() {
-    var keyword = this.value;
-    keyword = keyword.toUpperCase();
-
-    let all_tr = $$(".item-company");
-
-    for (var i=0; i<all_tr.length; i++){
-        var all_columns = all_tr[i].getElementsByTagName("span");
-
-        var column_value = all_columns[0].textContent || all_columns[0].innerText;
-        column_value = column_value.toUpperCase();
-        if (column_value.indexOf(keyword) > -1){
-            all_tr[i].style.display = ""; // show
-        } else { 
-            all_tr[i].style.display = "none"; // hide
-        }
-    }
-});
-
-
+getUser(sessionStorage.getItem("id_user"));
 
 
 
@@ -225,12 +259,14 @@ var getAllLinesApi = "https://aiclub.uit.edu.vn/namnh/emetro/lines/getall";
 var getCompanyApi = "https://aiclub.uit.edu.vn/namnh/emetro/companies/search/?id=";
 var getLineApi = "https://aiclub.uit.edu.vn/namnh/emetro/lines/search/?id=";
 
-async function getAllLines(callback) {
+async function getAllLines(company_id) {
     fetch(getAllLinesApi)
         .then(function(response) {
             return response.json();
         })
-        .then(callback)
+        .then(function(lines) {
+            renderLines(lines, company_id);
+        })
         .catch(function(err) {
             console.log(err);
         });
@@ -251,35 +287,42 @@ async function getCompany(id) {
 
 
 
-async function renderLines(lines) {
+async function renderLines(lines, company_id) {
     var data = lines.data;
     let table = $("table tbody"); 
 
     let htmls = data.map(function(line) {
-        let status = "Còn hoạt động";
-        if (line.status == 0) {
-            status = "Không hoạt động";
-        }
 
-        let type = "Tốc hành";
-        if (line.type == 0) {
-            type = "Thường";
+        // console.log(line.company_id);
+        // console.log(objectUser.company_id);
+        if (line.company_id == company_id) {     
+            let status = "Còn hoạt động";
+            if (line.status == 0) {
+                status = "Không hoạt động";
+            }
+    
+            let type = "Tốc hành";
+            if (line.type == 0) {
+                type = "Thường";
+            }
+    
+            return `<tr>
+                        <td>${line.id}</td>
+                        <td>${line.name}</td>
+                        <td>${type}</td>
+                        <td>${status}</td>
+                        <td>${line.ticket_price}</td>
+                    </tr>`;
+        } else {
+            return "";
         }
-
-        return `<tr>
-                    <td>${line.id}</td>
-                    <td>${line.name}</td>
-                    <td>${type}</td>
-                    <td>${status}</td>
-                    <td>${line.ticket_price}</td>
-                </tr>`;
     });
 
     table.innerHTML = htmls.join('');
     setOnClickTable();
     updateTotal();
 }
-getAllLines(renderLines);
+
 
 
 async function createLine(newLine) {
@@ -509,7 +552,9 @@ function clearAddForm() {
     let listInputAdd = $$(".add-line-form__input");
 
     for (let i=0; i<listInputAdd.length; i++) {
-        listInputAdd[i].value = "";
+        if (i != 4) {
+            listInputAdd[i].value = "";
+        }
     }
 
     let minSecOption = $$(".min-sec-option");
@@ -541,7 +586,7 @@ btnCancel.onclick = function() {
     modal.style.display = "none";
     clearAddForm();
     resetSelectRouteForm();
-    resetSelectCompanyForm();
+    // resetSelectCompanyForm();
 }
 
 // OK ADD FORM
@@ -589,7 +634,7 @@ btnOk.onclick = function() {
             modal.style.display = "none";
             clearAddForm();
             resetSelectRouteForm();
-            resetSelectCompanyForm();
+            // resetSelectCompanyForm();
         });
     }
 }
