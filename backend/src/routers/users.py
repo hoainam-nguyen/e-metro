@@ -58,11 +58,11 @@ async def reset_passwd(user_email: str) -> ResponseModel:
 
     try:
         contact = {"user_email": user_email, "user_password": password_new}
-        thread1 = EmailThread(contact)
-        thread1.start()
 
         user_id = search_passwd_by_useremail(user_email)[0]["id"]
         id = update_data_to_db(table_name="users", id=user_id, data={"user_password": password_new})
+        thread1 = EmailThread(contact)
+        thread1.start()
 
     except Exception as err:
         print(err)
