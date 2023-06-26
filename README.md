@@ -77,7 +77,7 @@ Below is a list of the key technologies used in the project:
 ├── docs/               # Project documentation
 ├── backend/                # Backend source code
 │   ├── src/                # Main source code
-├── fronend/                # Frontend source code
+├── fe/                # Frontend source code
 │   ├── assets/                 
 │   ├── html/               # UI source 
 │   ├── javascripts/ 
