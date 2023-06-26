@@ -64,3 +64,29 @@ def search_passwd_by_useremail(user_email: str):
     
     result_dict = dict(zip(column_names, result))
     return [result_dict]
+
+
+def search_revenue_by_company_id(company_id):
+    _sql_str = f'''
+        SELECT t.*
+        FROM companies c
+        JOIN lines l ON c.id = l.company_id
+        JOIN tickets t ON l.id = t.line_id
+        WHERE c.id = {company_id}; 
+    '''
+    conn = RESOUSCE_MAP['db']
+    cursor = conn.cursor()
+    cursor.execute(_sql_str)
+    
+    column_names = [desc.name for desc in cursor.description]
+    results = cursor.fetchall()
+    
+    conn.commit()
+    cursor.close()
+
+    results_dict = []
+    for result in results:
+        results_dict.append(
+            dict(zip(column_names, result))
+        )
+    return results_dict
