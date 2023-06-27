@@ -250,7 +250,7 @@ function showToast()
             line_id: lineid,
             is_effective: status,
             no_used:0,
-            // purchase_date : purchasedate
+            purchase_date : purchasedate
             }
         };
 
